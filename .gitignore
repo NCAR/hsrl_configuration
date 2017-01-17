@@ -1,0 +1,44 @@
+# emacs
+
+~*
+*~
+
+# Compiled Object files
+
+*.so
+*.o
+*.a
+*.la
+*.lo
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Static libraries
+
+*.lai
+*.la
+*.a
+*.lib
+
+# configure
+
+makefile
+.dirstamp
+.deps
+makefile.in
+makefile.am
+__makefile.template
+.libs
+
+# Binaries
+
+# Links
+
+projDir/data
+projDir/logs
+
+projDir/control/crontab
+projDir/control/data_list
+projDir/control/proc_list
