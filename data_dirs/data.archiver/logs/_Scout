@@ -1,0 +1,36 @@
+/**********************************************************************
+ * TDRP params for Scout
+ **********************************************************************/
+
+///////////// Recurse /////////////////////////////////
+//
+// Recurse into this directory and subdirectories below it.
+// If FALSE, the current directory and all those below it are ignored. 
+//   This value is controlled by inserting a _scout (or _Scout) parameter 
+//   file into the relevant directory.
+// Type: boolean
+//
+
+Recurse = TRUE;
+
+///////////// DataType ////////////////////////////////
+//
+// Data type to use for data mapper registration.
+// This data type is used for registration from this point in the 
+//   direectory tree down, or until another _Scout param file is found.
+// Type: string
+//
+
+DataType = "";
+
+///////////// SummarizeFromHereDown ///////////////////
+//
+// Force a file count from this directory and below.
+// If TRUE, the Scout will count all files below here and report the 
+//   stats to the DataMapper for this directory. Only a single DataMapper 
+//   entry will appear.
+// Type: boolean
+//
+
+SummarizeFromHereDown = TRUE;
+

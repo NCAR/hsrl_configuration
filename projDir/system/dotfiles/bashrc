@@ -1,0 +1,13 @@
+# .bashrc
+
+# User specific aliases and functions
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+export PATH=/home/eol-lidar/projDir/rvp8/scripts:/home/eol-lidar/projDir/bin:/home/eol-lidar/projDir/system/scripts:/usr/sigmet/bin:/usr/sigmet/bin/rda:$PATH
+# keep cursor in sync for Avocent KVM
+xset m 1 1
+
+

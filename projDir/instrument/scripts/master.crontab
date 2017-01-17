@@ -1,0 +1,10 @@
+# edit the master copy in ~hsrl/etc/master.crontab - 
+# don't modify with crontab -e
+*/1 * * * *   /usr/local/bin/start_capturetest      1> /dev/null 2> /dev/null
+*/1 * * * *   /usr/local/bin/start_read2nc      1> /dev/null 2> /dev/null
+*/1 * * * *   /usr/local/bin/start_hsrlcontrol      1> /dev/null 2> /dev/null
+*/1 * * * *   /usr/local/bin/start_lidarTune      1> /dev/null 2> /dev/null
+#*/1 * * * *   /usr/local/bin/start_cdfserver      1> /dev/null 2> /dev/null
+*/1 * * * *   /usr/local/bin/start_maintainEtalonPressure      1> /dev/null 2> /dev/null
+*/1 * * * *   /usr/local/bin/start_l3collect 1> /dev/null 2>/dev/null
+*/1 * * * *   /usr/local/bin/start_rsync_hsrl_to_archiver 1> /dev/null 2>/dev/null

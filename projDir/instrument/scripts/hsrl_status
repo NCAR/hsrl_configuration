@@ -1,0 +1,51 @@
+#!/bin/sh
+pgrep -x read2nc2 >& /dev/null
+if [ $? == 0 ]; then
+	echo read2nc2 is running
+else
+	echo read2nc2 is NOT running
+fi
+pgrep -x l3collect >& /dev/null
+if [ $? == 0 ]; then
+	echo l3collect is running
+else
+	echo l3collect is NOT running
+fi
+pgrep -x lidarTune >& /dev/null
+if [ $? == 0 ]; then
+	echo lidarTune is running
+else
+	echo lidarTune is NOT running
+fi
+pgrep -x hsrlcontrol >& /dev/null
+if [ $? == 0 ]; then
+	echo hsrlcontrol is running
+else
+	echo hsrlcontrol is NOT running
+fi
+pgrep -f -x '/usr/local/anaconda/bin/python -u ./cdfserve.py -p 8005 -d /data/hsrl' >& /dev/null
+if [ $? == 0 ]; then
+	echo cdfserver is running
+else
+	echo cdfserver is NOT running
+fi
+pgrep -x capturetest >& /dev/null
+if [ $? == 0 ]; then
+	echo capturetest is running
+else
+	echo capturetest is NOT running
+fi
+pgrep -f /usr/local/bin/maintainEtalonPressure >& /dev/null
+
+if [ $? == 0 ]; then
+	echo maintainEtalonPressure is running
+else
+	echo maintainEtalonPressure is NOT running
+fi
+
+pgrep -f -x '/bin/csh /usr/local/bin/rsync_hsrl_to_archiver' >& /dev/null
+if [ $? == 0 ]; then
+	echo rsync_hsrl_to_archiver is running
+else
+	echo rsync_hsrl_to_archiver is NOT running
+fi

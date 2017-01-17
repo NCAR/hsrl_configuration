@@ -1,0 +1,13 @@
+#!/bin/sh
+# now, start the tasks
+start_l3collect
+start_capturetest
+start_read2nc
+start_hsrlcontrol
+start_lidarTune
+#start_cdfserver
+start_rsync_hsrl_to_archiver
+start_maintainEtalonPressure
+
+# install the crontab
+install_crontab

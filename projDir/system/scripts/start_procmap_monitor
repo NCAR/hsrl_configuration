@@ -1,0 +1,9 @@
+#! /bin/csh
+
+xterm -title procmap -bg black -fg cyan -g 100x30+0+0 -fn fixed -e print_procmap -hb -up -status -c 5
+
+
+
+
+
+

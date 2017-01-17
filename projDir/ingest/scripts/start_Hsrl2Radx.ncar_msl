@@ -1,0 +1,9 @@
+#! /bin/csh
+
+cd $PROJ_DIR/ingest/params
+
+running "Hsrl2Radx -params Hsrl2Radx.ncar_msl"
+if ($status == 1) then
+  Hsrl2Radx -params Hsrl2Radx.ncar_msl |& \
+    LogFilter -d $ERRORS_LOG_DIR -p Hsrl2Radx -i ncar_msl &
+endif

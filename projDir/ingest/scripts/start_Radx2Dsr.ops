@@ -1,0 +1,9 @@
+#! /bin/csh
+
+cd $PROJ_DIR/ingest/params
+
+running "Radx2Dsr -params Radx2Dsr.ops"
+if ($status == 1) then
+  Radx2Dsr -params Radx2Dsr.ops |& \
+    LogFilter -d $ERRORS_LOG_DIR -p Radx2Dsr -i ops &
+endif

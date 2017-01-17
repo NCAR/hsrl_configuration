@@ -1,0 +1,25 @@
+###############################################################################
+# SYSTEM processes
+#
+DsServerMgr   primary    start_DsServerMgr         snuff_inst        localhost
+Janitor       logs       start_Janitor.logs        kill_Janitor      localhost
+DataMapper    primary    start_DataMapper          kill_DataMapper   localhost
+#
+###############################################################################
+# CfRadial files
+#
+Hsrl2Radx    ops       start_Hsrl2Radx.ops         snuff_inst    localhost
+Radx2Dsr     ops       start_Radx2Dsr.ops          snuff_inst    localhost
+#
+###############################################################################
+# Images for catalog
+#
+HawkEye      catalog     start_HawkEye.catalog         snuff_inst    localhost
+LdataWatcher catalog     start_LdataWatcher.catalog    snuff_inst    localhost
+#
+###############################################################################
+###############################################################################
+# Terrain height server
+#
+#TerrainHtServer  ops   start_TerrainHtServer.ops   snuff_inst        localhost
+#

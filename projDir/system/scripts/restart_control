@@ -1,0 +1,6 @@
+#/bin/sh
+
+# restart the system controller and control GUI
+
+kill_control
+start_control

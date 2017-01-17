@@ -1,0 +1,7 @@
+#############################################
+# project-specific parameter file for HCR
+#############################################
+
+setenv PROJECT_NAME               "CSET"
+setenv SITE_NAME                  "GV"
+

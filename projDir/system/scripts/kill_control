@@ -1,0 +1,6 @@
+#/bin/sh
+
+# kill the system controller and control GUI
+
+snuff syscon
+snuff ui_server

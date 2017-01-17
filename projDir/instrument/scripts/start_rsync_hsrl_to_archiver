@@ -1,0 +1,10 @@
+#!/bin/sh
+
+pgrep -f -x '/bin/csh /usr/local/bin/rsync_hsrl_to_archiver' >& /dev/null
+if [ $? == 0 ]; then
+  echo "rsync_hsrl_to_archiver is already running!"
+else
+  /usr/local/bin/rsync_hsrl_to_archiver |& \
+    /usr/local/bin/log_with_rotate.py /var/local/log/rsync_hsrl_to_archiver.log &
+fi
+

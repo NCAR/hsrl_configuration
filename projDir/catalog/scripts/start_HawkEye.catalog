@@ -1,0 +1,18 @@
+#! /bin/csh
+
+# start HawkEye to display on Xvfb running as display :1000
+
+start_Xvfb
+set display_num = 1000
+setenv DISPLAY :${display_num}.0
+
+cd $PROJ_DIR/catalog/params
+
+running "HawkEye -params HawkEye.catalog"
+if ($status == 1) then
+  HawkEye -params HawkEye.catalog -debug |& \
+    LogFilter -d $ERRORS_LOG_DIR -p HawkEye -i catalog &
+endif
+
+
+

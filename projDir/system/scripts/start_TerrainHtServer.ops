@@ -1,0 +1,11 @@
+#! /bin/csh
+
+cd $PROJ_DIR/system/params
+ 
+running "TerrainHtServer -params TerrainHtServer.ops"
+    
+if ($status == 1) then
+    TerrainHtServer -params TerrainHtServer.ops |& \
+	LogFilter -d $ERRORS_LOG_DIR -p TerrainHtServer -i ops >& /dev/null &
+endif
+

@@ -1,0 +1,10 @@
+#! /bin/csh
+
+cd /data/hsrl
+
+while (1)
+  echo "=============== rsync hsrl data to archiver ============="
+  rsync -av 20?? eol-lidar@192.168.84.61:/home/data/gvhsrldata
+  echo "===================== done =============================="
+  sleep 15
+end

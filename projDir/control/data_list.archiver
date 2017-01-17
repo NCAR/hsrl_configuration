@@ -1,0 +1,9 @@
+#################################################
+# required data for archiver
+#
+# Format is:
+#
+#  dir               late_secs  very_late_secs
+#################################################
+cfradial/covar/wband            120  300
+cfradial/moments/wband          120  300
