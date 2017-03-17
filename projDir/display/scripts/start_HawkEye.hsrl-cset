@@ -3,7 +3,7 @@
 rehash
 
 setenv PROJ_DIR /opt/local/hsrl/projDir
-setenv DATA_DIR /scr/eldora1/rsfdata
+setenv DATA_DIR /scr/eldora2/rsfdata
 cd $PROJ_DIR/display/params
 
 if ($#argv < 6) then
