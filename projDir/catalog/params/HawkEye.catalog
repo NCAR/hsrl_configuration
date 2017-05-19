@@ -327,8 +327,8 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "combined_hi",
-    raw_name = "combined_hi",
+    label = "CombinedHiCount",
+    raw_name = "CombinedHiCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -336,8 +336,8 @@ fields = {
   }
   ,
   {
-    label = "combined_lo",
-    raw_name = "combined_lo",
+    label = "CombinedLoCount",
+    raw_name = "CombinedLoCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -345,8 +345,8 @@ fields = {
   }
   ,
   {
-    label = "cross",
-    raw_name = "cross",
+    label = "CrossCount",
+    raw_name = "CrossCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -354,8 +354,8 @@ fields = {
   }
   ,
   {
-    label = "molecular",
-    raw_name = "molecular",
+    label = "MolecularCount",
+    raw_name = "MolecularCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -363,35 +363,8 @@ fields = {
   }
   ,
   {
-    label = "height",
-    raw_name = "height",
-    filtered_name = "",
-    units = "km",
-    color_map = "number50.colors",
-    shortcut = "9"
-  }
-  ,
-  {
-    label = "temperature",
-    raw_name = "temperature",
-    filtered_name = "",
-    units = "K",
-    color_map = "tempK.colors",
-    shortcut = "a"
-  } 
-  ,  
-  { 
-    label = "pressure",
-    raw_name = "pressure",
-    filtered_name = "",
-    units = "mb",
-    color_map = "number_log.colors",
-    shortcut = "b"
-  } 
-  ,
-  {
-    label = "volDepol",
-    raw_name = "volDepol",
+    label = "VolumeDepol",
+    raw_name = "VolumeDepol",
     filtered_name = "",
     units = "",
     color_map = "number_log_n3.colors",
@@ -399,8 +372,8 @@ fields = {
   } 
   ,
   {
-    label = "backscatRatio",
-    raw_name = "backscatRatio",
+    label = "BackscatterRatio",
+    raw_name = "BackscatterRatio",
     filtered_name = "",
     units = "",
     color_map = "number_log_n1.colors",
@@ -408,8 +381,8 @@ fields = {
   } 
   ,
   {
-    label = "partDepol",
-    raw_name = "partDepol",
+    label = "ParticleDepol",
+    raw_name = "ParticleDepol",
     filtered_name = "",
     units = "",
     color_map = "number_log_n3.colors",
@@ -417,8 +390,8 @@ fields = {
   } 
   ,
   {
-    label = "backscatCoeff",
-    raw_name = "backscatCoeff",
+    label = "BackscatterCoeff",
+    raw_name = "BackscatterCoeff",
     filtered_name = "",
     units = "",
     color_map = "number_log_n5.colors",
@@ -426,8 +399,8 @@ fields = {
   }
   , 
   {
-    label = "extinction",
-    raw_name = "extinction",
+    label = "Extinction",
+    raw_name = "Extinction",
     filtered_name = "",
     units = "",
     color_map = "number_log_n2.colors",
