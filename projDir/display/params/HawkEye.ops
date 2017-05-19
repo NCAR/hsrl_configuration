@@ -315,44 +315,8 @@ color_scale_dir = "$(HOME)/git/hsrl_configuration/projDir/display/color_scales";
 
 fields = {
   {
-    label = "db_combined_hi",
-    raw_name = "db_combined_hi",
-    filtered_name = "",
-    units = "db_counts",
-    color_map = "hsrl_log_counts.colors",
-    shortcut = "1"
-  }
-  ,
-  {
-    label = "db_combined_lo",
-    raw_name = "db_combined_lo",
-    filtered_name = "",
-    units = "db_counts",
-    color_map = "hsrl_log_counts.colors",
-    shortcut = "2"
-  }
-  ,
-  {
-    label = "db_cross",
-    raw_name = "db_cross",
-    filtered_name = "",
-    units = "db_counts",
-    color_map = "hsrl_log_counts.colors",
-    shortcut = "3"
-  }
-  ,
-  {
-    label = "db_molecular",
-    raw_name = "db_molecular",
-    filtered_name = "",
-    units = "db_counts",
-    color_map = "hsrl_log_counts.colors",
-    shortcut = "4"
-  }
-  , 
-  {
-    label = "combined_hi",
-    raw_name = "combined_hi",
+    label = "CombinedHiCount",
+    raw_name = "CombinedHiCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -360,8 +324,8 @@ fields = {
   }
   ,
   {
-    label = "combined_lo",
-    raw_name = "combined_lo",
+    label = "CombinedLoCount",
+    raw_name = "CombinedLoCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -369,8 +333,8 @@ fields = {
   }
   ,
   {
-    label = "cross",
-    raw_name = "cross",
+    label = "CrossCount",
+    raw_name = "CrossCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -378,8 +342,8 @@ fields = {
   }
   ,
   {
-    label = "molecular",
-    raw_name = "molecular",
+    label = "MolecularCount",
+    raw_name = "MolecularCount",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
@@ -387,8 +351,8 @@ fields = {
   }
   ,
   {
-    label = "height",
-    raw_name = "height",
+    label = "Height",
+    raw_name = "Height",
     filtered_name = "",
     units = "km",
     color_map = "number50.colors",
@@ -396,8 +360,8 @@ fields = {
   }
   ,
   {
-    label = "temperature",
-    raw_name = "temperature",
+    label = "Temperature",
+    raw_name = "Temperature",
     filtered_name = "",
     units = "K",
     color_map = "tempK.colors",
@@ -405,8 +369,8 @@ fields = {
   } 
   ,  
   { 
-    label = "pressure",
-    raw_name = "pressure",
+    label = "Pressure",
+    raw_name = "Pressure",
     filtered_name = "",
     units = "mb",
     color_map = "number_log.colors",
@@ -414,8 +378,8 @@ fields = {
   } 
   ,
   {
-    label = "volDepol",
-    raw_name = "volDepol",
+    label = "VolumeDepol",
+    raw_name = "VolumeDepol",
     filtered_name = "",
     units = "",
     color_map = "number_log_n3.colors",
@@ -423,8 +387,8 @@ fields = {
   } 
   ,
   {
-    label = "backscatRatio",
-    raw_name = "backscatRatio",
+    label = "BackscatterRatio",
+    raw_name = "BackscatterRatio",
     filtered_name = "",
     units = "",
     color_map = "number_log_n1.colors",
@@ -432,8 +396,8 @@ fields = {
   } 
   ,
   {
-    label = "partDepol",
-    raw_name = "partDepol",
+    label = "ParticleDepol",
+    raw_name = "ParticleDepol",
     filtered_name = "",
     units = "",
     color_map = "number_log_n3.colors",
@@ -441,8 +405,8 @@ fields = {
   } 
   ,
   {
-    label = "backscatCoeff",
-    raw_name = "backscatCoeff",
+    label = "BackscatterCoeff",
+    raw_name = "BackscatterCoeff",
     filtered_name = "",
     units = "",
     color_map = "number_log_n5.colors",
@@ -450,8 +414,8 @@ fields = {
   }
   , 
   {
-    label = "extinction",
-    raw_name = "extinction",
+    label = "Extinction",
+    raw_name = "Extinction",
     filtered_name = "",
     units = "",
     color_map = "number_log_n2.colors",

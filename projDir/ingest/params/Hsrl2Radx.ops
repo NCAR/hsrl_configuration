@@ -415,7 +415,7 @@ raw_bin_spacing_km = 0.0075;
 // Type: string
 //
 
-combined_hi_field_name = "combined_hi";
+combined_hi_field_name = "CombinedHiCount";
 
 ///////////// combined_lo_field_name //////////////////
 //
@@ -425,7 +425,7 @@ combined_hi_field_name = "combined_hi";
 // Type: string
 //
 
-combined_lo_field_name = "combined_lo";
+combined_lo_field_name = "CombinedHiCount";
 
 ///////////// molecular_field_name ////////////////////
 //
@@ -435,7 +435,7 @@ combined_lo_field_name = "combined_lo";
 // Type: string
 //
 
-molecular_field_name = "molecular";
+molecular_field_name = "MolecularCount";
 
 ///////////// cross_field_name ////////////////////////
 //
@@ -445,7 +445,7 @@ molecular_field_name = "molecular";
 // Type: string
 //
 
-cross_field_name = "cross";
+cross_field_name = "CrossCount";
 
 ///////////// baseline_calibration_path ///////////////
 //
@@ -692,8 +692,8 @@ output_fields = {
   }
   ,
   {
-    input_field_name = "extinction",
-    output_field_name = "extinction",
+    input_field_name = "Extinction",
+    output_field_name = "Extinction",
     long_name = "aerosol_plus_molecular_extinction_profile",
     standard_name = "aerosol_plus_molecular_extinction_profile",
     output_units = "1/km"

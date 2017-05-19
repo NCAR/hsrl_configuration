@@ -1360,109 +1360,109 @@ debug_auto_detection = FALSE;
 
 output_fields = {
   {
-    dsr_name = "combined_hi",
-    output_name = "combined_hi",
-    long_name = "combined_hi",
-    standard_name = "combined_hi",
+    dsr_name = "CombinedHiCount",
+    output_name = "CombinedHiCount",
+    long_name = "CombinedHiCount",
+    standard_name = "CombinedHiCount",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "combined_lo",
-    output_name = "combined_lo",
-    long_name = "combined_lo",
-    standard_name = "combined_lo",
+    dsr_name = "CombinedLoCount",
+    output_name = "CombinedLoCount",
+    long_name = "CombinedLoCount",
+    standard_name = "CombinedLoCount",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "cross",
-    output_name = "cross",
-    long_name = "cross",
-    standard_name = "cross",
+    dsr_name = "CrossCount",
+    output_name = "CrossCount",
+    long_name = "CrossCount",
+    standard_name = "CrossCount",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "molecular",
-    output_name = "molecular",
-    long_name = "molecular",
-    standard_name = "molecular",
+    dsr_name = "MolecularCount",
+    output_name = "MolecularCount",
+    long_name = "MolecularCount",
+    standard_name = "MolecularCount",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "height",
-    output_name = "height",
-    long_name = "height",
-    standard_name = "height",
+    dsr_name = "Height",
+    output_name = "Height",
+    long_name = "Height",
+    standard_name = "Height",
     output_units = "km",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "temperature",
-    output_name = "temperature",
-    long_name = "temperature",
-    standard_name = "temperature",
+    dsr_name = "Temperature",
+    output_name = "Temperature",
+    long_name = "Temperature",
+    standard_name = "Temperature",
     output_units = "K",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "pressure",
-    output_name = "pressure",
-    long_name = "pressure",
-    standard_name = "pressure",
+    dsr_name = "Pressure",
+    output_name = "Pressure",
+    long_name = "Pressure",
+    standard_name = "Pressure",
     output_units = "hPa",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "volDepol",
-    output_name = "volDepol",
-    long_name = "volDepol",
-    standard_name = "volDepol",
+    dsr_name = "VolumeDepol",
+    output_name = "VolumeDepol",
+    long_name = "VolumeDepol",
+    standard_name = "VolumeDepol",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "backscatRatio",
-    output_name = "backscatRatio",
-    long_name = "backscatRatio",
-    standard_name = "backscatRatio",
+    dsr_name = "BackscatterRatio",
+    output_name = "BackscatterRatio",
+    long_name = "BackscatterRatio",
+    standard_name = "BackscatterRatio",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "partDepol",
-    output_name = "partDepol",
-    long_name = "partDepol",
-    standard_name = "partDepol",
+    dsr_name = "ParticleDepol",
+    output_name = "ParticleDepol",
+    long_name = "ParticleDepol",
+    standard_name = "ParticleDepol",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "backscatCoeff",
-    output_name = "backscatCoeff",
-    long_name = "backscatCoeff",
-    standard_name = "backscatCoeff",
+    dsr_name = "BackscatterCoeff",
+    output_name = "BackscatterCoeff",
+    long_name = "BackscatterCoeff",
+    standard_name = "BackscatterCoeff",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "extinction",
-    output_name = "extinction",
-    long_name = "extinction",
-    standard_name = "extinction",
+    dsr_name = "Extinction",
+    output_name = "Extinction",
+    long_name = "Extinction",
+    standard_name = "Extinction",
     output_units = "1/m",
     output_encoding = OUTPUT_FLOAT
   }
