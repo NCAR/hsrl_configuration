@@ -845,7 +845,7 @@ check_min_rays_in_sweep = FALSE;
 // Type: int
 //
 
-min_rays_in_sweep = 180;
+min_rays_in_sweep = 1;
 
 //======================================================================
 //
@@ -1073,7 +1073,7 @@ trim_surveillance_sweeps_to_360deg = FALSE;
 //     ELAPSED_TIME
 //
 
-end_of_vol_decision = END_OF_VOL_FLAG;
+end_of_vol_decision = ELAPSED_TIME;
 
 ///////////// last_sweep_in_vol ///////////////////////
 //
@@ -1295,7 +1295,7 @@ max_az_change_per_sweep = 540;
 // Type: int
 //
 
-min_rays_per_ppi_vol = 180;
+min_rays_per_ppi_vol = 1;
 
 ///////////// min_rays_per_rhi_vol ////////////////////
 //
@@ -1308,7 +1308,7 @@ min_rays_per_ppi_vol = 180;
 // Type: int
 //
 
-min_rays_per_rhi_vol = 30;
+min_rays_per_rhi_vol = 1;
 
 ///////////// debug_auto_detection ////////////////////
 //

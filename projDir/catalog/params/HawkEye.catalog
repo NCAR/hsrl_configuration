@@ -204,7 +204,7 @@ archive_end_time = "2015 06 02 16 50 00";
 // Type: string
 //
 
-archive_data_url = "$(DATA_DIR)/cfradial/ncar";
+archive_data_url = "$(DATA_DIR)/cfradial/hsrl/moments";
 
 //======================================================================
 //
@@ -1544,7 +1544,7 @@ images_schedule_interval_secs = 300;
 // Type: int
 //
 
-images_schedule_delay_secs = 120;
+images_schedule_delay_secs = 60;
 
 //======================================================================
 //
