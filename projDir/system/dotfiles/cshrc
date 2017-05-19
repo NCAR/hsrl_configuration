@@ -145,14 +145,10 @@ setenv DS_PING_TIMEOUT_MSECS 20000
 #setenv UDUNITS2_XML_PATH /usr/share/udunits/udunits2.xml
 #setenv UDUNITS2_XML_PATH /opt/local/lib/udunits2.xml
 
-# --- site info --- 
+# --- project info --- 
 
-if (-f $PROJ_DIR/system/params/site_params) then
-  source $PROJ_DIR/system/params/site_params
-endif
-
-if (-f $PROJ_DIR/system/params/site_info) then
-  source $PROJ_DIR/system/params/site_info
+if (-f $PROJ_DIR/system/params/project_info) then
+  source $PROJ_DIR/system/params/project_info
 endif
 
 # --- PYTHON ---

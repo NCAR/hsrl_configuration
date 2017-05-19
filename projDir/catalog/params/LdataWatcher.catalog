@@ -390,7 +390,7 @@ script_min_interval_secs = 0;
 
 supplementary_args = {
   "--ftp_server", "catalog.eol.ucar.edu",
-  "--target_dir", "pub/incoming/catalog/cset",
+  "--target_dir", "pub/incoming/catalog/$(PROJECT_NAME)",
   "--debug"
 };
 

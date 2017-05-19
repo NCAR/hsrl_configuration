@@ -1,7 +1,8 @@
 #############################################
-# project-specific parameter file for HCR
+# project-specific parameter file for HSRL
 #############################################
 
-setenv PROJECT_NAME               "CSET"
-setenv SITE_NAME                  "GV"
+setenv PROJECT_NAME               "operations"
+setenv SITE_NAME                  "FL"
+
 

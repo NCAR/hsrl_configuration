@@ -127,7 +127,7 @@ use_input_scan_mode = FALSE;
 // Type: string
 //
 
-site_name = "GV";
+site_name = "$(SITE_NAME)";
 
 ///////////// override_radar_name /////////////////////
 //
@@ -1463,7 +1463,7 @@ output_fields = {
     output_name = "extinction",
     long_name = "extinction",
     standard_name = "extinction",
-    output_units = "/km",
+    output_units = "1/m",
     output_encoding = OUTPUT_FLOAT
   }
 };
