@@ -7,17 +7,11 @@
 # Process restarters
 */1 * * * *  csh -c "start_auto_restart_check_cron" 1> /dev/null 2> /dev/null
 */1 * * * *  csh -c "start_procmap_check_cron"      1> /dev/null 2> /dev/null
-*/1 * * * * /usr/local/hsrl/etc/start_cdfclient >& /dev/null
-#
-# create 5 minute CfRadial files
-*/5 * * * * csh -c "source ~/.cshrc; /usr/local/hsrl/etc/5min_cfradial.py" >& /var/local/log/5min_cfradial.log
 #
 # Build links to log date subdirs
 */5 * * * *   csh -c "start_build_logdir_links" 1> /dev/null 2> /dev/null
 #
-####################################################################
-# HISTORY FILES
-#
-# Delete history file - creating problems on scientific linux 6
-#
-*/1 * * * *  csh -c "remove_history"      1> /dev/null 2> /dev/null
+
+###################################################################
+# ?????? is this needed
+#*/1 * * * * /usr/local/hsrl/etc/start_cdfclient >& /dev/null
