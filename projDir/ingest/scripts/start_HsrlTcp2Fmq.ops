@@ -1,0 +1,9 @@
+#! /bin/csh
+
+cd $PROJ_DIR/ingest/params
+
+running "HsrlTcp2Fmq -params HsrlTcp2Fmq.ops"
+if ($status == 1) then
+  HsrlTcp2Fmq -params HsrlTcp2Fmq.ops |& \
+    LogFilter -d $ERRORS_LOG_DIR -p HsrlTcp2Fmq -i ops &
+endif

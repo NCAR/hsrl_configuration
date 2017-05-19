@@ -22,13 +22,6 @@ kill_SymprodServers
 # kill all processes
 
 killall_processes
-kill_SysView
-
-# kill HSRL data xfer
-pkill -f cdfclient.py
-
-# kill any 5min image jogs
-pkill -9 5min_cfradial
 
 # remove shared memory segments
 

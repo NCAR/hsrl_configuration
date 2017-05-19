@@ -2,13 +2,14 @@
 # SYSTEM processes
 #
 DsServerMgr   primary    start_DsServerMgr         snuff_inst    
-Janitor       logs       start_Janitor.logs        kill_Janitor  
 DataMapper    primary    start_DataMapper          kill_DataMapper
+Janitor       logs       start_Janitor.logs        kill_Janitor  
+Scout         primary    start_Scout               kill_Scout
 #
 ###############################################################################
 # Read raw data from HSRL instrument, convert to Radx rays
 #
-HsrlRaw2Fmq  ops       start_HsrlRaw2Fmq.ops        snuff_inst 
+HsrlTcp2Fmq  ops       start_HsrlTcp2Fmq.ops        snuff_inst 
 #
 ###############################################################################
 # Compute derived fields, write Radx rays
@@ -18,7 +19,7 @@ Hsrl2Radx    ops       start_Hsrl2Radx.ops          snuff_inst
 ###############################################################################
 # Create CfRadial files
 #
-Dsr2Radx     derived   start_Dsr2Radx.derived        snuff_inst 
+Dsr2Radx     moments   start_Dsr2Radx.moments        snuff_inst 
 #
 ###############################################################################
 # Images for catalog

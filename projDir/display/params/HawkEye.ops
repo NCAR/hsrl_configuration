@@ -45,7 +45,7 @@ debug = DEBUG_OFF;
 // Type: boolean
 //
 
-register_with_procmap = FALSE;
+register_with_procmap = TRUE;
 
 ///////////// instance ////////////////////////////////
 //
@@ -86,7 +86,7 @@ instance = "ops";
 //     DSR_FMQ_INPUT
 //
 
-input_mode = IWRF_FMQ_INPUT;
+input_mode = DSR_FMQ_INPUT;
 
 ///////////// input_fmq_url ///////////////////////////
 //
@@ -100,7 +100,7 @@ input_mode = IWRF_FMQ_INPUT;
 // Type: string
 //
 
-input_fmq_url = "$(DATA_DIR)/fmq/ncar";
+input_fmq_url = "/tmp/fmq/hsrl_moments";
 
 ///////////// seek_to_start_of_fmq ////////////////////
 //
@@ -114,7 +114,7 @@ input_fmq_url = "$(DATA_DIR)/fmq/ncar";
 // Type: boolean
 //
 
-seek_to_start_of_fmq = TRUE;
+seek_to_start_of_fmq = FALSE;
 
 ///////////// input_tcp_host //////////////////////////
 //
@@ -180,19 +180,7 @@ begin_in_archive_mode = FALSE;
 // Type: string
 //
 
-archive_start_time = "2015 06 24 19 55 00";
-
-///////////// archive_end_time ////////////////////////
-//
-// End time for archive mode.
-//
-// Generally this is applicable for image generation.
-//
-//
-// Type: string
-//
-
-archive_end_time = "2015 06 24 20 00 00";
+archive_start_time = "2015 07 14 18 00 00";
 
 ///////////// archive_data_url ////////////////////////
 //
@@ -204,7 +192,7 @@ archive_end_time = "2015 06 24 20 00 00";
 // Type: string
 //
 
-archive_data_url = "$(DATA_DIR)/cfradial/ncar";
+archive_data_url = "/tmp/cfradial/ncar";
 
 //======================================================================
 //
@@ -299,7 +287,7 @@ show_status_in_gui = {
 // Type: string
 //
 
-color_scale_dir = "$(PROJ_DIR)/display/color_scales";
+color_scale_dir = "$(HOME)/git/hsrl_configuration/projDir/display/color_scales";
 
 ///////////// fields //////////////////////////////////
 //
@@ -327,49 +315,149 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "BackScatter",
-    raw_name = "beta_a_backscat",
+    label = "db_combined_hi",
+    raw_name = "db_combined_hi",
     filtered_name = "",
-    units = "1/m.st",
-    color_map = "backscatter.colors",
+    units = "db_counts",
+    color_map = "hsrl_log_counts.colors",
     shortcut = "1"
   }
   ,
   {
-    label = "Extinction",
-    raw_name = "extinction",
+    label = "db_combined_lo",
+    raw_name = "db_combined_lo",
     filtered_name = "",
-    units = "1/km",
-    color_map = "extinction2.colors",
+    units = "db_counts",
+    color_map = "hsrl_log_counts.colors",
     shortcut = "2"
   }
   ,
   {
-    label = "OpticalDepth",
-    raw_name = "od",
+    label = "db_cross",
+    raw_name = "db_cross",
     filtered_name = "",
-    units = "",
-    color_map = "optical_depth.colors",
+    units = "db_counts",
+    color_map = "hsrl_log_counts.colors",
     shortcut = "3"
   }
   ,
   {
-    label = "LinearDepol",
-    raw_name = "linear_depol",
+    label = "db_molecular",
+    raw_name = "db_molecular",
     filtered_name = "",
-    units = "",
-    color_map = "depol.colors",
+    units = "db_counts",
+    color_map = "hsrl_log_counts.colors",
     shortcut = "4"
+  }
+  , 
+  {
+    label = "combined_hi",
+    raw_name = "combined_hi",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "5"
   }
   ,
   {
-    label = "Temp",
-    raw_name = "temperature_profile",
+    label = "combined_lo",
+    raw_name = "combined_lo",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "6"
+  }
+  ,
+  {
+    label = "cross",
+    raw_name = "cross",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "7"
+  }
+  ,
+  {
+    label = "molecular",
+    raw_name = "molecular",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "8"
+  }
+  ,
+  {
+    label = "height",
+    raw_name = "height",
+    filtered_name = "",
+    units = "km",
+    color_map = "number50.colors",
+    shortcut = "9"
+  }
+  ,
+  {
+    label = "temperature",
+    raw_name = "temperature",
     filtered_name = "",
     units = "K",
     color_map = "tempK.colors",
-    shortcut = "5"
+    shortcut = "a"
+  } 
+  ,  
+  { 
+    label = "pressure",
+    raw_name = "pressure",
+    filtered_name = "",
+    units = "mb",
+    color_map = "number_log.colors",
+    shortcut = "b"
+  } 
+  ,
+  {
+    label = "volDepol",
+    raw_name = "volDepol",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n3.colors",
+    shortcut = "c"
+  } 
+  ,
+  {
+    label = "backscatRatio",
+    raw_name = "backscatRatio",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n1.colors",
+    shortcut = "d"
+  } 
+  ,
+  {
+    label = "partDepol",
+    raw_name = "partDepol",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n3.colors",
+    shortcut = "e"
+  } 
+  ,
+  {
+    label = "backscatCoeff",
+    raw_name = "backscatCoeff",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n5.colors",
+    shortcut = "f"
   }
+  , 
+  {
+    label = "extinction",
+    raw_name = "extinction",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n2.colors",
+    shortcut = "g"
+  }
+ 
 };
 
 ///////////// background_render_mins //////////////////
@@ -722,7 +810,7 @@ rhi_aspect_ratio = 1;
 // Type: double
 //
 
-bscan_time_span_secs = 300;
+bscan_time_span_secs = 180;
 
 ///////////// bscan_truncate_start_time ///////////////
 //
@@ -826,7 +914,7 @@ bscan_specify_range_limits = TRUE;
 // Type: double
 //
 
-bscan_min_range_km = 0;
+bscan_min_range_km = -1;
 
 ///////////// bscan_max_range_km //////////////////////
 //
@@ -838,7 +926,7 @@ bscan_min_range_km = 0;
 // Type: double
 //
 
-bscan_max_range_km = 15;
+bscan_max_range_km = 17;
 
 ///////////// bscan_min_altitude_km ///////////////////
 //
@@ -848,7 +936,7 @@ bscan_max_range_km = 15;
 // Type: double
 //
 
-bscan_min_altitude_km = 0;
+bscan_min_altitude_km = -1;
 
 ///////////// bscan_max_altitude_km ///////////////////
 //
@@ -858,7 +946,7 @@ bscan_min_altitude_km = 0;
 // Type: double
 //
 
-bscan_max_altitude_km = 25;
+bscan_max_altitude_km = 17;
 
 ///////////// bscan_altitude_in_feet //////////////////
 //
@@ -868,7 +956,7 @@ bscan_max_altitude_km = 25;
 // Type: boolean
 //
 
-bscan_altitude_in_feet = TRUE;
+bscan_altitude_in_feet = FALSE;
 
 ///////////// bscan_range_in_feet /////////////////////
 //
@@ -1141,7 +1229,7 @@ bscan_draw_instrument_height_line = TRUE;
 // Type: string
 //
 
-bscan_instrument_height_color = "blue";
+bscan_instrument_height_color = "yellow";
 
 //======================================================================
 //

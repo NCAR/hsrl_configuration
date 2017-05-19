@@ -68,29 +68,44 @@ input_dir = "$(DATA_DIR)/cfradial/uw";
 //
 // Operating mode.
 //
-// In REALTIME mode, the program waits for a new input file.  In ARCHIVE 
-//   mode, it moves through the data between the start and end times set 
-//   on the command line. In FILELIST mode, it moves through the list of 
-//   file names specified on the command line. Paths (in ARCHIVE mode, at 
-//   least) MUST contain a day-directory above the data file -- 
-//   ./data_file.ext will not work as a file path, but 
+// In REALTIME_FMQ, the program reads raw rays from an FMQ and writes 
+//   output to an FMQ.  In REALTIME_FILE mode, the program waits for a new 
+//   input file.  In ARCHIVE mode, it moves through the data between the 
+//   start and end times set on the command line. In FILELIST mode, it 
+//   moves through the list of file names specified on the command line. 
+//   Paths (in ARCHIVE mode, at least) MUST contain a day-directory above 
+//   the data file -- ./data_file.ext will not work as a file path, but 
 //   ./yyyymmdd/data_file.ext will.
 //
 //
 // Type: enum
 // Options:
-//     REALTIME
+//     REALTIME_FMQ
+//     REALTIME_FILE
 //     ARCHIVE
 //     FILELIST
 //
 
-mode = REALTIME;
+mode = REALTIME_FMQ;
+
+///////////// input_fmq_path //////////////////////////
+//
+// Path to input FMQ.
+//
+// REATIME_FMQ mode only. The FMQ consists of 2 files, ??.buf and 
+//   ??.stat. Specify only the root, not the extensions.
+//
+//
+// Type: string
+//
+
+input_fmq_path = "/tmp/fmq/hsrl_raw";
 
 ///////////// max_realtime_data_age_secs //////////////
 //
 // Maximum age of realtime data (secs).
 //
-// Only data less old than this will be used.
+// REALTIME_FILE mode only. Only data less old than this will be used.
 //
 //
 // Type: int
@@ -102,8 +117,8 @@ max_realtime_data_age_secs = 1800;
 //
 // Is _latest_data_info file available?.
 //
-// If TRUE, will watch the latest_data_info file. If FALSE, will scan 
-//   the input directory for new files.
+// REALTIME_FILE mode only. If TRUE, will watch the latest_data_info 
+//   file. If FALSE, will scan the input directory for new files.
 //
 //
 // Type: boolean
@@ -115,9 +130,10 @@ latest_data_info_avail = TRUE;
 //
 // Option to recurse to subdirectories while looking for new files.
 //
-// If TRUE, all subdirectories with ages less than max_dir_age will be 
-//   searched. This may take considerable CPU, so be careful in its use. 
-//   Only applies if latest_data_info_avail is FALSE.
+// REALTIME_FILE mode only. If TRUE, all subdirectories with ages less 
+//   than max_dir_age will be searched. This may take considerable CPU, so 
+//   be careful in its use. Only applies if latest_data_info_avail is 
+//   FALSE.
 //
 //
 // Type: boolean
@@ -129,10 +145,11 @@ search_recursively = TRUE;
 //
 // Maximum depth for recursive directory scan.
 //
-// Only applies search_recursively is TRUE. This is the max depth, below 
-//   input_dir, to which the recursive directory search will be carried 
-//   out. A depth of 0 will search the top-level directory only. A depth 
-//   of 1 will search the level below the top directory, etc.
+// REALTIME_FILE mode only. Only applies search_recursively is TRUE. 
+//   This is the max depth, below input_dir, to which the recursive 
+//   directory search will be carried out. A depth of 0 will search the 
+//   top-level directory only. A depth of 1 will search the level below 
+//   the top directory, etc.
 //
 //
 // Type: int
@@ -144,9 +161,10 @@ max_recursion_depth = 3;
 //
 // Sleep time between checking directory for input - secs.
 //
-// If a directory is large and files do not arrive frequently, set this 
-//   to a higher value to reduce the CPU load from checking the directory. 
-//   Only applies if latest_data_info_avail is FALSE.
+// REALTIME_FILE mode only. If a directory is large and files do not 
+//   arrive frequently, set this to a higher value to reduce the CPU load 
+//   from checking the directory. Only applies if latest_data_info_avail 
+//   is FALSE.
 //
 // Minimum val: 1
 //
@@ -159,9 +177,9 @@ wait_between_checks = 5;
 //
 // File quiescence when checking for files - secs.
 //
-// This allows you to make sure that a file coming from a remote machine 
-//   is complete before reading it. Only applies if latest_data_info_avail 
-//   is FALSE.
+// REALTIME_FILE mode only. This allows you to make sure that a file 
+//   coming from a remote machine is complete before reading it. Only 
+//   applies if latest_data_info_avail is FALSE.
 //
 //
 // Type: int
@@ -173,108 +191,14 @@ file_quiescence = 5;
 //
 // File name extension.
 //
-// If set, only files with this extension will be processed.
+// REALTIME_FILE mode only. If set, only files with this extension will 
+//   be processed.
 //
 //
 // Type: string
 //
 
 search_ext = "nc";
-
-//======================================================================
-//
-// READ OPTIONS.
-//
-//======================================================================
- 
-///////////// set_max_range ///////////////////////////
-//
-// Option to set the max range for any ray.
-//
-//
-// Type: boolean
-//
-
-set_max_range = FALSE;
-
-///////////// max_range_km ////////////////////////////
-//
-// Specified maximim range - km.
-//
-// Gates beyond this range are removed.
-//
-//
-// Type: double
-//
-
-max_range_km = 9999;
-
-///////////// set_ngates_constant /////////////////////
-//
-// Option to force the number of gates to be constant.
-//
-// If TRUE, the number of gates on all rays will be set to the maximum, 
-//   and gates added to shorter rays will be filled with missing values.
-//
-//
-// Type: boolean
-//
-
-set_ngates_constant = FALSE;
-
-//======================================================================
-//
-// OPTION TO OVERRIDE INSTRUMENT AND/OR NAME.
-//
-//======================================================================
- 
-///////////// override_instrument_name ////////////////
-//
-// Option to override the instrument name.
-//
-// If true, the name provided will be used.
-//
-//
-// Type: boolean
-//
-
-override_instrument_name = FALSE;
-
-///////////// instrument_name /////////////////////////
-//
-// Instrument name.
-//
-// See override_instrument_name.
-//
-//
-// Type: string
-//
-
-instrument_name = "unknown";
-
-///////////// override_site_name //////////////////////
-//
-// Option to override the site name.
-//
-// If true, the name provided will be used.
-//
-//
-// Type: boolean
-//
-
-override_site_name = FALSE;
-
-///////////// site_name ///////////////////////////////
-//
-// Site name.
-//
-// See override_site_name.
-//
-//
-// Type: string
-//
-
-site_name = "unknown";
 
 //======================================================================
 //
@@ -334,11 +258,14 @@ gate_spacing_km = 0.0075;
 
 //======================================================================
 //
-// OPTION TO OVERRIDE INSTRUMENT LOCATION.
+// OPTION TO READ GEOREF DATA FROM AIRCRAFT SYSTEM.
+//
+// If not read from aircraft, need to set the instrument location from 
+//   the config file.
 //
 //======================================================================
  
-///////////// override_instrument_location ////////////
+///////////// read_georef_data_from_aircraft_system ///
 //
 // Option to override the instrument location.
 //
@@ -349,76 +276,49 @@ gate_spacing_km = 0.0075;
 // Type: boolean
 //
 
-override_instrument_location = FALSE;
+read_georef_data_from_aircraft_system = FALSE;
 
 ///////////// instrument_latitude_deg /////////////////
 //
 // Instrument latitude (deg).
 //
-// See override_instrument_location.
+// Applies if read_georef_data_from_aircraft_system is false.
 //
 //
 // Type: double
 //
 
-instrument_latitude_deg = -999;
+instrument_latitude_deg = 40.0;
 
 ///////////// instrument_longitude_deg ////////////////
 //
 // Instrument longitude (deg).
 //
-// See override_instrument_location.
+// Applies if read_georef_data_from_aircraft_system is false.
 //
 //
 // Type: double
 //
 
-instrument_longitude_deg = -999;
+instrument_longitude_deg = -105.4;
 
 ///////////// instrument_altitude_meters //////////////
 //
 // Instrument altitude (meters).
 //
-// See override_instrument_location.
+// Applies if read_georef_data_from_aircraft_system is false.
 //
 //
 // Type: double
 //
 
-instrument_altitude_meters = -999;
-
-///////////// change_instrument_latitude_sign /////////
-//
-// Option to negate the latitude.
-//
-// Mainly useful for RAPIC files. In RAPIC, latitude is always positive, 
-//   so mostly you need to set the latitiude to the negative value of 
-//   itself.
-//
-//
-// Type: boolean
-//
-
-change_instrument_latitude_sign = FALSE;
-
-///////////// apply_georeference_corrections //////////
-//
-// Option to apply the georeference info for moving platforms.
-//
-// For moving platforms, measured georeference information is sometimes 
-//   available. If this is set to true, the georeference data is applied 
-//   and appropriate corrections made. If possible, Earth-centric azimuth 
-//   and elevation angles will be computed.
-//
-//
-// Type: boolean
-//
-
-apply_georeference_corrections = FALSE;
+instrument_altitude_meters = 1650;
 
 //======================================================================
 //
-// OPTION TO SET RANGE RELATIVE TO INSTRUNENT.
+// OPTION TO SET RANGE RELATIVE TO INSTRUMENT - MSL CfRadial files only.
+//
+// This applies to python-generated CfRadial files relative to MSL only.
 //
 //======================================================================
  
@@ -452,177 +352,295 @@ telescope_direction_is_up = 1;
 
 //======================================================================
 //
-// OPTION TO OVERRIDE SELECTED GLOBAL ATTRIBUTES.
+// READING RAW NetCDF DATA FILES.
 //
 //======================================================================
  
-///////////// version_override ////////////////////////
+///////////// combine_bins_on_read ////////////////////
 //
-// Option to override the version global attribute.
+// Option to combine range gates on read.
 //
-// If empty, no effect. If not empty, this string is used to override 
-//   the version attribute.
-//
-//
-// Type: string
-//
-
-version_override = "";
-
-///////////// title_override //////////////////////////
-//
-// Option to override the title global attribute.
-//
-// If empty, no effect. If not empty, this string is used to override 
-//   the title attribute.
-//
-//
-// Type: string
-//
-
-title_override = "";
-
-///////////// institution_override ////////////////////
-//
-// Option to override the institution global attribute.
-//
-// If empty, no effect. If not empty, this string is used to override 
-//   the institution attribute.
-//
-//
-// Type: string
-//
-
-institution_override = "";
-
-///////////// references_override /////////////////////
-//
-// Option to override the references global attribute.
-//
-// If empty, no effect. If not empty, this string is used to override 
-//   the references attribute.
-//
-//
-// Type: string
-//
-
-references_override = "";
-
-///////////// source_override /////////////////////////
-//
-// Option to override the source global attribute.
-//
-// If empty, no effect. If not empty, this string is used to override 
-//   the source attribute.
-//
-//
-// Type: string
-//
-
-source_override = "";
-
-///////////// history_override ////////////////////////
-//
-// Option to override the history global attribute.
-//
-// If empty, no effect. If not empty, this string is used to override 
-//   the history attribute.
-//
-//
-// Type: string
-//
-
-history_override = "";
-
-///////////// comment_override ////////////////////////
-//
-// Option to override the comment global attribute.
-//
-// If empty, no effect. If not empty, this string is used to override 
-//   the comment attribute.
-//
-//
-// Type: string
-//
-
-comment_override = "";
-
-///////////// author_override /////////////////////////
-//
-// Option to override the author global attribute.
-//
-// If empty, no effect. If not empty, this string is used to override 
-//   the author attribute.
-//
-//
-// Type: string
-//
-
-author_override = "";
-
-//======================================================================
-//
-// OPTION TO CORRECT ANTENNA ANGLES.
-//
-//======================================================================
- 
-///////////// apply_azimuth_offset ////////////////////
-//
-// Option to apply an offset to the azimuth values.
-//
-// If TRUE, this offset will be ADDED to the measured azimuth angles. 
-//   This is useful, for example, in the case of a mobile platform which 
-//   is not set up oriented to true north. Suppose you have a truck (like 
-//   the DOWs) which is oriented off true north. Then if you add in the 
-//   truck HEADING relative to true north, the measured azimuth angles 
-//   will be adjusted by the heading, to give azimuth relative to TRUE 
-//   north.
+// If true, the specified number of range gates will be combined on read 
+//   to create mean values with lower noisiness.
 //
 //
 // Type: boolean
 //
 
-apply_azimuth_offset = FALSE;
+combine_bins_on_read = TRUE;
 
-///////////// azimuth_offset //////////////////////////
+///////////// n_bins_per_gate /////////////////////////
 //
-// Azimuth offset (degrees).
+// Number of bins to combine into a single gate.
 //
-// See 'apply_azimuth_offset'. This value will be ADDED to the measured 
-//   azimuths.
+// In range, we will combine this number of gates to produce a data set 
+//   with lower spatial resolution but less noiry data.
+//
+//
+// Type: int
+//
+
+n_bins_per_gate = 4;
+
+///////////// raw_bin_start_range_km //////////////////
+//
+// Start range to first bin (km).
+//
+// Takes into account dead zone caused by digitizer starting before the 
+//   pulse.
 //
 //
 // Type: double
 //
 
-azimuth_offset = 0;
+raw_bin_start_range_km = -0.3;
 
-///////////// apply_elevation_offset //////////////////
+///////////// raw_bin_spacing_km //////////////////////
 //
-// Option to apply an offset to the elevation values.
+// Spacing of raw bins (km).
 //
-// If TRUE, this offset will be ADDED to the measured elevation angles. 
-//   This is useful to correct for a systematic bias in measured elevation 
-//   angles.
+// The distance between the ray bins in km.
+//
+//
+// Type: double
+//
+
+raw_bin_spacing_km = 0.0075;
+
+///////////// combined_hi_field_name //////////////////
+//
+// Name of combined_hi field in netCDF file.
+//
+//
+// Type: string
+//
+
+combined_hi_field_name = "combined_hi";
+
+///////////// combined_lo_field_name //////////////////
+//
+// Name of combined_lo field in netCDF file.
+//
+//
+// Type: string
+//
+
+combined_lo_field_name = "combined_lo";
+
+///////////// molecular_field_name ////////////////////
+//
+// Name of molecular field in netCDF file.
+//
+//
+// Type: string
+//
+
+molecular_field_name = "molecular";
+
+///////////// cross_field_name ////////////////////////
+//
+// Name of cross field in netCDF file.
+//
+//
+// Type: string
+//
+
+cross_field_name = "cross";
+
+///////////// baseline_calibration_path ///////////////
+//
+// location of baseline calibration file.
+//
+//
+// Type: string
+//
+
+baseline_calibration_path = "$(PROJ_DIR)/calfiles/baseline_correction_20150601T0000.blc";
+
+///////////// diff_default_geofile_path ///////////////
+//
+// location of diff_default_geofile calibration file.
+//
+//
+// Type: string
+//
+
+diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20120201T0000.geo";
+
+///////////// geofile_default_path ////////////////////
+//
+// location of geofile_default calibration file.
+//
+//
+// Type: string
+//
+
+geofile_default_path = "$(PROJ_DIR)/calfiles/geofile_default_20150601T0000.geo";
+
+///////////// afterpulse_default_path /////////////////
+//
+// location of afterpulse_default calibration file.
+//
+//
+// Type: string
+//
+
+afterpulse_default_path = "$(PROJ_DIR)/calfiles/afterpulse_default_20061001T0000.ap";
+
+///////////// calvals_gvhsrl_path /////////////////////
+//
+// location of calvals_gvhsrl calibration file.
+//
+//
+// Type: string
+//
+
+calvals_gvhsrl_path = "$(PROJ_DIR)/calfiles/calvals_gvhsrl.txt";
+
+///////////// combined_hi_dead_time_name //////////////
+//
+// Name of combined_hi_dead_time field in CalVals file.
+//
+//
+// Type: string
+//
+
+combined_hi_dead_time_name = "combined_hi_dead_time";
+
+///////////// combined_lo_dead_time_name //////////////
+//
+// Name of combined_lo_dead_time field in CalVals file.
+//
+//
+// Type: string
+//
+
+combined_lo_dead_time_name = "combined_lo_dead_time";
+
+///////////// cross_pol_dead_time_name ////////////////
+//
+// Name of cross_pol_dead_time field in CalVals file.
+//
+//
+// Type: string
+//
+
+cross_pol_dead_time_name = "cross_pol_dead_time";
+
+///////////// molecular_dead_time_name ////////////////
+//
+// Name of molecular_dead_time field in CalVals file.
+//
+//
+// Type: string
+//
+
+molecular_dead_time_name = "molecular_dead_time";
+
+///////////// bin_width_name //////////////////////////
+//
+// Name of binWidth field in CalVals file.
+//
+//
+// Type: string
+//
+
+bin_width_name = "binwidth";
+
+///////////// scan_adjustment_name ////////////////////
+//
+// Name of coefficient field in CalVals file.
+//
+//
+// Type: string
+//
+
+scan_adjustment_name = "i2_scan_adjustment";
+
+//======================================================================
+//
+// OUTPUT FMQ DETAILS.
+//
+// REALTIME_FMQ mode only.
+//
+//======================================================================
+ 
+///////////// output_fmq_url //////////////////////////
+//
+// URL for output FMQ.
+//
+// The FMQ consists of 2 files, ??.buf and ??.stat.
+//
+//
+// Type: string
+//
+
+output_fmq_url = "/tmp/fmq/hsrl_moments";
+
+///////////// output_fmq_size /////////////////////////
+//
+// Size of output FMQ, in bytes.
+//
+// This is the total size of the output FMQ buffer.
+//
+//
+// Type: int
+//
+
+output_fmq_size = 10000000;
+
+///////////// output_fmq_nslots ///////////////////////
+//
+// Number of slots in the output FMQ.
+//
+// The number of slots corresponds to the maximum number of messages 
+//   which may be written to the buffer before overwrites occur. However, 
+//   overwrites may occur sooner if the size is not set large enough.
+//
+//
+// Type: int
+//
+
+output_fmq_nslots = 500;
+
+///////////// output_fmq_compress /////////////////////
+//
+// Option to compress the FMQ data on write.
+//
+// This helps to keep the size of the queue entries small. Should only 
+//   be used for remote FMQs over slow networks.
 //
 //
 // Type: boolean
 //
 
-apply_elevation_offset = FALSE;
+output_fmq_compress = FALSE;
 
-///////////// elevation_offset ////////////////////////
+///////////// nrays_for_params ////////////////////////
 //
-// Elevation offset (degrees).
+// Number of rays between sending params.
 //
-// See 'apply_elevation_offset'. This value will be ADDED to the 
-//   measured elevations.
+// The params will be sent when this number of rays have been written.
 //
 //
-// Type: double
+// Type: int
 //
 
-elevation_offset = 0;
+nrays_for_params = 10;
+
+///////////// write_blocking //////////////////////////
+//
+// Option to set up the FMQ as blocking.
+//
+// If TRUE, FMQ will be set up FMQ for blocking operation. If the FMQ 
+//   becomes full, Test2Dsr will then block until there is space for more 
+//   data.
+//
+//
+// Type: boolean
+//
+
+write_blocking = FALSE;
 
 //======================================================================
 //
@@ -759,6 +777,116 @@ excluded_fields = {
 
 //======================================================================
 //
+// OPTION TO OVERRIDE SELECTED GLOBAL ATTRIBUTES.
+//
+//======================================================================
+ 
+///////////// version_override ////////////////////////
+//
+// Option to override the version global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the version attribute.
+//
+//
+// Type: string
+//
+
+version_override = "";
+
+///////////// title_override //////////////////////////
+//
+// Option to override the title global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the title attribute.
+//
+//
+// Type: string
+//
+
+title_override = "";
+
+///////////// institution_override ////////////////////
+//
+// Option to override the institution global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the institution attribute.
+//
+//
+// Type: string
+//
+
+institution_override = "";
+
+///////////// references_override /////////////////////
+//
+// Option to override the references global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the references attribute.
+//
+//
+// Type: string
+//
+
+references_override = "";
+
+///////////// source_override /////////////////////////
+//
+// Option to override the source global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the source attribute.
+//
+//
+// Type: string
+//
+
+source_override = "";
+
+///////////// history_override ////////////////////////
+//
+// Option to override the history global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the history attribute.
+//
+//
+// Type: string
+//
+
+history_override = "";
+
+///////////// comment_override ////////////////////////
+//
+// Option to override the comment global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the comment attribute.
+//
+//
+// Type: string
+//
+
+comment_override = "";
+
+///////////// author_override /////////////////////////
+//
+// Option to override the author global attribute.
+//
+// If empty, no effect. If not empty, this string is used to override 
+//   the author attribute.
+//
+//
+// Type: string
+//
+
+author_override = "";
+
+//======================================================================
+//
 // OUTPUT FORMAT.
 //
 // Files are written in CfRadial.
@@ -789,19 +917,6 @@ netcdf_style = NETCDF4;
 //
 //======================================================================
  
-///////////// output_force_ngates_vary ////////////////
-//
-// Option to force the use of ragged arrays for CfRadial files.
-//
-// Only applies to CfRadial. If true, forces the use of ragged arrays 
-//   even if the number of gates for all rays is constant.
-//
-//
-// Type: boolean
-//
-
-output_force_ngates_vary = FALSE;
-
 ///////////// compression_level ///////////////////////
 //
 // Compression level for output, if compressed.
@@ -814,6 +929,54 @@ output_force_ngates_vary = FALSE;
 //
 
 compression_level = 4;
+
+///////////// override_instrument_name ////////////////
+//
+// Option to override the instrument name.
+//
+// If true, the name provided will be used.
+//
+//
+// Type: boolean
+//
+
+override_instrument_name = FALSE;
+
+///////////// instrument_name /////////////////////////
+//
+// Instrument name.
+//
+// See override_instrument_name.
+//
+//
+// Type: string
+//
+
+instrument_name = "unknown";
+
+///////////// override_site_name //////////////////////
+//
+// Option to override the site name.
+//
+// If true, the name provided will be used.
+//
+//
+// Type: boolean
+//
+
+override_site_name = FALSE;
+
+///////////// site_name ///////////////////////////////
+//
+// Site name.
+//
+// See override_site_name.
+//
+//
+// Type: string
+//
+
+site_name = "unknown";
 
 //======================================================================
 //
@@ -831,7 +994,7 @@ compression_level = 4;
 // Type: string
 //
 
-output_dir = "$(DATA_DIR)/cfradial/ncar";
+output_dir = "/tmp/cfradial/ncar";
 
 ///////////// output_filename_mode ////////////////////
 //
@@ -943,20 +1106,6 @@ append_day_dir_to_output_dir = TRUE;
 
 append_year_dir_to_output_dir = FALSE;
 
-///////////// write_individual_sweeps /////////////////
-//
-// Option to write out individual sweeps if appropriate.
-//
-// If true, the volume is split into individual sweeps for writing. 
-//   Applies to CfRadial format. This is always true for DORADE format 
-//   files.
-//
-//
-// Type: boolean
-//
-
-write_individual_sweeps = FALSE;
-
 ///////////// write_latest_data_info //////////////////
 //
 // Option to write out _latest_data_info files.
@@ -969,160 +1118,4 @@ write_individual_sweeps = FALSE;
 //
 
 write_latest_data_info = TRUE;
-
-//======================================================================
-//
-// OPTION TO OVERRIDE MISSING VALUES.
-//
-// Missing values are applicable to both metadata and field data. The 
-//   default values should be satisfactory for most purposes. However, you 
-//   can choose to override these if you are careful with the selected 
-//   values.
-//
-// The default values for metadata are:
-// 	missingMetaDouble = -9999.0
-// 	missingMetaFloat = -9999.0
-// 	missingMetaInt = -9999
-// 	missingMetaChar = -128
-//
-// The default values for field data are:
-// 	missingFl64 = -9.0e33
-// 	missingFl32 = -9.0e33
-// 	missingSi32 = -2147483647
-// 	missingSi16 = -32768
-// 	missingSi08 = -128.
-//
-//======================================================================
- 
-///////////// override_missing_metadata_values ////////
-//
-// Option to override the missing values for meta-data.
-//
-// See following parameter options.
-//
-//
-// Type: boolean
-//
-
-override_missing_metadata_values = FALSE;
-
-///////////// missing_metadata_double /////////////////
-//
-// Missing value for metadata of type double.
-//
-// Only applies if override_missing_metadata_values is TRUE.
-//
-//
-// Type: double
-//
-
-missing_metadata_double = -9999;
-
-///////////// missing_metadata_float //////////////////
-//
-// Missing value for metadata of type float.
-//
-// Only applies if override_missing_metadata_values is TRUE.
-//
-//
-// Type: float
-//
-
-missing_metadata_float = -9999;
-
-///////////// missing_metadata_int ////////////////////
-//
-// Missing value for metadata of type int.
-//
-// Only applies if override_missing_metadata_values is TRUE.
-//
-//
-// Type: int
-//
-
-missing_metadata_int = -9999;
-
-///////////// missing_metadata_char ///////////////////
-//
-// Missing value for metadata of type char.
-//
-// Only applies if override_missing_metadata_values is TRUE.
-//
-//
-// Type: int
-//
-
-missing_metadata_char = -128;
-
-///////////// override_missing_field_values ///////////
-//
-// Option to override the missing values for field data.
-//
-// See following parameter options.
-//
-//
-// Type: boolean
-//
-
-override_missing_field_values = FALSE;
-
-///////////// missing_field_fl64 //////////////////////
-//
-// Missing value for field data of type 64-bit float.
-//
-// Only applies if override_missing_field_values is TRUE.
-//
-//
-// Type: double
-//
-
-missing_field_fl64 = -9e+33;
-
-///////////// missing_field_fl32 //////////////////////
-//
-// Missing value for field data of type 32-bit float.
-//
-// Only applies if override_missing_field_values is TRUE.
-//
-//
-// Type: double
-//
-
-missing_field_fl32 = -9e+33;
-
-///////////// missing_field_si32 //////////////////////
-//
-// Missing value for field data of type 32-bit integer.
-//
-// Only applies if override_missing_field_values is TRUE.
-//
-//
-// Type: int
-//
-
-missing_field_si32 = -2147483647;
-
-///////////// missing_field_si16 //////////////////////
-//
-// Missing value for field data of type 16-bit integer.
-//
-// Only applies if override_missing_field_values is TRUE.
-//
-//
-// Type: int
-//
-
-missing_field_si16 = -232768;
-
-///////////// missing_field_si08 //////////////////////
-//
-// Missing value for field data of type 8-bit integer.
-//
-// Only applies if override_missing_field_values is TRUE.
-//
-//
-// Type: int
-//
-
-missing_field_si08 = -128;
 

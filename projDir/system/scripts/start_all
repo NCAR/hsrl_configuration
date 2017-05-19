@@ -24,9 +24,6 @@ procmap_list_start -sleep 0 \
 #
 start_auto_restart
 
-# startup HSRL data transfer
-/usr/local/hsrl/etc/start_cdfclient
-#
 # install the crontab which insures that procmap and
 # the auto_restarter are always going
 #
@@ -37,3 +34,7 @@ install_crontab
 # the log directory 'today' and 'yesterday' links
 #
 start_build_logdir_links
+
+# start the virtual X server
+
+start_Xvfb
