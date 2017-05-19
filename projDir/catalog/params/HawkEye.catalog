@@ -100,7 +100,7 @@ input_mode = IWRF_FMQ_INPUT;
 // Type: string
 //
 
-input_fmq_url = "$(DATA_DIR)/fmq/ncar";
+input_fmq_url = "/tmp/fmq/hsrl_moments";
 
 ///////////// seek_to_start_of_fmq ////////////////////
 //
@@ -327,49 +327,113 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "BackScatter",
-    raw_name = "beta_a_backscat",
+    label = "combined_hi",
+    raw_name = "combined_hi",
     filtered_name = "",
-    units = "1/m.st",
-    color_map = "backscatter.colors",
-    shortcut = "1"
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "5"
   }
-  // ,
-  // {
-  //   label = "Extinction",
-  //   raw_name = "extinction",
-  //   filtered_name = "",
-  //   units = "1/km",
-  //   color_map = "extinction2.colors",
-  //   shortcut = "2"
-  // }
-  // ,
-  // {
-  //   label = "OpticalDepth",
-  //   raw_name = "od",
-  //   filtered_name = "",
-  //   units = "",
-  //   color_map = "optical_depth.colors",
-  //   shortcut = "3"
-  // }
   ,
   {
-    label = "LinearDepol",
-    raw_name = "linear_depol",
+    label = "combined_lo",
+    raw_name = "combined_lo",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "6"
+  }
+  ,
+  {
+    label = "cross",
+    raw_name = "cross",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "7"
+  }
+  ,
+  {
+    label = "molecular",
+    raw_name = "molecular",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "8"
+  }
+  ,
+  {
+    label = "height",
+    raw_name = "height",
+    filtered_name = "",
+    units = "km",
+    color_map = "number50.colors",
+    shortcut = "9"
+  }
+  ,
+  {
+    label = "temperature",
+    raw_name = "temperature",
+    filtered_name = "",
+    units = "K",
+    color_map = "tempK.colors",
+    shortcut = "a"
+  } 
+  ,  
+  { 
+    label = "pressure",
+    raw_name = "pressure",
+    filtered_name = "",
+    units = "mb",
+    color_map = "number_log.colors",
+    shortcut = "b"
+  } 
+  ,
+  {
+    label = "volDepol",
+    raw_name = "volDepol",
     filtered_name = "",
     units = "",
-    color_map = "depol.colors",
-    shortcut = "4"
+    color_map = "number_log_n3.colors",
+    shortcut = "c"
+  } 
+  ,
+  {
+    label = "backscatRatio",
+    raw_name = "backscatRatio",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n1.colors",
+    shortcut = "d"
+  } 
+  ,
+  {
+    label = "partDepol",
+    raw_name = "partDepol",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n3.colors",
+    shortcut = "e"
+  } 
+  ,
+  {
+    label = "backscatCoeff",
+    raw_name = "backscatCoeff",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n5.colors",
+    shortcut = "f"
   }
-  // ,
-  // {
-  //   label = "Temp",
-  //   raw_name = "temperature_profile",
-  //   filtered_name = "",
-  //   units = "K",
-  //   color_map = "tempK.colors",
-  //   shortcut = "5"
-  // }
+  , 
+  {
+    label = "extinction",
+    raw_name = "extinction",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n2.colors",
+    shortcut = "g"
+  }
+ 
 };
 
 ///////////// background_render_mins //////////////////
