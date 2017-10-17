@@ -180,19 +180,7 @@ begin_in_archive_mode = TRUE;
 // Type: string
 //
 
-archive_start_time = "2015 06 29 18 00 00";
-
-///////////// archive_end_time ////////////////////////
-//
-// End time for archive mode.
-//
-// Generally this is applicable for image generation.
-//
-//
-// Type: string
-//
-
-archive_end_time = "2015 06 29 18 05 00";
+archive_start_time = "2017 09 19 21 00 00";
 
 ///////////// archive_data_url ////////////////////////
 //
@@ -204,7 +192,7 @@ archive_end_time = "2015 06 29 18 05 00";
 // Type: string
 //
 
-archive_data_url = "$(DATA_DIR)/cfradial/ncar";
+archive_data_url = "$(DATA_DIR)/cfradial/hsrl/moments";
 
 //======================================================================
 //
@@ -327,48 +315,111 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "BackScatter",
-    raw_name = "beta_a_backscat",
+    label = "CombinedHiCount",
+    raw_name = "CombinedHiCount",
     filtered_name = "",
-    units = "1/m.st",
-    color_map = "backscatter.colors",
+    units = "counts",
+    color_map = "number_log.colors",
     shortcut = "1"
   }
   ,
   {
-    label = "Extinction",
-    raw_name = "extinction",
+    label = "CombinedLoCount",
+    raw_name = "CombinedLoCount",
     filtered_name = "",
-    units = "1/km",
-    color_map = "extinction2.colors",
+    units = "counts",
+    color_map = "number_log.colors",
     shortcut = "2"
   }
   ,
   {
-    label = "OpticalDepth",
-    raw_name = "od",
+    label = "CrossCount",
+    raw_name = "CrossCount",
     filtered_name = "",
-    units = "",
-    color_map = "optical_depth.colors",
+    units = "counts",
+    color_map = "number_log.colors",
     shortcut = "3"
   }
   ,
   {
-    label = "LinearDepol",
-    raw_name = "linear_depol",
+    label = "MolecularCount",
+    raw_name = "MolecularCount",
     filtered_name = "",
-    units = "",
-    color_map = "depol.colors",
+    units = "counts",
+    color_map = "number_log.colors",
     shortcut = "4"
   }
   ,
   {
-    label = "Temp",
-    raw_name = "temperature_profile",
+    label = "Height",
+    raw_name = "Height",
+    filtered_name = "",
+    units = "km",
+    color_map = "number50.colors",
+    shortcut = "5"
+  }
+  ,
+  {
+    label = "Temperature",
+    raw_name = "Temperature",
     filtered_name = "",
     units = "K",
     color_map = "tempK.colors",
-    shortcut = "5"
+    shortcut = "6"
+  } 
+  ,  
+  { 
+    label = "Pressure",
+    raw_name = "Pressure",
+    filtered_name = "",
+    units = "mb",
+    color_map = "number_log.colors",
+    shortcut = "7"
+  } 
+  ,
+  {
+    label = "VolumeDepol",
+    raw_name = "VolumeDepol",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n3.colors",
+    shortcut = "8"
+  } 
+  ,
+  {
+    label = "BackscatterRatio",
+    raw_name = "BackscatterRatio",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n1.colors",
+    shortcut = "9"
+  } 
+  ,
+  {
+    label = "ParticleDepol",
+    raw_name = "ParticleDepol",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n3.colors",
+    shortcut = "a"
+  } 
+  ,
+  {
+    label = "BackscatterCoeff",
+    raw_name = "BackscatterCoeff",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n5.colors",
+    shortcut = "b"
+  }
+  , 
+  {
+    label = "Extinction",
+    raw_name = "Extinction",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n2.colors",
+    shortcut = "c"
   }
 };
 
@@ -722,7 +773,7 @@ rhi_aspect_ratio = 1;
 // Type: double
 //
 
-bscan_time_span_secs = 300;
+bscan_time_span_secs = 3600;
 
 ///////////// bscan_truncate_start_time ///////////////
 //
