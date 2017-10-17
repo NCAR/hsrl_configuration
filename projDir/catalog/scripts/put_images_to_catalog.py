@@ -24,8 +24,7 @@ def main():
     global ftpPassword
 
     ftpUser = "anonymous"
-    # ftpPassword = "front@ucar.edu"
-    ftpPassword = "dixon@ucar.edu"
+    ftpPassword = "hsrl@ucar.edu"
 
     # parse the command line
 
