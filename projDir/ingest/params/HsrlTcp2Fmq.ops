@@ -129,7 +129,7 @@ output_fmq_path = "/tmp/fmq/hsrl_raw";
 // Type: int
 //
 
-output_fmq_size = 1000000;
+output_fmq_size = 10000000;
 
 ///////////// output_fmq_nslots ///////////////////////
 //
