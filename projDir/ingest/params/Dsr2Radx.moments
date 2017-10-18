@@ -150,7 +150,7 @@ override_radar_name = FALSE;
 // Type: string
 //
 
-radar_name = "NCAR-HSRL";
+radar_name = "GV-HSRL";
 
 ///////////// override_radar_location /////////////////
 //
