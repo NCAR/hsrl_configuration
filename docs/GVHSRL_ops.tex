@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{cite}
+\renewcommand{\bibname}{references}
+\renewcommand{\abstractname}{Introduction}
+\usepackage{hyperref}
+
+\begin{document}
+
+\title{HSRL startup procedure}
+\maketitle
+
+\newpage
+
+\section{HSRL associated computers}
+
+Access computers in Lidar Lab in FL1: 
+
+HSRL control 
+
+  ssh -a -XY -C hsrl@hsrl-router.eol.ucar.edu
+
+Archiver 
+
+  ssh -p 23 -a -XY -C hsrl@hsrl-router.eol.ucar.edu
+
+\section{Startup Procedure}
+
+On the HSRL electronics rack
+
+\begin{itemize}
+
+\item Turn on the thermal control power switch. 
+
+\item Turn on Computer power switch (this is usually already on if HSRL is in FL lidar lab). 
+
+\item Turn on Laser power switch. 
+
+\end{itemize}
+
+\noindent On the Photonics Ind Panel
+
+\begin{itemize}
+
+\item Power on switch. 
+
+\item laser enable. 
+
+\item shutter control on. 
+
+\item LDD (laser diod driver) button 
+
+\item MENU button then enter button twice to allow you to change the laser diode current 
+
+\item Turn knob to set IS to 26.5 Amps. (laser currently needs replacing, current value to be updated.) 
+
+\end{itemize}
+
+\noindent On the HSRL control computer
+
+\begin{itemize}
+
+\item start\_all
+
+\item make sure main shutter is open on webpage: 
+
+\end{itemize}
+
+\noindent On the HSRL archiver
+
+\begin{itemize}
+
+\item start\_all
+
+\item make sure images are reaching the field catalog: http://catalog.eol.ucar.edu/operations/lidar
+
+\end{itemize}
+
+
+
+\noindent To check that everything is running properly you can run hsrl\_status. 
+
+\noindent To turn off the HSRL reverse these steps using stop\_all instead of start\_all. 
+
+\end{document}
