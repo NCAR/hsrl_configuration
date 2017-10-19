@@ -315,48 +315,48 @@ color_scale_dir = "$(HOME)/git/hsrl_configuration/projDir/display/color_scales";
 
 fields = {
   {
-    label = "CombinedHiCount",
-    raw_name = "CombinedHiCount",
+    label = "CombinedHighCounts",
+    raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
-    shortcut = "5"
+    shortcut = "1"
   }
   ,
   {
-    label = "CombinedLoCount",
-    raw_name = "CombinedLoCount",
+    label = "CombinedLowCounts",
+    raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
-    shortcut = "6"
+    shortcut = "2"
   }
   ,
   {
-    label = "CrossCount",
-    raw_name = "CrossCount",
+    label = "CrossPolarCounts",
+    raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
-    shortcut = "7"
+    shortcut = "3"
   }
   ,
   {
-    label = "MolecularCount",
-    raw_name = "MolecularCount",
+    label = "MolecularCounts",
+    raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
     color_map = "number_log.colors",
-    shortcut = "8"
+    shortcut = "4"
   }
   ,
   {
     label = "Height",
     raw_name = "Height",
     filtered_name = "",
-    units = "km",
-    color_map = "number50.colors",
-    shortcut = "9"
+    units = "m",
+    color_map = "number50k.colors",
+    shortcut = "5"
   }
   ,
   {
@@ -365,7 +365,7 @@ fields = {
     filtered_name = "",
     units = "K",
     color_map = "tempK.colors",
-    shortcut = "a"
+    shortcut = "6"
   } 
   ,  
   { 
@@ -374,54 +374,62 @@ fields = {
     filtered_name = "",
     units = "mb",
     color_map = "number_log.colors",
-    shortcut = "b"
+    shortcut = "7"
   } 
   ,
   {
-    label = "VolumeDepol",
-    raw_name = "VolumeDepol",
+    label = "VolumeDepolRatio",
+    raw_name = "VolumeDepolRatio",
     filtered_name = "",
     units = "",
     color_map = "number_log_n3.colors",
-    shortcut = "c"
+    shortcut = "8"
   } 
   ,
   {
-    label = "BackscatterRatio",
-    raw_name = "BackscatterRatio",
+    label = "BackScatterRatio",
+    raw_name = "BackScatterRatio",
     filtered_name = "",
     units = "",
     color_map = "number_log_n1.colors",
-    shortcut = "d"
+    shortcut = "9"
   } 
   ,
   {
-    label = "ParticleDepol",
-    raw_name = "ParticleDepol",
+    label = "ParticleDepolRatio",
+    raw_name = "ParticleDepolRatio",
     filtered_name = "",
     units = "",
     color_map = "number_log_n3.colors",
-    shortcut = "e"
+    shortcut = "a"
   } 
   ,
   {
-    label = "BackscatterCoeff",
-    raw_name = "BackscatterCoeff",
+    label = "BackScatterCoeff",
+    raw_name = "BackScatterCoeff",
     filtered_name = "",
-    units = "",
+    units = "m-1.sr-1",
     color_map = "number_log_n5.colors",
-    shortcut = "f"
+    shortcut = "b"
   }
   , 
   {
     label = "Extinction",
     raw_name = "Extinction",
     filtered_name = "",
-    units = "",
-    color_map = "number_log_n2.colors",
-    shortcut = "g"
+    units = "m-1",
+    color_map = "number_log_n5.colors",
+    shortcut = "c"
   }
- 
+  , 
+  {
+    label = "OpticalDepth",
+    raw_name = "OpticalDepth",
+    filtered_name = "",
+    units = "",
+    color_map = "optical_depth.colors",
+    shortcut = "d"
+  }
 };
 
 ///////////// background_render_mins //////////////////
