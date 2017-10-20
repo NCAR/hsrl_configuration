@@ -1459,8 +1459,8 @@ output_fields = {
   }
   ,
   {
-    dsr_name = "Extinction",
-    output_name = "Extinction",
+    dsr_name = "ExtinctionCoeff",
+    output_name = "ExtinctionCoeff",
     long_name = "lidar_extinction_coefficient",
     standard_name = "lidar_extinction_coefficient",
     output_units = "1/m",

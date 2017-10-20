@@ -414,8 +414,8 @@ fields = {
   }
   , 
   {
-    label = "Extinction",
-    raw_name = "Extinction",
+    label = "ExtinctionCoeff",
+    raw_name = "ExtinctionCoeff",
     filtered_name = "",
     units = "m-1",
     color_map = "number_log_n2.colors",
