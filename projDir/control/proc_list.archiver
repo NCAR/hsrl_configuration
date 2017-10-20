@@ -14,7 +14,8 @@ HsrlTcp2Fmq  ops       start_HsrlTcp2Fmq.ops        snuff_inst
 ###############################################################################
 # Compute derived fields, write Radx rays
 #
-Hsrl2Radx    ops       start_Hsrl2Radx.ops          snuff_inst 
+AcGeoref2Spdb    iwg1      start_AcGeoref2Spdb.iwg1     snuff_inst    
+Hsrl2Radx        ops       start_Hsrl2Radx.ops          snuff_inst 
 #
 ###############################################################################
 # Create CfRadial files
