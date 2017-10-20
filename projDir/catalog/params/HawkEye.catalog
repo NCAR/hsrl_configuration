@@ -327,66 +327,12 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "CombinedHighCounts",
-    raw_name = "CombinedHighCounts",
-    filtered_name = "",
-    units = "counts",
-    color_map = "number_log.colors",
-    shortcut = "1"
-  }
-  ,
-  {
-    label = "CombinedLowCounts",
-    raw_name = "CombinedLowCounts",
-    filtered_name = "",
-    units = "counts",
-    color_map = "number_log.colors",
-    shortcut = "2"
-  }
-  ,
-  {
-    label = "CrossPolarCounts",
-    raw_name = "CrossPolarCounts",
-    filtered_name = "",
-    units = "counts",
-    color_map = "number_log.colors",
-    shortcut = "3"
-  }
-  ,
-  {
-    label = "MolecularCounts",
-    raw_name = "MolecularCounts",
-    filtered_name = "",
-    units = "counts",
-    color_map = "number_log.colors",
-    shortcut = "4"
-  }
-  ,
-  {
-    label = "VolumeDepolRatio",
-    raw_name = "VolumeDepolRatio",
-    filtered_name = "",
-    units = "",
-    color_map = "number_log_n3.colors",
-    shortcut = "8"
-  } 
-  ,
-  {
     label = "BackScatterRatio",
     raw_name = "BackScatterRatio",
     filtered_name = "",
     units = "",
     color_map = "number_log_n1.colors",
-    shortcut = "9"
-  } 
-  ,
-  {
-    label = "ParticleDepolRatio",
-    raw_name = "ParticleDepolRatio",
-    filtered_name = "",
-    units = "",
-    color_map = "number_log_n3.colors",
-    shortcut = "a"
+    shortcut = "1"
   } 
   ,
   {
@@ -395,16 +341,34 @@ fields = {
     filtered_name = "",
     units = "m-1.sr-1",
     color_map = "number_log_n5.colors",
-    shortcut = "b"
+    shortcut = "2"
   }
   , 
+  {
+    label = "VolumeDepolRatio",
+    raw_name = "VolumeDepolRatio",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n3.colors",
+    shortcut = "3"
+  } 
+  ,
+  {
+    label = "ParticleDepolRatio",
+    raw_name = "ParticleDepolRatio",
+    filtered_name = "",
+    units = "",
+    color_map = "number_log_n3.colors",
+    shortcut = "4"
+  } 
+  ,
   {
     label = "ExtinctionCoeff",
     raw_name = "ExtinctionCoeff",
     filtered_name = "",
     units = "m-1",
     color_map = "number_log_n5.colors",
-    shortcut = "c"
+    shortcut = "5"
   }
   , 
   {
@@ -413,7 +377,43 @@ fields = {
     filtered_name = "",
     units = "",
     color_map = "optical_depth.colors",
-    shortcut = "d"
+    shortcut = "6"
+  }
+  ,
+  {
+    label = "CombinedHighCounts",
+    raw_name = "CombinedHighCounts",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "7"
+  }
+  ,
+  {
+    label = "CombinedLowCounts",
+    raw_name = "CombinedLowCounts",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "8"
+  }
+  ,
+  {
+    label = "CrossPolarCounts",
+    raw_name = "CrossPolarCounts",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "9"
+  }
+  ,
+  {
+    label = "MolecularCounts",
+    raw_name = "MolecularCounts",
+    filtered_name = "",
+    units = "counts",
+    color_map = "number_log.colors",
+    shortcut = "a"
   }
 };
 
