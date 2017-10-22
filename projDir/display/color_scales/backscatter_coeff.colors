@@ -1,6 +1,6 @@
 <ColorScale id="backscatter_coeff.colors" gradation="log">
 
-  <Range min="1.0e-10"    max="auto" color="0.2081, 0.1663, 0.5292" />
+  <Range min="1.0e-8"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />
   <Range min="auto" max="auto" color="0.2123, 0.2138, 0.6270" />
   <Range min="auto" max="auto" color="0.2081, 0.2386, 0.6771" />
@@ -63,16 +63,10 @@
   <Range min="auto" max="auto" color="0.9589, 0.8949, 0.1132" />
   <Range min="auto" max="auto" color="0.9598, 0.9218, 0.0948" />
   <Range min="auto" max="auto" color="0.9661, 0.9514, 0.0755" />
-  <Range min="auto" max="1.0e-6"  color="0.9763, 0.9831, 0.0538" />
+  <Range min="auto" max="1.0e-4"  color="0.9763, 0.9831, 0.0538" />
 
   <SpecifyLabels>true</SpecifyLabels>
 
-  <Label value="1.0e-10"  text="1.0e-10"    />
-  <Label value="2.0e-10"  text="2.0e-10"    />
-  <Label value="5.0e-10"  text="5.0e-10"    />
-  <Label value="1.0e-9"  text="1.0e-9"    />
-  <Label value="2.0e-9"  text="2.0e-9"    />
-  <Label value="5.0e-9"  text="5.0e-9"    />
   <Label value="1.0e-8"  text="1.0e-8"    />
   <Label value="2.0e-8"  text="2.0e-8"    />
   <Label value="5.0e-8"  text="5.0e-8"    />
@@ -80,5 +74,11 @@
   <Label value="2.0e-7"  text="2.0e-7"    />
   <Label value="5.0e-7"  text="5.0e-7"    />
   <Label value="1.0e-6"  text="1.0e-6"    />
+  <Label value="2.0e-6"  text="2.0e-6"    />
+  <Label value="5.0e-6"  text="5.0e-6"    />
+  <Label value="1.0e-5"  text="1.0e-5"    />
+  <Label value="2.0e-5"  text="2.0e-5"    />
+  <Label value="5.0e-5"  text="5.0e-5"    />
+  <Label value="1.0e-4"  text="1.0e-4"    />
 
 </ColorScale>

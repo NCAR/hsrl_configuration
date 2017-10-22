@@ -319,7 +319,7 @@ fields = {
     raw_name = "BackScatterRatio",
     filtered_name = "",
     units = "",
-    color_map = "number_log_n1.colors",
+    color_map = "backscatter_ratio.colors",
     shortcut = "1"
   } 
   ,
@@ -328,7 +328,7 @@ fields = {
     raw_name = "BackScatterCoeff",
     filtered_name = "",
     units = "m-1.sr-1",
-    color_map = "number_log_n5.colors",
+    color_map = "backscatter_coeff.colors",
     shortcut = "2"
   }
   , 
@@ -337,7 +337,7 @@ fields = {
     raw_name = "VolumeDepolRatio",
     filtered_name = "",
     units = "",
-    color_map = "number_log_n3.colors",
+    color_map = "volume_depol_ratio.colors",
     shortcut = "3"
   } 
   ,
@@ -346,7 +346,7 @@ fields = {
     raw_name = "ParticleDepolRatio",
     filtered_name = "",
     units = "",
-    color_map = "number_log_n3.colors",
+    color_map = "particle_depol_ratio.colors",
     shortcut = "4"
   } 
   ,
@@ -355,7 +355,7 @@ fields = {
     raw_name = "ExtinctionCoeff",
     filtered_name = "",
     units = "m-1",
-    color_map = "number_log_n5.colors",
+    color_map = "extinction_coeff.colors",
     shortcut = "5"
   }
   , 
@@ -373,7 +373,7 @@ fields = {
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "number_log.colors",
+    color_map = "log_1_2000.colors",
     shortcut = "7"
   }
   ,
@@ -382,7 +382,7 @@ fields = {
     raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "number_log.colors",
+    color_map = "log_1_100.colors",
     shortcut = "8"
   }
   ,
@@ -391,7 +391,7 @@ fields = {
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "number_log.colors",
+    color_map = "log_1_100.colors",
     shortcut = "9"
   }
   ,
@@ -400,7 +400,7 @@ fields = {
     raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "number_log.colors",
+    color_map = "log_1_1000.colors",
     shortcut = "a"
   }
 };
