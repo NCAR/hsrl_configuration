@@ -1,4 +1,4 @@
-<ColorScale id="logColorscale" gradation="log">
+<ColorScale id="log.colors" gradation="log">
 
   <Range min="1"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />

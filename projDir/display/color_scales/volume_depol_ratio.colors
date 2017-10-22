@@ -1,4 +1,4 @@
-<ColorScale id="particle_depol.colors" gradation="linear">
+<ColorScale id="volume_depol.colors" gradation="linear">
 
   <Range min="-1"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />
