@@ -1,46 +1,4 @@
-<!--ColorScale id="linearColorscale" gradation="linear">
-
-  <Range min="-50"   max="auto"  color="204,153,255"/>
-  <Range min="auto"  max="auto"  color="153,102,255"/>
-  <Range min="auto"  max="auto"  color="102,51,153"/>
-  <Range min="auto"  max="auto"  color="0,0,204"/>
-  <Range min="auto"  max="auto"  color="0,0,255"/>
-  <Range min="auto"  max="auto"  color="51,102,255"/>
-  <Range min="auto"  max="auto"  color="51,153,255"/>
-  <Range min="auto"  max="auto"  color="102,204,255"/>
-  <Range min="auto"  max="auto"  color="153,204,255"/>
-  <Range min="auto"  max="auto"  color="204,204,255"/>
-  <Range min="auto"  max="auto"  color="255,255,153"/>
-  <Range min="auto"  max="auto"  color="255,204,0"/>
-  <Range min="auto"  max="auto"  color="255,153,0"/>
-  <Range min="auto"  max="auto"  color="255,102,0"/>
-  <Range min="auto"  max="auto"  color="255,51,0"/>
-  <Range min="auto"  max="auto"  color="255,0,0"/>
-  <Range min="auto"  max="35"    color="204,0,0"/>
-
-</ColorScale-->
-
-<!--ColorScale id="tempColorscale">
-  <Range min="-50" max="-45"  color="204,153,255"/>
-  <Range min="-45" max="-40"  color="153,102,255"/>
-  <Range min="-40" max="-35"  color="102,51,153"/>
-  <Range min="-35" max="-30"  color="0,0,204"/>
-  <Range min="-30" max="-25"  color="0,0,255"/>
-  <Range min="-25" max="-20"  color="51,102,255"/>
-  <Range min="-20" max="-15"  color="51,153,255"/>
-  <Range min="-15" max="-10"  color="102,204,255"/>
-  <Range min="-10" max="-5"   color="153,204,255"/>
-  <Range min="-5"  max="0"    color="204,204,255"/>
-  <Range min="0"   max="5"    color="255,255,153"/>
-  <Range min="5"   max="10"   color="255,204,0"/>
-  <Range min="10"  max="15"   color="255,153,0"/>
-  <Range min="15"  max="20"   color="255,102,0"/>
-  <Range min="20"  max="25"   color="255,51,0"/>
-  <Range min="25"  max="30"   color="255,0,0"/>
-  <Range min="30"  max="35"   color="204,0,0"/>
-</ColorScale-->
-
-<ColorScale id="linearColorscale" gradation="linear">
+<ColorScale id="backscatter_ratio.colors" gradation="linear">
 
   <Range min="0"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />
@@ -105,6 +63,14 @@
   <Range min="auto" max="auto" color="0.9589, 0.8949, 0.1132" />
   <Range min="auto" max="auto" color="0.9598, 0.9218, 0.0948" />
   <Range min="auto" max="auto" color="0.9661, 0.9514, 0.0755" />
-  <Range min="auto" max="5"    color="0.9763, 0.9831, 0.0538" />
+  <Range min="auto" max="2"  color="0.9763, 0.9831, 0.0538" />
+
+  <SpecifyLabels>true</SpecifyLabels>
+
+  <Label value="0"      text="0.0"    />
+  <Label value="0.5"    text="0.5"    />
+  <Label value="1.0"    text="1.0"    />
+  <Label value="1.5"    text="1.5"    />
+  <Label value="2.0"    text="2.0"    />
 
 </ColorScale>
