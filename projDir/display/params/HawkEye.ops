@@ -367,18 +367,18 @@ fields = {
     color_map = "optical_depth.colors",
     shortcut = "6"
   }
+  // ,
+  // {
+  //   label = "CombinedHighCounts",
+  //   raw_name = "CombinedHighCounts",
+  //   filtered_name = "",
+  //   units = "counts",
+  //   color_map = "log_1_5000.colors",
+  //   shortcut = "7"
+  // }
   ,
   {
     label = "CombinedHighCounts",
-    raw_name = "CombinedHighCounts",
-    filtered_name = "",
-    units = "counts",
-    color_map = "log_1_5000.colors",
-    shortcut = "7"
-  }
-  ,
-  {
-    label = "CombinedHighCounts2",
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
@@ -402,15 +402,6 @@ fields = {
     units = "counts",
     color_map = "log_1_1000.colors",
     shortcut = "9"
-  }
-  ,
-  {
-    label = "CrossPolarCounts2",
-    raw_name = "CrossPolarCounts",
-    filtered_name = "",
-    units = "counts",
-    color_map = "log_1_5000.jet.colors",
-    shortcut = "z"
   }
   ,
   {
