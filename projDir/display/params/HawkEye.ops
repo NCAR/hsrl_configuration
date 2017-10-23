@@ -373,7 +373,7 @@ fields = {
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_2000.colors",
+    color_map = "log_1_5000.colors",
     shortcut = "7"
   }
   ,
@@ -382,7 +382,7 @@ fields = {
     raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_100.colors",
+    color_map = "log_1_1000.colors",
     shortcut = "8"
   }
   ,
@@ -391,7 +391,7 @@ fields = {
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_100.colors",
+    color_map = "log_1_1000.colors",
     shortcut = "9"
   }
   ,
@@ -1005,7 +1005,7 @@ bscan_specify_range_limits = TRUE;
 // Type: double
 //
 
-bscan_min_range_km = -1;
+bscan_min_range_km = 0;
 
 ///////////// bscan_max_range_km //////////////////////
 //
@@ -1017,7 +1017,7 @@ bscan_min_range_km = -1;
 // Type: double
 //
 
-bscan_max_range_km = 17;
+bscan_max_range_km = 15;
 
 ///////////// bscan_min_altitude_km ///////////////////
 //
@@ -1027,7 +1027,7 @@ bscan_max_range_km = 17;
 // Type: double
 //
 
-bscan_min_altitude_km = -1;
+bscan_min_altitude_km = 1;
 
 ///////////// bscan_max_altitude_km ///////////////////
 //
@@ -1037,7 +1037,7 @@ bscan_min_altitude_km = -1;
 // Type: double
 //
 
-bscan_max_altitude_km = 17;
+bscan_max_altitude_km = 10;
 
 ///////////// bscan_altitude_in_feet //////////////////
 //
@@ -1320,7 +1320,7 @@ bscan_draw_instrument_height_line = TRUE;
 // Type: string
 //
 
-bscan_instrument_height_color = "yellow";
+bscan_instrument_height_color = "brown";
 
 //======================================================================
 //

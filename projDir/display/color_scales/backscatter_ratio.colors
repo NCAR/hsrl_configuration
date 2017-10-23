@@ -78,13 +78,13 @@
   <Label value="20.0"   text="20"   />
   <Label value="30.0"   text="30"   />
   <Label value="50.0"   text="50"   />
-  <Label value="75.0"   text="75"   />
+  <Label value="70.0"   text="70"   />
   <Label value="100.0"  text="100"  />
   <Label value="150.0"  text="150"  />
   <Label value="200.0"  text="200"  />
   <Label value="300.0"  text="300"  />
   <Label value="500.0"  text="500"  />
-  <Label value="750.0"  text="750"  />
+  <Label value="700.0"  text="700"  />
   <Label value="1000.0" text="1000" />
   <Label value="1500.0" text="1500" />
   <Label value="2000.0" text="2000" />

@@ -385,7 +385,7 @@ fields = {
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_2000.colors",
+    color_map = "log_1_5000.colors",
     shortcut = "7"
   }
   ,
@@ -394,7 +394,7 @@ fields = {
     raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_100.colors",
+    color_map = "log_1_1000.colors",
     shortcut = "8"
   }
   ,
@@ -403,7 +403,7 @@ fields = {
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_100.colors",
+    color_map = "log_1_1000.colors",
     shortcut = "9"
   }
   ,

@@ -68,8 +68,13 @@
   <SpecifyLabels>true</SpecifyLabels>
 
   <Label value="1.0"    text="1"    />
+  <Label value="2.0"    text="2"    />
+  <Label value="3.0"    text="3"    />
+  <Label value="4.0"    text="4"    />
   <Label value="5.0"    text="5"    />
+  <Label value="7.0"    text="7"    />
   <Label value="10.0"   text="10"   />
+  <Label value="12.5"   text="12.5"   />
   <Label value="15.0"   text="15"   />
   <Label value="20.0"   text="20"   />
   <Label value="25.0"   text="25"   />
