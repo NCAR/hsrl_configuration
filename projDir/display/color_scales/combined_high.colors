@@ -1,4 +1,4 @@
-<ColorScale id="log_1_5000.colors" 
+<ColorScale id="combined_high.colors" 
             gradation="log"
             saturation="1.0"
             labelsSetByValue="true">
@@ -66,7 +66,30 @@
   <Range min="auto" max="auto" color="0.9589, 0.8949, 0.1132" />
   <Range min="auto" max="auto" color="0.9598, 0.9218, 0.0948" />
   <Range min="auto" max="auto" color="0.9661, 0.9514, 0.0755" />
-  <Range min="auto" max="5000" color="0.9763, 0.9831, 0.0538" />
+  <Range min="auto" max="auto" color="0.9763, 0.9831, 0.0538" />
+  <Range min="auto" max="auto" color="1.0000, 0.8750, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.8125, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.7500, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.6875, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.6250, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.5625, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.5000, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.4375, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.3750, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.3125, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.2500, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.1875, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.1250, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.0625, 0.0000" />
+  <Range min="auto" max="auto" color="1.0000, 0.0000, 0.0000" />
+  <Range min="auto" max="auto" color="0.9375, 0.0000, 0.0000" />
+  <Range min="auto" max="auto" color="0.8750, 0.0000, 0.0000" />
+  <Range min="auto" max="auto" color="0.8125, 0.0000, 0.0000" />
+  <Range min="auto" max="auto" color="0.7500, 0.0000, 0.0000" />
+  <Range min="auto" max="auto" color="0.6875, 0.0000, 0.0000" />
+  <Range min="auto" max="auto" color="0.6250, 0.0000, 0.0000" />
+  <Range min="auto" max="auto" color="0.5625, 0.0000, 0.0000" />
+  <Range min="auto" max="5000" color="0.5000, 0.0000, 0.0000" />
 
   <Label value="1.0"    text="1"    />
   <Label value="2.0"    text="2"    />

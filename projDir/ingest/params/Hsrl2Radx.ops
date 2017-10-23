@@ -1,5 +1,5 @@
 /**********************************************************************
- * TDRP params for Hsrl2Radx
+ * TDRP params for ./Hsrl2Radx
  **********************************************************************/
 
 //======================================================================
@@ -609,6 +609,19 @@ bin_width_name = "binwidth";
 //
 
 scan_adjustment_name = "i2_scan_adjustment";
+
+///////////// optical_depth_median_filter_len /////////
+//
+// The optical depth field is filtered using a median filter.
+//
+// This is done prior to computing the extinction coefficient. Set the 
+//   length to 1 for no filtering.
+//
+//
+// Type: int
+//
+
+optical_depth_median_filter_len = 5;
 
 //======================================================================
 //

@@ -1,4 +1,7 @@
-<ColorScale id="extinction_coeff.colors" gradation="log">
+<ColorScale id="extinction_coeff.colors"
+            gradation="log"
+            saturation="1.0"
+            labelsSetByValue="true">
 
   <Range min="1.0e-6"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />
@@ -64,8 +67,6 @@
   <Range min="auto" max="auto" color="0.9598, 0.9218, 0.0948" />
   <Range min="auto" max="auto" color="0.9661, 0.9514, 0.0755" />
   <Range min="auto" max="1.0e-4" color="0.9763, 0.9831, 0.0538" />
-
-  <SpecifyLabels>true</SpecifyLabels>
 
   <Label value="1.0e-6"    text="1.0e-6"    />
   <Label value="2.0e-6"    text="2.0e-6"    />

@@ -378,6 +378,15 @@ fields = {
   }
   ,
   {
+    label = "CombinedHighCounts2",
+    raw_name = "CombinedHighCounts",
+    filtered_name = "",
+    units = "counts",
+    color_map = "combined_high.colors",
+    shortcut = "7"
+  }
+  ,
+  {
     label = "CombinedLowCounts",
     raw_name = "CombinedLowCounts",
     filtered_name = "",
@@ -396,6 +405,15 @@ fields = {
   }
   ,
   {
+    label = "CrossPolarCounts2",
+    raw_name = "CrossPolarCounts",
+    filtered_name = "",
+    units = "counts",
+    color_map = "log_1_5000.jet.colors",
+    shortcut = "z"
+  }
+  ,
+  {
     label = "MolecularCounts",
     raw_name = "MolecularCounts",
     filtered_name = "",
@@ -409,7 +427,7 @@ fields = {
     raw_name = "Height",
     filtered_name = "",
     units = "m",
-    color_map = "height.colors",
+    color_map = "height_m.colors",
     shortcut = "b"
   }
   ,
@@ -418,7 +436,7 @@ fields = {
     raw_name = "Temperature",
     filtered_name = "",
     units = "K",
-    color_map = "tempK.colors",
+    color_map = "tempK_xml.colors",
     shortcut = "c"
   } 
   ,  
@@ -427,7 +445,7 @@ fields = {
     raw_name = "Pressure",
     filtered_name = "",
     units = "mb",
-    color_map = "pressure.colors",
+    color_map = "pressure_xml.colors",
     shortcut = "d"
   } 
 };

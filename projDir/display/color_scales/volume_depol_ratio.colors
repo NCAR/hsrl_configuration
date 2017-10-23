@@ -1,6 +1,9 @@
-<ColorScale id="volume_depol.colors" gradation="linear">
+<ColorScale id="volume_depol_ratio.colors"
+            gradation="log"
+            saturation="1.0"
+            labelsSetByValue="true">
 
-  <Range min="-1"    max="auto" color="0.2081, 0.1663, 0.5292" />
+  <Range min="0"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />
   <Range min="auto" max="auto" color="0.2123, 0.2138, 0.6270" />
   <Range min="auto" max="auto" color="0.2081, 0.2386, 0.6771" />
@@ -10,7 +13,7 @@
   <Range min="auto" max="auto" color="0.0591, 0.3598, 0.8683" />
   <Range min="auto" max="auto" color="0.0117, 0.3875, 0.8820" />
   <Range min="auto" max="auto" color="0.0060, 0.4086, 0.8828" />
-  <Range min="-0.5" max="auto" color="0.0165, 0.4266, 0.8786" />
+  <Range min="auto" max="auto" color="0.0165, 0.4266, 0.8786" />
   <Range min="auto" max="auto" color="0.0329, 0.4430, 0.8720" />
   <Range min="auto" max="auto" color="0.0498, 0.4586, 0.8641" />
   <Range min="auto" max="auto" color="0.0629, 0.4737, 0.8554" />
@@ -28,7 +31,7 @@
   <Range min="auto" max="auto" color="0.0267, 0.6642, 0.7607" />
   <Range min="auto" max="auto" color="0.0384, 0.6743, 0.7436" />
   <Range min="auto" max="auto" color="0.0590, 0.6838, 0.7254" />
-  <Range min="auto" max="auto" color="0.0843, 0.6928, 0.7062" />
+  <Range min="0.1"  max="auto" color="0.0843, 0.6928, 0.7062" />
   <Range min="auto" max="auto" color="0.1133, 0.7015, 0.6859" />
   <Range min="auto" max="auto" color="0.1453, 0.7098, 0.6646" />
   <Range min="auto" max="auto" color="0.1801, 0.7177, 0.6424" />
@@ -42,7 +45,7 @@
   <Range min="auto" max="auto" color="0.5300, 0.7491, 0.4661" />
   <Range min="auto" max="auto" color="0.5709, 0.7485, 0.4494" />
   <Range min="auto" max="auto" color="0.6099, 0.7473, 0.4337" />
-  <Range min="auto" max="auto" color="0.6473, 0.7456, 0.4188" />
+  <Range min="0.2"  max="auto" color="0.6473, 0.7456, 0.4188" />
   <Range min="auto" max="auto" color="0.6834, 0.7435, 0.4044" />
   <Range min="auto" max="auto" color="0.7184, 0.7411, 0.3905" />
   <Range min="auto" max="auto" color="0.7525, 0.7384, 0.3768" />
@@ -53,7 +56,7 @@
   <Range min="auto" max="auto" color="0.9139, 0.7258, 0.3063" />
   <Range min="auto" max="auto" color="0.9450, 0.7261, 0.2886" />
   <Range min="auto" max="auto" color="0.9739, 0.7314, 0.2666" />
-  <Range min="auto" max="0.5" color="0.9938, 0.7455, 0.2403" />
+  <Range min="auto" max="auto" color="0.9938, 0.7455, 0.2403" />
   <Range min="auto" max="auto" color="0.9990, 0.7653, 0.2164" />
   <Range min="auto" max="auto" color="0.9955, 0.7861, 0.1967" />
   <Range min="auto" max="auto" color="0.9880, 0.8066, 0.1794" />
@@ -65,20 +68,13 @@
   <Range min="auto" max="auto" color="0.9661, 0.9514, 0.0755" />
   <Range min="auto" max="1"  color="0.9763, 0.9831, 0.0538" />
 
-  <SpecifyLabels>true</SpecifyLabels>
-
-  <Label value="-1.0"   text="-1"    />
-  <Label value="-0.9"   text="-0.9"    />
-  <Label value="-0.8"   text="-0.8"    />
-  <Label value="-0.7"   text="-0.7"    />
-  <Label value="-0.6"   text="-0.6"    />
-  <Label value="-0.5"   text="-0.5"    />
-  <Label value="-0.4"   text="-0.4"    />
-  <Label value="-0.3"   text="-0.3"    />
-  <Label value="-0.2"   text="-0.2"    />
-  <Label value="-0.1"   text="-0.1"    />
-  <Label value="0"      text="0"    />
+  <Label value="0"      text="0"      />
+  <Label value="0.01"   text="0.01"   />
+  <Label value="0.02"   text="0.02"   />
+  <Label value="0.05"   text="0.05"   />
+  <Label value="0.07"   text="0.07"   />
   <Label value="0.1"    text="0.1"    />
+  <Label value="0.15"   text="0.15"   />
   <Label value="0.2"    text="0.2"    />
   <Label value="0.3"    text="0.3"    />
   <Label value="0.4"    text="0.4"    />
@@ -87,6 +83,6 @@
   <Label value="0.7"    text="0.7"    />
   <Label value="0.8"    text="0.8"    />
   <Label value="0.9"    text="0.9"    />
-  <Label value="1.0"    text="1"    />
+  <Label value="1.0"    text="1"      />
 
 </ColorScale>
