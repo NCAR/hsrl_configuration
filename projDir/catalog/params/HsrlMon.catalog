@@ -251,6 +251,22 @@ monitoring_fields = {
   }
   ,
   {
+    name = "etalonposition",
+    qualifier = "",
+    minValidValue = -100,
+    maxValidValue = 1e+10,
+    note = ""
+  }
+  ,
+  {
+    name = "pressure",
+    qualifier = "",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
     name = "polarization",
     qualifier = "",
     minValidValue = -100,
@@ -353,22 +369,6 @@ monitoring_fields = {
     maxValidValue = 100,
     note = ""
   }
-  // ,
-  // {
-  //   name = "tcsfore_fan1_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "tcsfore_fan2_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
   ,
   {
     name = "tcsfore_main_current",
@@ -433,22 +433,6 @@ monitoring_fields = {
     maxValidValue = 100,
     note = ""
   }
-  // ,
-  // {
-  //   name = "tcsaft_fan1_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "tcsaft_fan2_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
   ,
   {
     name = "tcsaft_main_current",
@@ -471,78 +455,6 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100,
-    note = ""
-  }
-  // ,
-  // {
-  //   name = "shortcell_target",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "shortcell",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "l3stats_shotcount",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "l3stats_goodshotcount",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "builduptime_threshhold",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "attenuator",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 1e+06,
-  //   note = ""
-  // }
-  ,
-  {
-    name = "etalonposition",
-    qualifier = "",
-    minValidValue = -100,
-    maxValidValue = 1e+10,
-    note = ""
-  }
-  // ,
-  // {
-  //   name = "LIDARCTL_mode",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  ,
-  {
-    name = "pressure",
-    qualifier = "",
-    minValidValue = -100,
-    maxValidValue = 100000,
     note = ""
   }
   ,
@@ -658,6 +570,95 @@ monitoring_fields = {
     note = ""
   }
 };
+
+  // ,
+  // {
+  //   name = "tcsfore_fan1_main",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "tcsfore_fan2_main",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "tcsaft_fan1_main",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "tcsaft_fan2_main",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "shortcell_target",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100000,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "shortcell",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100000,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "l3stats_shotcount",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100000,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "l3stats_goodshotcount",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100000,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "builduptime_threshhold",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100000,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "attenuator",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 1e+06,
+  //   note = ""
+  // }
+  // ,
+  // {
+  //   name = "LIDARCTL_mode",
+  //   qualifier = "",
+  //   minValidValue = -100,
+  //   maxValidValue = 100000,
+  //   note = ""
+  // }
 
 //======================================================================
 //
