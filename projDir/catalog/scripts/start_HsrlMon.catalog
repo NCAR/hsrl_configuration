@@ -1,0 +1,12 @@
+#! /bin/csh
+
+cd $PROJ_DIR/catalog/params
+
+running "HsrlMon -params HsrlMon.catalog"
+if ($status == 1) then
+  HsrlMon -params HsrlMon.catalog -debug |& \
+    LogFilter -d $ERRORS_LOG_DIR -p HsrlMon -i catalog &
+endif
+
+
+
