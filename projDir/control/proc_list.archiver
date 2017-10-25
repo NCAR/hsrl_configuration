@@ -14,7 +14,8 @@ HsrlTcp2Fmq  ops       start_HsrlTcp2Fmq.ops        snuff_inst
 ###############################################################################
 # Compute derived fields, write Radx rays
 #
-Hsrl2Radx    ops       start_Hsrl2Radx.ops          snuff_inst 
+AcGeoref2Spdb    iwg1      start_AcGeoref2Spdb.iwg1     snuff_inst    
+Hsrl2Radx        ops       start_Hsrl2Radx.ops          snuff_inst 
 #
 ###############################################################################
 # Create CfRadial files
@@ -24,5 +25,8 @@ Dsr2Radx     moments   start_Dsr2Radx.moments        snuff_inst
 ###############################################################################
 # Images for catalog
 #
-HawkEye      catalog     start_HawkEye.catalog         snuff_inst
-LdataWatcher catalog     start_LdataWatcher.catalog    snuff_inst
+HawkEye      catalog      start_HawkEye.catalog         snuff_inst
+HawkEye      1hr_catalog  start_HawkEye.1hr_catalog     snuff_inst
+LdataWatcher catalog      start_LdataWatcher.catalog    snuff_inst
+HsrlMon      catalog      start_HsrlMon.catalog         snuff_inst
+LdataWatcher monitor      start_LdataWatcher.monitor    snuff_inst

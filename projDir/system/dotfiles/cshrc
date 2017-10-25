@@ -259,6 +259,7 @@ if ($?prompt) then
   alias pcheck 'procmap_list_check -proc_list $PROJ_DIR/control/proc_list'
   alias ph 'get_host_type'
 
+  alias hsrl 'ssh -a -X -Y -C -R 8083:archiver:8083 -L 9001:archiver:9001 hsrl'
   alias gate 'ssh -a -x -C -L 2401:cvs.rap.ucar.edu:2401 dixon@gateway'
   alias front 'ssh -a -X -Y -C -R 2401:cvs.rap.ucar.edu:2401 -p 22 dixon@front.eol.ucar.edu'
   alias eldora 'ssh -a -X -Y -C -R 2401:cvs.rap.ucar.edu:2401 dixon@eldora.eol.ucar.edu'

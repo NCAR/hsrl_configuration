@@ -45,7 +45,7 @@ debug = DEBUG_OFF;
 // Type: boolean
 //
 
-register_with_procmap = FALSE;
+register_with_procmap = TRUE;
 
 ///////////// instance ////////////////////////////////
 //
@@ -57,7 +57,7 @@ register_with_procmap = FALSE;
 // Type: string
 //
 
-instance = "qc";
+instance = "1hr_catalog";
 
 //======================================================================
 //
@@ -100,7 +100,7 @@ input_mode = IWRF_FMQ_INPUT;
 // Type: string
 //
 
-input_fmq_url = "$(DATA_DIR)/fmq/ncar";
+input_fmq_url = "/tmp/fmq/hsrl_moments";
 
 ///////////// seek_to_start_of_fmq ////////////////////
 //
@@ -168,7 +168,7 @@ beam_queue_size = 1000;
 // Type: boolean
 //
 
-begin_in_archive_mode = TRUE;
+begin_in_archive_mode = FALSE;
 
 ///////////// archive_start_time //////////////////////
 //
@@ -180,7 +180,19 @@ begin_in_archive_mode = TRUE;
 // Type: string
 //
 
-archive_start_time = "2015 07 09 16 00 00";
+archive_start_time = "2015 06 02 16 45 00";
+
+///////////// archive_end_time ////////////////////////
+//
+// End time for archive mode.
+//
+// Generally this is applicable for image generation.
+//
+//
+// Type: string
+//
+
+archive_end_time = "2015 06 02 16 50 00";
 
 ///////////// archive_data_url ////////////////////////
 //
@@ -192,7 +204,7 @@ archive_start_time = "2015 07 09 16 00 00";
 // Type: string
 //
 
-archive_data_url = "/home/mdtest/data/hsrl/cset/cfradial";
+archive_data_url = "$(DATA_DIR)/cfradial/hsrl/moments";
 
 //======================================================================
 //
@@ -315,7 +327,7 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "BackScatterRatio",
+    label = "1Hr_BackScatterRatio",
     raw_name = "BackScatterRatio",
     filtered_name = "",
     units = "",
@@ -324,7 +336,7 @@ fields = {
   } 
   ,
   {
-    label = "BackScatterCoeff",
+    label = "1Hr_BackScatterCoeff",
     raw_name = "BackScatterCoeff",
     filtered_name = "",
     units = "m-1.sr-1",
@@ -333,7 +345,7 @@ fields = {
   }
   , 
   {
-    label = "VolumeDepolRatio",
+    label = "1Hr_VolumeDepolRatio",
     raw_name = "VolumeDepolRatio",
     filtered_name = "",
     units = "",
@@ -342,7 +354,7 @@ fields = {
   } 
   ,
   {
-    label = "ParticleDepolRatio",
+    label = "1Hr_ParticleDepolRatio",
     raw_name = "ParticleDepolRatio",
     filtered_name = "",
     units = "",
@@ -351,7 +363,7 @@ fields = {
   } 
   ,
   {
-    label = "ExtinctionCoeff",
+    label = "1Hr_ExtinctionCoeff",
     raw_name = "ExtinctionCoeff",
     filtered_name = "",
     units = "m-1",
@@ -360,7 +372,7 @@ fields = {
   }
   , 
   {
-    label = "OpticalDepth",
+    label = "1Hr_OpticalDepth",
     raw_name = "OpticalDepth",
     filtered_name = "",
     units = "",
@@ -369,34 +381,34 @@ fields = {
   }
   ,
   {
-    label = "CombinedHighCounts",
+    label = "1Hr_CombinedHighCounts",
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_2000.colors",
+    color_map = "log_1_5000.colors",
     shortcut = "7"
   }
   ,
   {
-    label = "CombinedLowCounts",
+    label = "1Hr_CombinedLowCounts",
     raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_100.colors",
+    color_map = "log_1_1000.colors",
     shortcut = "8"
   }
   ,
   {
-    label = "CrossPolarCounts",
+    label = "1Hr_CrossPolarCounts",
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_100.colors",
+    color_map = "log_1_1000.colors",
     shortcut = "9"
   }
   ,
   {
-    label = "MolecularCounts",
+    label = "1Hr_MolecularCounts",
     raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
@@ -484,7 +496,7 @@ display_mode = BSCAN_DISPLAY;
 // Type: boolean
 //
 
-override_radar_name = FALSE;
+override_radar_name = TRUE;
 
 ///////////// radar_name //////////////////////////////
 //
@@ -514,7 +526,7 @@ display_site_name = FALSE;
 // Type: boolean
 //
 
-override_site_name = FALSE;
+override_site_name = TRUE;
 
 ///////////// site_name ///////////////////////////////
 //
@@ -540,7 +552,7 @@ site_name = "GV";
 // Type: int
 //
 
-main_window_width = 1400;
+main_window_width = 1500;
 
 ///////////// main_window_height //////////////////////
 //
@@ -550,7 +562,7 @@ main_window_width = 1400;
 // Type: int
 //
 
-main_window_height = 700;
+main_window_height = 800;
 
 ///////////// main_window_start_x /////////////////////
 //
@@ -767,7 +779,7 @@ bscan_time_span_secs = 3600;
 // Type: boolean
 //
 
-bscan_truncate_start_time = FALSE;
+bscan_truncate_start_time = TRUE;
 
 ///////////// bscan_subsec_precision //////////////////
 //
@@ -891,7 +903,7 @@ bscan_min_altitude_km = 0;
 // Type: double
 //
 
-bscan_max_altitude_km = 25;
+bscan_max_altitude_km = 15;
 
 ///////////// bscan_altitude_in_feet //////////////////
 //
@@ -902,16 +914,6 @@ bscan_max_altitude_km = 25;
 //
 
 bscan_altitude_in_feet = TRUE;
-
-///////////// bscan_range_in_feet /////////////////////
-//
-// Use feet for range units?.
-//
-//
-// Type: boolean
-//
-
-bscan_range_in_feet = FALSE;
 
 ///////////// bscan_range_axis_mode ///////////////////
 //
@@ -1208,7 +1210,7 @@ bscan_add_distance_to_time_axis = TRUE;
 // Type: int
 //
 
-bscan_n_segments_for_computing_distance = 50;
+bscan_n_segments_for_computing_distance = 100;
 
 //======================================================================
 //
@@ -1294,7 +1296,7 @@ bscan_mean_track_and_speed_legend_pos = LEGEND_TOP_RIGHT;
 // Type: boolean
 //
 
-bscan_archive_dwell_auto = TRUE;
+bscan_archive_dwell_auto = FALSE;
 
 ///////////// bscan_archive_dwell_secs ////////////////
 //
@@ -1304,7 +1306,7 @@ bscan_archive_dwell_auto = TRUE;
 // Type: double
 //
 
-bscan_archive_dwell_secs = 0.1;
+bscan_archive_dwell_secs = 0.5;
 
 ///////////// bscan_dwell_stats ///////////////////////
 //
@@ -1347,7 +1349,7 @@ bscan_dwell_stats = DWELL_STATS_MIDDLE;
 // Type: string
 //
 
-images_output_dir = "/tmp/images/HSRL";
+images_output_dir = "$(DATA_DIR)/images/catalog";
 
 ///////////// images_write_to_day_dir /////////////////
 //
@@ -1369,7 +1371,7 @@ images_write_to_day_dir = TRUE;
 // Type: string
 //
 
-images_file_name_category = "radar";
+images_file_name_category = "lidar";
 
 ///////////// images_file_name_platform ///////////////
 //
@@ -1468,7 +1470,7 @@ images_write_latest_data_info = TRUE;
 // Type: boolean
 //
 
-images_auto_create = FALSE;
+images_auto_create = TRUE;
 
 ///////////// images_creation_mode ////////////////////
 //
@@ -1496,7 +1498,7 @@ images_auto_create = FALSE;
 //     CREATE_IMAGES_ON_ARCHIVE_SCHEDULE
 //
 
-images_creation_mode = CREATE_IMAGES_THEN_EXIT;
+images_creation_mode = CREATE_IMAGES_ON_REALTIME_SCHEDULE;
 
 ///////////// images_schedule_interval_secs ///////////
 //
@@ -1509,7 +1511,7 @@ images_creation_mode = CREATE_IMAGES_THEN_EXIT;
 // Type: int
 //
 
-images_schedule_interval_secs = 60;
+images_schedule_interval_secs = 900;
 
 ///////////// images_schedule_delay_secs //////////////
 //
@@ -1523,7 +1525,7 @@ images_schedule_interval_secs = 60;
 // Type: int
 //
 
-images_schedule_delay_secs = 10;
+images_schedule_delay_secs = 60;
 
 //======================================================================
 //

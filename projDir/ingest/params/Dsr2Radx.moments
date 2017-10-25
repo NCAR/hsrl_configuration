@@ -1360,37 +1360,37 @@ debug_auto_detection = FALSE;
 
 output_fields = {
   {
-    dsr_name = "CombinedHiCount",
-    output_name = "CombinedHiCount",
-    long_name = "CombinedHiCount",
-    standard_name = "CombinedHiCount",
+    dsr_name = "CombinedHighCounts",
+    output_name = "CombinedHighCounts",
+    long_name = "high_copolar_combined_backscatter_photon_count",
+    standard_name = "lidar_copolar_combined_backscatter_photon_count",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "CombinedLoCount",
-    output_name = "CombinedLoCount",
-    long_name = "CombinedLoCount",
-    standard_name = "CombinedLoCount",
+    dsr_name = "CombinedLowCounts",
+    output_name = "CombinedLowCounts",
+    long_name = "low_copolar_combined_backscatter_photon_count",
+    standard_name = "lidar_copolar_combined_backscatter_photon_count",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "CrossCount",
-    output_name = "CrossCount",
-    long_name = "CrossCount",
-    standard_name = "CrossCount",
+    dsr_name = "CrossPolarCounts",
+    output_name = "CrossPolarCounts",
+    long_name = "lidar_crosspolar_combined_backscatter_photon_count",
+    standard_name = "lidar_crosspolar_combined_backscatter_photon_count",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "MolecularCount",
-    output_name = "MolecularCount",
-    long_name = "MolecularCount",
-    standard_name = "MolecularCount",
+    dsr_name = "MolecularCounts",
+    output_name = "MolecularCounts",
+    long_name = "lidar_copolar_molecular_backscatter_photon_count",
+    standard_name = "lidar_copolar_molecular_backscatter_photon_count",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
   }
@@ -1398,8 +1398,8 @@ output_fields = {
   {
     dsr_name = "Height",
     output_name = "Height",
-    long_name = "Height",
-    standard_name = "Height",
+    long_name = "height_above_mean_sea_level",
+    standard_name = "height_above_mean_sea_level",
     output_units = "km",
     output_encoding = OUTPUT_FLOAT
   }
@@ -1407,8 +1407,8 @@ output_fields = {
   {
     dsr_name = "Temperature",
     output_name = "Temperature",
-    long_name = "Temperature",
-    standard_name = "Temperature",
+    long_name = "air_temperature",
+    standard_name = "air_temperature",
     output_units = "K",
     output_encoding = OUTPUT_FLOAT
   }
@@ -1416,53 +1416,62 @@ output_fields = {
   {
     dsr_name = "Pressure",
     output_name = "Pressure",
-    long_name = "Pressure",
-    standard_name = "Pressure",
+    long_name = "air_pressure",
+    standard_name = "air_pressure",
     output_units = "hPa",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "VolumeDepol",
-    output_name = "VolumeDepol",
-    long_name = "VolumeDepol",
-    standard_name = "VolumeDepol",
+    dsr_name = "VolumeDepolRatio",
+    output_name = "VolumeDepolRatio",
+    long_name = "VolumeDepolRatio",
+    standard_name = "VolumeDepolRatio",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "BackscatterRatio",
-    output_name = "BackscatterRatio",
-    long_name = "BackscatterRatio",
-    standard_name = "BackscatterRatio",
+    dsr_name = "BackScatterRatio",
+    output_name = "BackScatterRatio",
+    long_name = "lidar_backscatter_ratio",
+    standard_name = "lidar_backscatter_ratio",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "ParticleDepol",
-    output_name = "ParticleDepol",
-    long_name = "ParticleDepol",
-    standard_name = "ParticleDepol",
+    dsr_name = "ParticleDepolRatio",
+    output_name = "ParticleDepolRatio",
+    long_name = "lidar_particle_depolarization_ratio",
+    standard_name = "lidar_particle_depolarization_ratio",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "BackscatterCoeff",
-    output_name = "BackscatterCoeff",
-    long_name = "BackscatterCoeff",
-    standard_name = "BackscatterCoeff",
+    dsr_name = "BackScatterCoeff",
+    output_name = "BackScatterCoeff",
+    long_name = "lidar_backscatter_coefficient",
+    standard_name = "lidar_backscatter_coefficient",
     output_units = "",
     output_encoding = OUTPUT_FLOAT
   }
   ,
   {
-    dsr_name = "Extinction",
-    output_name = "Extinction",
-    long_name = "Extinction",
-    standard_name = "Extinction",
+    dsr_name = "ExtinctionCoeff",
+    output_name = "ExtinctionCoeff",
+    long_name = "lidar_extinction_coefficient",
+    standard_name = "lidar_extinction_coefficient",
+    output_units = "1/m",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "OpticalDepth",
+    output_name = "OpticalDepth",
+    long_name = "lidar_optical_depth",
+    standard_name = "lidar_optical_depth",
     output_units = "1/m",
     output_encoding = OUTPUT_FLOAT
   }
@@ -1504,7 +1513,7 @@ output_fields = {
 
 output_data_set = {
   {
-    output_dir = "$(DATA_DIR)/cfradial/hsrl/moments",
+    output_dir = "$(DATA_DIR)/cfradial/moments",
     format = OUTPUT_FORMAT_CFRADIAL
   }
 };
