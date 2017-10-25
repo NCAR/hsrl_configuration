@@ -1513,7 +1513,7 @@ output_fields = {
 
 output_data_set = {
   {
-    output_dir = "$(DATA_DIR)/cfradial/moments",
+    output_dir = "$(DATA_DIR)/cfradial/hsrl_moments",
     format = OUTPUT_FORMAT_CFRADIAL
   }
 };

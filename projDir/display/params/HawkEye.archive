@@ -192,7 +192,7 @@ archive_start_time = "2017 10 20 23 00 00";
 // Type: string
 //
 
-archive_data_url = "$(DATA_DIR)/cfradial/hsrl/moments";
+archive_data_url = "$(DATA_DIR)/cfradial/hsrl_moments";
 
 //======================================================================
 //
