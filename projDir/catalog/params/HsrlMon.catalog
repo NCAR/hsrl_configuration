@@ -223,7 +223,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = "(0 is CLOSED, 1 is OPEN)"
+    note = "(1 is CLOSED, 0 is OPEN)"
   }
   ,
   {
@@ -231,7 +231,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = "(0 is CLOSED, 1 is OPEN)"
+    note = "(1 is CLOSED, 0 is OPEN)"
   }
   ,
   {
