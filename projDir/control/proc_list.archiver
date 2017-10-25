@@ -25,7 +25,8 @@ Dsr2Radx     moments   start_Dsr2Radx.moments        snuff_inst
 ###############################################################################
 # Images for catalog
 #
-HawkEye      catalog     start_HawkEye.catalog         snuff_inst
-LdataWatcher catalog     start_LdataWatcher.catalog    snuff_inst
-HsrlMon      catalog     start_HsrlMon.catalog         snuff_inst
-LdataWatcher monitor     start_LdataWatcher.monitor    snuff_inst
+HawkEye      catalog      start_HawkEye.catalog         snuff_inst
+HawkEye      1hr_catalog  start_HawkEye.1hr_catalog     snuff_inst
+LdataWatcher catalog      start_LdataWatcher.catalog    snuff_inst
+HsrlMon      catalog      start_HsrlMon.catalog         snuff_inst
+LdataWatcher monitor      start_LdataWatcher.monitor    snuff_inst
