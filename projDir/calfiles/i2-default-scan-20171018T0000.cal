@@ -1,12 +1,14 @@
-#  Calibration scan as function of frequency offset from I2 line
-#  calibration scan data aquired on 18-Oct-17 at 19:01 UT
-#  File created on 25-Oct-17 at 11:10 UT t_begin_cal_pulse= 1.50e-06 ;  start time of cal pulse (sec).
-#  t_end_cal_pulse=   2.10e-06 ;  end time of cal pulse (sec).
-#  pulse_durration=   5.00e-08 ;  laser pulse durration (sec). ratio of mol to combined channel gain =   1.48
-#  Cam = 1.478e-04
-#  Min iodine transmission =    2.2e-04,  1/(min_trans) =  4.6e+03
+# Calibration scan as function of frequency offset from I2 line
+# calibration scan data aquired on 18-Oct-17 at 19:01 UT
+# file created on 25-Oct-17 at 13:10 UT
+# t_begin_cal_pulse= 1.50e-06 ;  start time of cal pulse (sec).
+# t_end_cal_pulse=   2.10e-06 ;  end time of cal pulse (sec).
+# pulse_durration=   5.00e-08 ;  laser pulse durration (sec).
+# ratio of mol to combined channel gain =   1.5 
+# Cam = 1.478e-04 
+# Min iodine transmission =    2.2e-04,  1/(min_trans) =  4.6e+03
 # 
-# freq(GHz)  combined  molecular i2_measured i2_theory/n
+# freq(GHz)  combined  molecular i2_measured i2_theory
 -45.06000     0.07345     0.11437     0.93710     0.82820    
 -45.03000     0.07345     0.11437     0.93710     0.83550    
 -45.00000     0.07345     0.11437     0.93710     0.84180    
