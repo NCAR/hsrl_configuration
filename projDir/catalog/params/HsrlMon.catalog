@@ -207,7 +207,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = "(0 indicates locked)"
+    note = "(0 is LOCKED, 1 is FREE)"
   }
   ,
   {
@@ -215,7 +215,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = "(1 is UP, 0 is DOWN)"
+    note = "(0 is DOWN,   1 is UP)"
   }
   ,
   {
@@ -223,7 +223,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = "(1 is CLOSED, 0 is OPEN)"
+    note = "(0 is OPEN,   1 is CLOSED)"
   }
   ,
   {
@@ -231,7 +231,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = "(1 is CLOSED, 0 is OPEN)"
+    note = "(0 is OPEN,   1 is CLOSED)"
   }
   ,
   {
@@ -239,7 +239,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = ""
+    note = "(0 is OPEN,   1 is CLOSED)"
   }
   ,
   {
@@ -247,7 +247,7 @@ monitoring_fields = {
     qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
-    note = ""
+    note = "(0 is OPEN,   1 is CLOSED)"
   }
   ,
   {
