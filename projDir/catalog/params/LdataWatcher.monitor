@@ -39,7 +39,7 @@ debug = DEBUG_OFF;
 // Type: string
 //
 
-instance = "monitoring";
+instance = "monitor";
 
 ///////////// procmap_register_interval ///////////////
 //
