@@ -10,13 +10,13 @@ echo "================= rsync hsrl data to hcr ================"
 set hcr = hcr-router.eol.ucar.edu
 set dest = projDir/data/hsrl
 ssh hcr@${hcr} mkdir -p ${dest}
-rsync -av raw cfradial monitoring spdb hcr@${hcr}:${dest}
+rsync -av raw cfradial monitoring spdb images logs hcr@${hcr}:${dest}
 echo "===================== done =============================="
 
 echo "=============== rsync hsrl data to eldora ============="
 set eldora = eldora.eol.ucar.edu
 set dest = /scr/eldora1/rsfdata/hsrl
 ssh rsfdata@${eldora} mkdir -p ${dest}
-rsync -av raw cfradial monitoring spdb rsfdata@${eldora}:${dest}
+rsync -av raw cfradial monitoring spdb images logs rsfdata@${eldora}:${dest}
 echo "======================= done =============================="
 
