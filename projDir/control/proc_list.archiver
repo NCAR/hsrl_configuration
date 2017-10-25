@@ -28,3 +28,4 @@ Dsr2Radx     moments   start_Dsr2Radx.moments        snuff_inst
 HawkEye      catalog     start_HawkEye.catalog         snuff_inst
 LdataWatcher catalog     start_LdataWatcher.catalog    snuff_inst
 HsrlMon      catalog     start_HsrlMon.catalog         snuff_inst
+LdataWatcher monitor     start_LdataWatcher.monitor    snuff_inst
