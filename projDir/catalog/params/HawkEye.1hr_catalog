@@ -327,7 +327,7 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "BackScatterRatio",
+    label = "1Hr_BackScatterRatio",
     raw_name = "BackScatterRatio",
     filtered_name = "",
     units = "",
@@ -336,7 +336,7 @@ fields = {
   } 
   ,
   {
-    label = "BackScatterCoeff",
+    label = "1Hr_BackScatterCoeff",
     raw_name = "BackScatterCoeff",
     filtered_name = "",
     units = "m-1.sr-1",
@@ -345,7 +345,7 @@ fields = {
   }
   , 
   {
-    label = "VolumeDepolRatio",
+    label = "1Hr_VolumeDepolRatio",
     raw_name = "VolumeDepolRatio",
     filtered_name = "",
     units = "",
@@ -354,7 +354,7 @@ fields = {
   } 
   ,
   {
-    label = "ParticleDepolRatio",
+    label = "1Hr_ParticleDepolRatio",
     raw_name = "ParticleDepolRatio",
     filtered_name = "",
     units = "",
@@ -363,7 +363,7 @@ fields = {
   } 
   ,
   {
-    label = "ExtinctionCoeff",
+    label = "1Hr_ExtinctionCoeff",
     raw_name = "ExtinctionCoeff",
     filtered_name = "",
     units = "m-1",
@@ -372,7 +372,7 @@ fields = {
   }
   , 
   {
-    label = "OpticalDepth",
+    label = "1Hr_OpticalDepth",
     raw_name = "OpticalDepth",
     filtered_name = "",
     units = "",
@@ -381,7 +381,7 @@ fields = {
   }
   ,
   {
-    label = "CombinedHighCounts",
+    label = "1Hr_CombinedHighCounts",
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
@@ -390,7 +390,7 @@ fields = {
   }
   ,
   {
-    label = "CombinedLowCounts",
+    label = "1Hr_CombinedLowCounts",
     raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
@@ -399,7 +399,7 @@ fields = {
   }
   ,
   {
-    label = "CrossPolarCounts",
+    label = "1Hr_CrossPolarCounts",
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
@@ -408,7 +408,7 @@ fields = {
   }
   ,
   {
-    label = "MolecularCounts",
+    label = "1Hr_MolecularCounts",
     raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
