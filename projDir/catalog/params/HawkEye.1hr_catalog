@@ -327,7 +327,7 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 fields = {
   {
-    label = "1Hr_BackScatterRatio",
+    label = "BackScatterRatio",
     raw_name = "BackScatterRatio",
     filtered_name = "",
     units = "",
@@ -336,7 +336,7 @@ fields = {
   } 
   ,
   {
-    label = "1Hr_BackScatterCoeff",
+    label = "BackScatterCoeff",
     raw_name = "BackScatterCoeff",
     filtered_name = "",
     units = "m-1.sr-1",
@@ -345,7 +345,7 @@ fields = {
   }
   , 
   {
-    label = "1Hr_VolumeDepolRatio",
+    label = "VolumeDepolRatio",
     raw_name = "VolumeDepolRatio",
     filtered_name = "",
     units = "",
@@ -354,7 +354,7 @@ fields = {
   } 
   ,
   {
-    label = "1Hr_ParticleDepolRatio",
+    label = "ParticleDepolRatio",
     raw_name = "ParticleDepolRatio",
     filtered_name = "",
     units = "",
@@ -363,7 +363,7 @@ fields = {
   } 
   ,
   {
-    label = "1Hr_ExtinctionCoeff",
+    label = "ExtinctionCoeff",
     raw_name = "ExtinctionCoeff",
     filtered_name = "",
     units = "m-1",
@@ -372,7 +372,7 @@ fields = {
   }
   , 
   {
-    label = "1Hr_OpticalDepth",
+    label = "OpticalDepth",
     raw_name = "OpticalDepth",
     filtered_name = "",
     units = "",
@@ -381,38 +381,38 @@ fields = {
   }
   ,
   {
-    label = "1Hr_CombinedHighCounts",
+    label = "CombinedHighCounts",
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_5000.colors",
+    color_map = "hsrl_combined_high.colors",
     shortcut = "7"
   }
   ,
   {
-    label = "1Hr_CombinedLowCounts",
+    label = "CombinedLowCounts",
     raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_1000.colors",
+    color_map = "hsrl_combined_low.colors",
     shortcut = "8"
   }
   ,
   {
-    label = "1Hr_CrossPolarCounts",
+    label = "CrossPolarCounts",
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_1000.colors",
+    color_map = "hsrl_cross_polar.colors",
     shortcut = "9"
   }
   ,
   {
-    label = "1Hr_MolecularCounts",
+    label = "MolecularCounts",
     raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_1000.colors",
+    color_map = "hsrl_molecular.colors",
     shortcut = "a"
   }
 };
