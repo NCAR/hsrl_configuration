@@ -1306,7 +1306,7 @@ bscan_archive_dwell_auto = FALSE;
 // Type: double
 //
 
-bscan_archive_dwell_secs = 0.5;
+bscan_archive_dwell_secs = 6.0;
 
 ///////////// bscan_dwell_stats ///////////////////////
 //
@@ -1325,7 +1325,7 @@ bscan_archive_dwell_secs = 0.5;
 //     DWELL_STATS_MIDDLE
 //
 
-bscan_dwell_stats = DWELL_STATS_MIDDLE;
+bscan_dwell_stats = DWELL_STATS_MEAN;
 
 //======================================================================
 //

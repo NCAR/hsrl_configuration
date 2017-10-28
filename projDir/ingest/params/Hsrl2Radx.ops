@@ -1,5 +1,5 @@
 /**********************************************************************
- * TDRP params for ./Hsrl2Radx
+ * TDRP params for Hsrl2Radx
  **********************************************************************/
 
 //======================================================================
@@ -610,6 +610,18 @@ bin_width_name = "binwidth";
 
 scan_adjustment_name = "i2_scan_adjustment";
 
+///////////// counts_censoring_threshold //////////////
+//
+// Threshold the count fields below this value.
+//
+// This helps to remove the noise from the system.
+//
+//
+// Type: int
+//
+
+counts_censoring_threshold = 3;
+
 ///////////// optical_depth_median_filter_len /////////
 //
 // The optical depth field is filtered using a median filter.
@@ -622,6 +634,32 @@ scan_adjustment_name = "i2_scan_adjustment";
 //
 
 optical_depth_median_filter_len = 5;
+
+///////////// apply_speckle_filter ////////////////////
+//
+// Option to apply a speckle filter to the output data.
+//
+// If the length of the good data, between gates with missing values, is 
+//   less than this, the data in between is set to missing.
+//
+//
+// Type: boolean
+//
+
+apply_speckle_filter = TRUE;
+
+///////////// speckle_filter_len //////////////////////
+//
+// The length of the speckle filter.
+//
+// If the length of the good data, between missing values, is less than 
+//   this, the data is set to missing.
+//
+//
+// Type: int
+//
+
+speckle_filter_len = 2;
 
 //======================================================================
 //
