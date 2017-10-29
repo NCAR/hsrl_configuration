@@ -10,7 +10,7 @@
   <Range min="auto" max="auto" color="0.1959, 0.2645, 0.7279" />
   <Range min="auto" max="auto" color="0.1707, 0.2919, 0.7792" />
   <Range min="auto" max="auto" color="0.1253, 0.3242, 0.8303" />
-  <Range min="auto" max="auto" color="0.0591, 0.3598, 0.8683" />
+  <Range min="1.0e-5" max="auto" color="0.0591, 0.3598, 0.8683" />
   <Range min="auto" max="auto" color="0.0117, 0.3875, 0.8820" />
   <Range min="auto" max="auto" color="0.0060, 0.4086, 0.8828" />
   <Range min="auto" max="auto" color="0.0165, 0.4266, 0.8786" />
@@ -69,10 +69,7 @@
   <Range min="auto" max="1.0e-4" color="0.9763, 0.9831, 0.0538" />
 
   <Label value="1.0e-6"    text="1.0e-6"    />
-  <Label value="2.0e-6"    text="2.0e-6"    />
-  <Label value="3.0e-6"    text="3.0e-6"    />
   <Label value="5.0e-6"    text="5.0e-6"    />
-  <Label value="7.0e-6"    text="7.0e-6"    />
   <Label value="1.0e-5"    text="1.0e-5"    />
   <Label value="2.0e-5"    text="2.0e-5"    />
   <Label value="3.0e-5"    text="3.0e-5"    />
