@@ -421,7 +421,7 @@ combine_bins_on_read = TRUE;
 // Type: int
 //
 
-n_bins_per_gate = 4;
+n_bins_per_gate = 2;
 
 ///////////// raw_bin_start_range_km //////////////////
 //
@@ -620,7 +620,7 @@ scan_adjustment_name = "i2_scan_adjustment";
 // Type: int
 //
 
-counts_censoring_threshold = 3;
+counts_censoring_threshold = 2;
 
 ///////////// optical_depth_median_filter_len /////////
 //
@@ -633,7 +633,7 @@ counts_censoring_threshold = 3;
 // Type: int
 //
 
-optical_depth_median_filter_len = 5;
+optical_depth_median_filter_len = 3;
 
 ///////////// apply_speckle_filter ////////////////////
 //
