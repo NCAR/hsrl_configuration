@@ -88,7 +88,7 @@ mode = REALTIME;
 // Type: string
 //
 
-input_dir = "$(DATA_DIR)/hsrl/raw";
+input_dir = "$(DATA_DIR)/raw";
 
 ///////////// files_sub_dir ///////////////////////////
 //
@@ -499,6 +499,230 @@ monitoring_fields = {
   }
   ,
   {
+    name = "brillouinfiltered_energy_stats",
+    qualifier = "field0",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "nonfiltered_energy_stats",
+    qualifier = "field0",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "builduptime",
+    qualifier = "field0",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "l3cavityvoltage",
+    qualifier = "field0",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "l3locking_stats",
+    qualifier = "field0",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field2_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field3_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field4_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field5_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field7_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field8_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field9_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field11_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field12_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field13_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field14_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field15_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field16_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field17_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "system_temperatures",
+    qualifier = "field18_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "humidity",
+    qualifier = "field1_description",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "laserpowervalues",
+    qualifier = "field0_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "laserpowervalues",
+    qualifier = "field1_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "laserpowervalues",
+    qualifier = "field2_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "laserpowervalues",
+    qualifier = "field3_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "laserpowervalues",
+    qualifier = "field4_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "laserpowervalues",
+    qualifier = "field5_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "laserpowervalues",
+    qualifier = "field6_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
     name = "iwg1_Lat",
     qualifier = "",
     minValidValue = -100,
@@ -570,95 +794,6 @@ monitoring_fields = {
     note = ""
   }
 };
-
-  // ,
-  // {
-  //   name = "tcsfore_fan1_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "tcsfore_fan2_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "tcsaft_fan1_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "tcsaft_fan2_main",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "shortcell_target",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "shortcell",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "l3stats_shotcount",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "l3stats_goodshotcount",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "builduptime_threshhold",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "attenuator",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 1e+06,
-  //   note = ""
-  // }
-  // ,
-  // {
-  //   name = "LIDARCTL_mode",
-  //   qualifier = "",
-  //   minValidValue = -100,
-  //   maxValidValue = 100000,
-  //   note = ""
-  // }
 
 //======================================================================
 //

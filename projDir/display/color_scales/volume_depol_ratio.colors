@@ -1,5 +1,5 @@
 <ColorScale id="volume_depol_ratio.colors"
-            gradation="log"
+            gradation="linear"
             saturation="1.0"
             labelsSetByValue="true">
 

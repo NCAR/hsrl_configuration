@@ -192,7 +192,7 @@ archive_start_time = "2015 07 14 18 00 00";
 // Type: string
 //
 
-archive_data_url = "$(DATA_DIR)/cfradial/hsrl/moments";
+archive_data_url = "$(DATA_DIR)/cfradial/hsrl_moments";
 
 //======================================================================
 //
@@ -382,7 +382,7 @@ fields = {
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "combined_high.colors",
+    color_map = "hsrl_combined_high.colors",
     shortcut = "7"
   }
   ,
@@ -391,7 +391,7 @@ fields = {
     raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_1000.colors",
+    color_map = "hsrl_combined_low.colors",
     shortcut = "8"
   }
   ,
@@ -400,7 +400,7 @@ fields = {
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_1000.colors",
+    color_map = "hsrl_cross_polar.colors",
     shortcut = "9"
   }
   ,
@@ -409,7 +409,7 @@ fields = {
     raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
-    color_map = "log_1_1000.colors",
+    color_map = "hsrl_molecular.colors",
     shortcut = "a"
   }
   ,
@@ -1046,7 +1046,7 @@ bscan_min_altitude_km = 1;
 // Type: double
 //
 
-bscan_max_altitude_km = 10;
+bscan_max_altitude_km = 16;
 
 ///////////// bscan_altitude_in_feet //////////////////
 //
