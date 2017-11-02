@@ -17,8 +17,8 @@ filtered_energy_monitor(mJ/shot)
 transmitted_energy_monitor(mJ/shot)
    1-jan-08 18:00,[0.5,0 ,0]/4000
 
-seed_laser_voltage_to_freq(GHz/V)
-   1-jan-08      ,[-1.8]*1e9 
+#seed_laser_voltage_to_freq(GHz/V)
+#   1-jan-08      ,[-1.8]*1e9 
  
 sounding_id
    #system in Boulder
@@ -43,9 +43,9 @@ wavelength(nm)
 
 sounding_type
    01-sep-15,	 'NOAA raob'
-   27-jun-15,    'virtual'
+   27-jun-15,    'virtual cache'
    26-jun-15,    'NOAA raob'
-    1-may-15,    'virtual'
+    1-may-15,    'virtual cache'
     1-mar-12,    'NOAA raob'
     1-jan-12,    'time curtain'
     1-jan-08,    'NOAA raob'
@@ -56,8 +56,8 @@ GRIB_radius(hr,km)
     #     dr=update distance interval (km)
     1-jan-08,     [1.5,100]
 
-interferometer_temperature_cal(deg C)
-   1-jan-08 , [-.862448, 0.258456, 0.000142]/1000
+#interferometer_temperature_cal(deg C)
+#   1-jan-08 , [-.862448, 0.258456, 0.000142]/1000
 
 calibration_nd_filters
    20-dec-08 , [ 3,3]
@@ -117,6 +117,7 @@ shortcell_locked_ratio
   
 dark_count_timing
    #'first_bins' or 'last_bins' used for dark count computation
+   21-oct-16, 'last_bins'
    1-feb-08, 'first_bins'
 
 polarization_cross_talk
@@ -163,6 +164,7 @@ cpol_detector_dark_count
 
 
 combined_to_cross_pol_gain_ratio
+  27-oct-16, [1.0] 
    1-apr-15, [2.292]
    1-apr-14, [1.93]
   31-jul-13, [2.34]
@@ -177,6 +179,9 @@ combined_to_cross_pol_gain_ratio
    1-jan-08, [0.84]
    
 apd_pulse_timing(ns)
+  27-oct-16, [30, 36, 42]*50e-9
+   1-oct-16, [25, 36, 42]*50e-9
+   1-jun-15, [32, 37, 43]*50e-9
   31-jul-13, [32, 36, 42]*50e-9
    1-aug-11, [32, 37, 40]*50e-9
    1-may-11, [33, 36, 42]*50e-9
@@ -302,6 +307,7 @@ longitude(deg E)
     01-jan-08, [-89.4071]
 
 hi_to_low_combined_channel_gain_ratio
+   1-oct-16, [123]
    14-apr-14, [98]
    1-jan-12,  [104]
    15-aug-11, [95]
@@ -344,7 +350,9 @@ telescope_roll_angle_offset
 
 quarter_wave_plate_rotation
   #rotation of output quarter wave plate
-  #valid options: 'rotating','fixed','none'  
+  #valid options: 'rotating','fixed','none'
+  27-oct-16 18:38:27, 'fixed'  
+  27-oct-16 17:28:04, 'rotating'
   22-jul-15 20:37:42, 'fixed'
   22-jul-15 19:21:57, 'rotating'
   22-jul-15 15:16:30, 'fixed'
@@ -438,10 +446,6 @@ quarter_wave_plate_rotation
   24-apr-12 18:00:00, 'fixed'
   24-apr-12 15:56:20, 'rotating'
   18-jul-10 00:00:00, 'fixed'
-
-polarization_integration_time(seconds)
-#integration time to recover polarization for gvhsrl rotating qw_plate
-  18-jul-10 00:00:00, [40.0]
 
 location_string
    1-sep-15, 'Boulder'
