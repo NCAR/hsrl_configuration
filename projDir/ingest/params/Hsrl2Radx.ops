@@ -508,7 +508,7 @@ cross_field_name = "CrossCount";
 // Type: string
 //
 
-baseline_calibration_path = "$(PROJ_DIR)/calfiles/baseline_correction_20150601T0000.blc";
+baseline_calibration_path = "$(PROJ_DIR)/calfiles/baseline_correction_20171019T2000.blc";
 
 ///////////// diff_default_geofile_path ///////////////
 //
@@ -518,7 +518,7 @@ baseline_calibration_path = "$(PROJ_DIR)/calfiles/baseline_correction_20150601T0
 // Type: string
 //
 
-diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20120201T0000.geo";
+diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20171018T0000.geo";
 
 ///////////// geofile_default_path ////////////////////
 //
@@ -610,6 +610,18 @@ bin_width_name = "binwidth";
 
 scan_adjustment_name = "i2_scan_adjustment";
 
+///////////// ngates_for_background_correction ////////
+//
+// The background correction used data from the end of each ray.
+//
+// This is the number of gates used to compute the background value.
+//
+//
+// Type: int
+//
+
+ngates_for_background_correction = 100;
+
 ///////////// counts_censoring_threshold //////////////
 //
 // Threshold the count fields below this value.
@@ -620,7 +632,7 @@ scan_adjustment_name = "i2_scan_adjustment";
 // Type: int
 //
 
-counts_censoring_threshold = 2;
+counts_censoring_threshold = 4;
 
 ///////////// optical_depth_median_filter_len /////////
 //
