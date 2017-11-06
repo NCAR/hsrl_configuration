@@ -3,14 +3,14 @@
             saturation="1.0"
             labelsSetByValue="true">
 
-  <Range min="1.0e-6"    max="auto" color="0.2081, 0.1663, 0.5292" />
+  <Range min="1.0e-5"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />
   <Range min="auto" max="auto" color="0.2123, 0.2138, 0.6270" />
   <Range min="auto" max="auto" color="0.2081, 0.2386, 0.6771" />
   <Range min="auto" max="auto" color="0.1959, 0.2645, 0.7279" />
   <Range min="auto" max="auto" color="0.1707, 0.2919, 0.7792" />
   <Range min="auto" max="auto" color="0.1253, 0.3242, 0.8303" />
-  <Range min="1.0e-5" max="auto" color="0.0591, 0.3598, 0.8683" />
+  <Range min="auto" max="auto" color="0.0591, 0.3598, 0.8683" />
   <Range min="auto" max="auto" color="0.0117, 0.3875, 0.8820" />
   <Range min="auto" max="auto" color="0.0060, 0.4086, 0.8828" />
   <Range min="auto" max="auto" color="0.0165, 0.4266, 0.8786" />
@@ -66,15 +66,15 @@
   <Range min="auto" max="auto" color="0.9589, 0.8949, 0.1132" />
   <Range min="auto" max="auto" color="0.9598, 0.9218, 0.0948" />
   <Range min="auto" max="auto" color="0.9661, 0.9514, 0.0755" />
-  <Range min="auto" max="1.0e-4" color="0.9763, 0.9831, 0.0538" />
+  <Range min="auto" max="1.0e-1" color="0.9763, 0.9831, 0.0538" />
 
-  <Label value="1.0e-6"    text="1.0e-6"    />
-  <Label value="5.0e-6"    text="5.0e-6"    />
-  <Label value="1.0e-5"    text="1.0e-5"    />
-  <Label value="2.0e-5"    text="2.0e-5"    />
-  <Label value="3.0e-5"    text="3.0e-5"    />
-  <Label value="5.0e-5"    text="5.0e-5"    />
-  <Label value="7.0e-5"    text="7.0e-5"    />
-  <Label value="1.0e-4"    text="1.0e-4"    />
+  <Label value="1.0e-5"    text="1.0e-6"    />
+  <Label value="5.0e-5"    text="5.0e-6"    />
+  <Label value="1.0e-4"    text="1.0e-5"    />
+  <Label value="5.0e-4"    text="5.0e-5"    />
+  <Label value="1.0e-3"    text="1.0e-6"    />
+  <Label value="5.0e-3"    text="5.0e-6"    />
+  <Label value="1.0e-2"    text="1.0e-5"    />
+  <Label value="5.0e-2"    text="5.0e-5"    />
 
 </ColorScale>
