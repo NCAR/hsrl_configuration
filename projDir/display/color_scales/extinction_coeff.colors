@@ -68,13 +68,17 @@
   <Range min="auto" max="auto" color="0.9661, 0.9514, 0.0755" />
   <Range min="auto" max="1.0e-1" color="0.9763, 0.9831, 0.0538" />
 
-  <Label value="1.0e-5"    text="1.0e-6"    />
-  <Label value="5.0e-5"    text="5.0e-6"    />
-  <Label value="1.0e-4"    text="1.0e-5"    />
-  <Label value="5.0e-4"    text="5.0e-5"    />
-  <Label value="1.0e-3"    text="1.0e-6"    />
-  <Label value="5.0e-3"    text="5.0e-6"    />
-  <Label value="1.0e-2"    text="1.0e-5"    />
-  <Label value="5.0e-2"    text="5.0e-5"    />
+  <Label value="1.0e-5"    text="1.0e-5"    />
+  <Label value="2.5e-5"    text="2.5e-5"    />
+  <Label value="5.0e-5"    text="5.0e-5"    />
+  <Label value="1.0e-4"    text="1.0e-4"    />
+  <Label value="2.5e-4"    text="2.5e-4"    />
+  <Label value="5.0e-4"    text="5.0e-4"    />
+  <Label value="1.0e-3"    text="1.0e-3"    />
+  <Label value="1.5e-3"    text="2.5e-3"    />
+  <Label value="5.0e-3"    text="5.0e-3"    />
+  <Label value="1.0e-2"    text="1.0e-2"    />
+  <Label value="2.5e-2"    text="2.5e-2"    />
+  <Label value="5.0e-2"    text="5.0e-2"    />
 
 </ColorScale>
