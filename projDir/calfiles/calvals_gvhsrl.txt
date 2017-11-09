@@ -457,3 +457,6 @@ location_string
   20-feb-10, 'Madison'
    1-feb-10, 'Boulder'
    1-jan-08, 'Madison'  
+
+molecular_gain
+   12-oct-17, 1.10
