@@ -1369,9 +1369,27 @@ output_fields = {
   }
   ,
   {
+    dsr_name = "CombinedHighCounts_F",
+    output_name = "CombinedHighCounts_F",
+    long_name = "high_copolar_combined_backscatter_photon_count_filtered",
+    standard_name = "lidar_copolar_combined_backscatter_photon_count",
+    output_units = "counts",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
     dsr_name = "CombinedLowCounts",
     output_name = "CombinedLowCounts",
     long_name = "low_copolar_combined_backscatter_photon_count",
+    standard_name = "lidar_copolar_combined_backscatter_photon_count",
+    output_units = "counts",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "CombinedLowCounts_F",
+    output_name = "CombinedLowCounts_F",
+    long_name = "low_copolar_combined_backscatter_photon_count_filtered",
     standard_name = "lidar_copolar_combined_backscatter_photon_count",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
@@ -1387,11 +1405,137 @@ output_fields = {
   }
   ,
   {
+    dsr_name = "CrossPolarCounts_F",
+    output_name = "CrossPolarCounts_F",
+    long_name = "lidar_crosspolar_combined_backscatter_photon_count_filtered",
+    standard_name = "lidar_crosspolar_combined_backscatter_photon_count",
+    output_units = "counts",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
     dsr_name = "MolecularCounts",
     output_name = "MolecularCounts",
     long_name = "lidar_copolar_molecular_backscatter_photon_count",
     standard_name = "lidar_copolar_molecular_backscatter_photon_count",
     output_units = "counts",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "MolecularCounts_F",
+    output_name = "MolecularCounts_F",
+    long_name = "lidar_copolar_molecular_backscatter_photon_count_filtered",
+    standard_name = "lidar_copolar_molecular_backscatter_photon_count",
+    output_units = "counts",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "VolumeDepolRatio",
+    output_name = "VolumeDepolRatio",
+    long_name = "lidar_volume_depolarization_ratio",
+    standard_name = "lidar_volume_depolarization_ratio",
+    output_units = "",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "VolumeDepolRatio_F",
+    output_name = "VolumeDepolRatio_F",
+    long_name = "lidar_volume_depolarization_ratio_filtered",
+    standard_name = "lidar_volume_depolarization_ratio",
+    output_units = "",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "BackScatterRatio",
+    output_name = "BackScatterRatio",
+    long_name = "lidar_backscatter_ratio",
+    standard_name = "lidar_backscatter_ratio",
+    output_units = "",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "BackScatterRatio_F",
+    output_name = "BackScatterRatio_F",
+    long_name = "lidar_backscatter_ratio_filtered",
+    standard_name = "lidar_backscatter_ratio",
+    output_units = "",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "ParticleDepolRatio",
+    output_name = "ParticleDepolRatio",
+    long_name = "lidar_particle_depolarization_ratio",
+    standard_name = "lidar_particle_depolarization_ratio",
+    output_units = "",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "ParticleDepolRatio_F",
+    output_name = "ParticleDepolRatio_F",
+    long_name = "lidar_particle_depolarization_ratio_filtered",
+    standard_name = "lidar_particle_depolarization_ratio",
+    output_units = "",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "BackScatterCoeff",
+    output_name = "BackScatterCoeff",
+    long_name = "lidar_backscatter_coefficient",
+    standard_name = "lidar_backscatter_coefficient",
+    output_units = "sr-1.m-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "BackScatterCoeff_F",
+    output_name = "BackScatterCoeff_F",
+    long_name = "lidar_backscatter_coefficient_filtered",
+    standard_name = "lidar_backscatter_coefficient",
+    output_units = "sr-1.m-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "ExtinctionCoeff",
+    output_name = "ExtinctionCoeff",
+    long_name = "lidar_extinction_coefficient",
+    standard_name = "lidar_extinction_coefficient",
+    output_units = "m-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "ExtinctionCoeff_F",
+    output_name = "ExtinctionCoeff_F",
+    long_name = "lidar_extinction_coefficient_filtered",
+    standard_name = "lidar_extinction_coefficient",
+    output_units = "m-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "OpticalDepth",
+    output_name = "OpticalDepth",
+    long_name = "lidar_optical_depth",
+    standard_name = "lidar_optical_depth",
+    output_units = "m",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "OpticalDepth_F",
+    output_name = "OpticalDepth_F",
+    long_name = "lidar_optical_depth_filtered",
+    standard_name = "lidar_optical_depth",
+    output_units = "m",
     output_encoding = OUTPUT_FLOAT
   }
   ,
@@ -1419,60 +1563,6 @@ output_fields = {
     long_name = "air_pressure",
     standard_name = "air_pressure",
     output_units = "hPa",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
-    dsr_name = "VolumeDepolRatio",
-    output_name = "VolumeDepolRatio",
-    long_name = "VolumeDepolRatio",
-    standard_name = "VolumeDepolRatio",
-    output_units = "",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
-    dsr_name = "BackScatterRatio",
-    output_name = "BackScatterRatio",
-    long_name = "lidar_backscatter_ratio",
-    standard_name = "lidar_backscatter_ratio",
-    output_units = "",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
-    dsr_name = "ParticleDepolRatio",
-    output_name = "ParticleDepolRatio",
-    long_name = "lidar_particle_depolarization_ratio",
-    standard_name = "lidar_particle_depolarization_ratio",
-    output_units = "",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
-    dsr_name = "BackScatterCoeff",
-    output_name = "BackScatterCoeff",
-    long_name = "lidar_backscatter_coefficient",
-    standard_name = "lidar_backscatter_coefficient",
-    output_units = "",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
-    dsr_name = "ExtinctionCoeff",
-    output_name = "ExtinctionCoeff",
-    long_name = "lidar_extinction_coefficient",
-    standard_name = "lidar_extinction_coefficient",
-    output_units = "1/m",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
-    dsr_name = "OpticalDepth",
-    output_name = "OpticalDepth",
-    long_name = "lidar_optical_depth",
-    standard_name = "lidar_optical_depth",
-    output_units = "1/m",
     output_encoding = OUTPUT_FLOAT
   }
 };
