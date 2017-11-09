@@ -316,7 +316,7 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 fields = {
   {
     label = "BackScatterRatio",
-    raw_name = "BackScatterRatio",
+    raw_name = "BackScatterRatio_F",
     filtered_name = "",
     units = "",
     color_map = "backscatter_ratio.colors",
@@ -325,7 +325,7 @@ fields = {
   ,
   {
     label = "BackScatterCoeff",
-    raw_name = "BackScatterCoeff",
+    raw_name = "BackScatterCoeff_F",
     filtered_name = "",
     units = "m-1.sr-1",
     color_map = "backscatter_coeff.colors",
@@ -334,7 +334,7 @@ fields = {
   , 
   {
     label = "VolumeDepolRatio",
-    raw_name = "VolumeDepolRatio",
+    raw_name = "VolumeDepolRatio_F",
     filtered_name = "",
     units = "",
     color_map = "volume_depol_ratio.colors",
@@ -343,7 +343,7 @@ fields = {
   ,
   {
     label = "ParticleDepolRatio",
-    raw_name = "ParticleDepolRatio",
+    raw_name = "ParticleDepolRatio_F",
     filtered_name = "",
     units = "",
     color_map = "particle_depol_ratio.colors",
@@ -352,7 +352,7 @@ fields = {
   ,
   {
     label = "ExtinctionCoeff",
-    raw_name = "ExtinctionCoeff",
+    raw_name = "ExtinctionCoeff_F",
     filtered_name = "",
     units = "m-1",
     color_map = "extinction_coeff.colors",
@@ -361,7 +361,7 @@ fields = {
   , 
   {
     label = "OpticalDepth",
-    raw_name = "OpticalDepth",
+    raw_name = "OpticalDepth_F",
     filtered_name = "",
     units = "",
     color_map = "optical_depth.colors",
@@ -370,7 +370,7 @@ fields = {
   ,
   {
     label = "CombinedHighCounts",
-    raw_name = "CombinedHighCounts",
+    raw_name = "CombinedHighCounts_F",
     filtered_name = "",
     units = "counts",
     color_map = "log_1_2000.colors",
@@ -379,7 +379,7 @@ fields = {
   ,
   {
     label = "CombinedLowCounts",
-    raw_name = "CombinedLowCounts",
+    raw_name = "CombinedLowCounts_F",
     filtered_name = "",
     units = "counts",
     color_map = "log_1_100.colors",
@@ -388,7 +388,7 @@ fields = {
   ,
   {
     label = "CrossPolarCounts",
-    raw_name = "CrossPolarCounts",
+    raw_name = "CrossPolarCounts_F",
     filtered_name = "",
     units = "counts",
     color_map = "log_1_100.colors",
@@ -397,7 +397,7 @@ fields = {
   ,
   {
     label = "MolecularCounts",
-    raw_name = "MolecularCounts",
+    raw_name = "MolecularCounts_F",
     filtered_name = "",
     units = "counts",
     color_map = "log_1_1000.colors",
