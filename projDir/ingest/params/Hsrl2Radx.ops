@@ -634,6 +634,44 @@ ngates_for_background_correction = 100;
 
 counts_censoring_threshold = 4;
 
+///////////// optical_depth_reference_range_m /////////
+//
+// Range to gate for the reference optical depth.
+//
+// We use this to calibrate the optical depth. We compute a running mean 
+//   of the measured optical depth for this range, and then adjust the 
+//   measured values relative to the reference value.
+//
+//
+// Type: double
+//
+
+optical_depth_reference_range_m = 100;
+
+///////////// optical_depth_n_reference_obs ///////////
+//
+// Number of observations for computing the reference optical depth.
+//
+// We compute a running mean to determine the reference optical depth.
+//
+//
+// Type: int
+//
+
+optical_depth_n_reference_obs = 20;
+
+///////////// optical_depth_reference_value ///////////
+//
+// Optical depth at the reference range.
+//
+// See optical_depth_reference_range_m.
+//
+//
+// Type: double
+//
+
+optical_depth_reference_value = 0.4;
+
 ///////////// optical_depth_median_filter_len /////////
 //
 // The optical depth field is filtered using a median filter.

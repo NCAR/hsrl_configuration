@@ -3,7 +3,7 @@
             saturation="1.0"
             labelsSetByValue="true">
 
-  <Range min="1"    max="auto" color="0.2081, 0.1663, 0.5292" />
+  <Range min="0"    max="auto" color="0.2081, 0.1663, 0.5292" />
   <Range min="auto" max="auto" color="0.2116, 0.1898, 0.5777" />
   <Range min="auto" max="auto" color="0.2123, 0.2138, 0.6270" />
   <Range min="auto" max="auto" color="0.2081, 0.2386, 0.6771" />
