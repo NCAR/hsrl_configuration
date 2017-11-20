@@ -767,7 +767,7 @@ rhi_aspect_ratio = 1;
 // Type: double
 //
 
-bscan_time_span_secs = 300;
+bscan_time_span_secs = 900;
 
 ///////////// bscan_truncate_start_time ///////////////
 //
@@ -1511,7 +1511,7 @@ images_creation_mode = CREATE_IMAGES_ON_REALTIME_SCHEDULE;
 // Type: int
 //
 
-images_schedule_interval_secs = 300;
+images_schedule_interval_secs = 900;
 
 ///////////// images_schedule_delay_secs //////////////
 //
