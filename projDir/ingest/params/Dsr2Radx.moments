@@ -1369,27 +1369,9 @@ output_fields = {
   }
   ,
   {
-    dsr_name = "CombinedHighCounts_F",
-    output_name = "CombinedHighCounts_F",
-    long_name = "high_copolar_combined_backscatter_photon_count_filtered",
-    standard_name = "lidar_copolar_combined_backscatter_photon_count",
-    output_units = "counts",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
     dsr_name = "CombinedLowCounts",
     output_name = "CombinedLowCounts",
     long_name = "low_copolar_combined_backscatter_photon_count",
-    standard_name = "lidar_copolar_combined_backscatter_photon_count",
-    output_units = "counts",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
-    dsr_name = "CombinedLowCounts_F",
-    output_name = "CombinedLowCounts_F",
-    long_name = "low_copolar_combined_backscatter_photon_count_filtered",
     standard_name = "lidar_copolar_combined_backscatter_photon_count",
     output_units = "counts",
     output_encoding = OUTPUT_FLOAT
@@ -1405,15 +1387,6 @@ output_fields = {
   }
   ,
   {
-    dsr_name = "CrossPolarCounts_F",
-    output_name = "CrossPolarCounts_F",
-    long_name = "lidar_crosspolar_combined_backscatter_photon_count_filtered",
-    standard_name = "lidar_crosspolar_combined_backscatter_photon_count",
-    output_units = "counts",
-    output_encoding = OUTPUT_FLOAT
-  }
-  ,
-  {
     dsr_name = "MolecularCounts",
     output_name = "MolecularCounts",
     long_name = "lidar_copolar_molecular_backscatter_photon_count",
@@ -1423,11 +1396,74 @@ output_fields = {
   }
   ,
   {
-    dsr_name = "MolecularCounts_F",
-    output_name = "MolecularCounts_F",
-    long_name = "lidar_copolar_molecular_backscatter_photon_count_filtered",
-    standard_name = "lidar_copolar_molecular_backscatter_photon_count",
-    output_units = "counts",
+    dsr_name = "CombinedHighRate",
+    output_name = "CombinedHighRate",
+    long_name = "high_copolar_combined_backscatter_photon_rate",
+    standard_name = "lidar_copolar_combined_backscatter_photon_rate",
+    output_units = "s-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "CombinedHighRate_F",
+    output_name = "CombinedHighRate_F",
+    long_name = "high_copolar_combined_backscatter_photon_rate_filtered",
+    standard_name = "lidar_copolar_combined_backscatter_photon_rate",
+    output_units = "s-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "CombinedLowRate",
+    output_name = "CombinedLowRate",
+    long_name = "low_copolar_combined_backscatter_photon_rate",
+    standard_name = "lidar_copolar_combined_backscatter_photon_rate",
+    output_units = "s-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "CombinedLowRate_F",
+    output_name = "CombinedLowRate_F",
+    long_name = "low_copolar_combined_backscatter_photon_rate_filtered",
+    standard_name = "lidar_copolar_combined_backscatter_photon_rate",
+    output_units = "s-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "CrossPolarRate",
+    output_name = "CrossPolarRate",
+    long_name = "lidar_crosspolar_combined_backscatter_photon_rate",
+    standard_name = "lidar_crosspolar_combined_backscatter_photon_rate",
+    output_units = "s-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "CrossPolarRate_F",
+    output_name = "CrossPolarRate_F",
+    long_name = "lidar_crosspolar_combined_backscatter_photon_rate_filtered",
+    standard_name = "lidar_crosspolar_combined_backscatter_photon_rate",
+    output_units = "s-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "MolecularRate",
+    output_name = "MolecularRate",
+    long_name = "lidar_copolar_molecular_backscatter_photon_rate",
+    standard_name = "lidar_copolar_molecular_backscatter_photon_rate",
+    output_units = "s-1",
+    output_encoding = OUTPUT_FLOAT
+  }
+  ,
+  {
+    dsr_name = "MolecularRate_F",
+    output_name = "MolecularRate_F",
+    long_name = "lidar_copolar_molecular_backscatter_photon_rate_filtered",
+    standard_name = "lidar_copolar_molecular_backscatter_photon_rate",
+    output_units = "s-1",
     output_encoding = OUTPUT_FLOAT
   }
   ,

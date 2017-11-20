@@ -382,7 +382,7 @@ fields = {
   ,
   {
     label = "1Hr_CombinedHighCounts",
-    raw_name = "CombinedHighCounts_F",
+    raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_high.colors",
@@ -391,7 +391,7 @@ fields = {
   ,
   {
     label = "1Hr_CombinedLowCounts",
-    raw_name = "CombinedLowCounts_F",
+    raw_name = "CombinedLowCounts",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_low.colors",
@@ -400,7 +400,7 @@ fields = {
   ,
   {
     label = "1Hr_CrossPolarCounts",
-    raw_name = "CrossPolarCounts_F",
+    raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_cross_polar.colors",
@@ -409,7 +409,7 @@ fields = {
   ,
   {
     label = "1Hr_MolecularCounts",
-    raw_name = "MolecularCounts_F",
+    raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_molecular.colors",
