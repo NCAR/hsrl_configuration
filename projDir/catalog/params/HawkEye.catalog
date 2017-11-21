@@ -1396,7 +1396,7 @@ images_file_name_platform = "NSF_NCAR_GV_HSRL";
 // Type: string
 //
 
-images_file_name_extension = "png";
+images_file_name_extension = "jpg";
 
 ///////////// images_file_name_delimiter //////////////
 //
