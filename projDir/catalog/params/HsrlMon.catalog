@@ -459,46 +459,6 @@ monitoring_fields = {
   }
   ,
   {
-    name = "CalibrationPowerFilter",
-    qualifier = "",
-    minValidValue = -100,
-    maxValidValue = 100000,
-    note = ""
-  }
-  ,
-  {
-    name = "CrossChannelBlock",
-    qualifier = "",
-    minValidValue = -100,
-    maxValidValue = 100000,
-    note = ""
-  }
-  ,
-  {
-    name = "IodineLongFilter",
-    qualifier = "",
-    minValidValue = -100,
-    maxValidValue = 100000,
-    note = ""
-  }
-  ,
-  {
-    name = "ReceivedSignalFilter",
-    qualifier = "",
-    minValidValue = -100,
-    maxValidValue = 100000,
-    note = ""
-  }
-  ,
-  {
-    name = "RemoveLongI2Cell",
-    qualifier = "",
-    minValidValue = -100,
-    maxValidValue = 100000,
-    note = ""
-  }
-  ,
-  {
     name = "brillouinfiltered_energy_stats",
     qualifier = "field0",
     minValidValue = -100,
@@ -717,6 +677,46 @@ monitoring_fields = {
   {
     name = "laserpowervalues",
     qualifier = "field6_name",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "CalibrationPowerFilter",
+    qualifier = "",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "CrossChannelBlock",
+    qualifier = "",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "IodineLongFilter",
+    qualifier = "",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "ReceivedSignalFilter",
+    qualifier = "",
+    minValidValue = -100,
+    maxValidValue = 100000,
+    note = ""
+  }
+  ,
+  {
+    name = "RemoveLongI2Cell",
+    qualifier = "",
     minValidValue = -100,
     maxValidValue = 100000,
     note = ""

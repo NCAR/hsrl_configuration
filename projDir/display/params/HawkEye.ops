@@ -180,7 +180,7 @@ begin_in_archive_mode = FALSE;
 // Type: string
 //
 
-archive_start_time = "2015 07 14 18 00 00";
+archive_start_time = "2017 11 09 20 15 00";
 
 ///////////// archive_scan_interval_secs //////////////
 //
@@ -358,7 +358,7 @@ fields = {
     units = "",
     color_map = "backscatter_ratio.colors",
     shortcut = "1"
-  }
+  } 
   ,
   {
     label = "BackScatterCoeff",
@@ -368,7 +368,7 @@ fields = {
     color_map = "backscatter_coeff.colors",
     shortcut = "2"
   }
-  ,
+  , 
   {
     label = "VolumeDepolRatio",
     raw_name = "VolumeDepolRatio",
@@ -376,7 +376,7 @@ fields = {
     units = "",
     color_map = "volume_depol_ratio.colors",
     shortcut = "3"
-  }
+  } 
   ,
   {
     label = "ParticleDepolRatio",
@@ -385,7 +385,7 @@ fields = {
     units = "",
     color_map = "particle_depol_ratio.colors",
     shortcut = "4"
-  }
+  } 
   ,
   {
     label = "ExtinctionCoeff",
@@ -395,7 +395,7 @@ fields = {
     color_map = "extinction_coeff.colors",
     shortcut = "5"
   }
-  ,
+  , 
   {
     label = "OpticalDepth",
     raw_name = "OpticalDepth",
@@ -406,9 +406,45 @@ fields = {
   }
   ,
   {
+    label = "CombinedHighRate",
+    raw_name = "CombinedHighRate",
+    filtered_name = "CombinedHighRate_F",
+    units = "m-1",
+    color_map = "hsrl_combined_high.colors",
+    shortcut = "7"
+  }
+  ,
+  {
+    label = "CombinedLowRate",
+    raw_name = "CombinedLowRate",
+    filtered_name = "CombinedLowRate_F",
+    units = "m-1",
+    color_map = "hsrl_combined_low.colors",
+    shortcut = "8"
+  }
+  ,
+  {
+    label = "CrossPolarRate",
+    raw_name = "CrossPolarRate",
+    filtered_name = "CrossPolarRate_F",
+    units = "m-1",
+    color_map = "hsrl_cross_polar.colors",
+    shortcut = "9"
+  }
+  ,
+  {
+    label = "MolecularRate",
+    raw_name = "MolecularRate",
+    filtered_name = "MolecularRate_F",
+    units = "m-1",
+    color_map = "hsrl_molecular.colors",
+    shortcut = "a"
+  }
+  ,
+  {
     label = "CombinedHighCounts",
     raw_name = "CombinedHighCounts",
-    filtered_name = "CombinedHighCounts_F",
+    filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_high.colors",
     shortcut = "7"
@@ -417,7 +453,7 @@ fields = {
   {
     label = "CombinedLowCounts",
     raw_name = "CombinedLowCounts",
-    filtered_name = "CombinedLowCounts_F",
+    filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_low.colors",
     shortcut = "8"
@@ -426,7 +462,7 @@ fields = {
   {
     label = "CrossPolarCounts",
     raw_name = "CrossPolarCounts",
-    filtered_name = "CrossPolarCounts_F",
+    filtered_name = "",
     units = "counts",
     color_map = "hsrl_cross_polar.colors",
     shortcut = "9"
@@ -435,7 +471,7 @@ fields = {
   {
     label = "MolecularCounts",
     raw_name = "MolecularCounts",
-    filtered_name = "MolecularCounts_F",
+    filtered_name = "",
     units = "counts",
     color_map = "hsrl_molecular.colors",
     shortcut = "a"
@@ -457,16 +493,16 @@ fields = {
     units = "K",
     color_map = "tempK_xml.colors",
     shortcut = "c"
-  }
-  ,
-  {
+  } 
+  ,  
+  { 
     label = "Pressure",
     raw_name = "Pressure",
     filtered_name = "",
     units = "mb",
     color_map = "pressure_xml.colors",
     shortcut = "d"
-  }
+  } 
 };
 
 ///////////// background_render_mins //////////////////
