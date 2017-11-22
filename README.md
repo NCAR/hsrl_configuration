@@ -2,23 +2,15 @@
 
 Configuration files and scripts for HSRL real-time operations.
 
-### Setting up the LINUX environment
+### Operations manual for HSRL
 
-  See [README_LINUX_SETUP.md](./docs/README_LINUX_SETUP.md)
+  See [HSRL_Ops_Manual.pdf](./docs/HSRL_Ops_Manual.pdf)
 
-### Checking out the HSRL repositories
+### HSRL data block diagram
 
-  See [README_HSRL_CHECKOUT.md](./docs/README_HSRL_CHECKOUT.md)
+  See [HSRL_Block_Diagram.pdf](./docs/HSRL_Block_Diagram.pdf)
 
-### Installing the HSRL configuration
+### Running the HawkEye display
 
-  See [README_INSTALL_HSRL_CONFIGS.md](./docs/README_INSTALL_HSRL_CONFIGS.md)
-
-### Building LROSE
-
-  See [README_LROSE_BUILD.md](./docs/README_LROSE_BUILD.md)
-
-### Running HSRL
-
-  See [README_RUN_HSRL.md](./docs/README_RUN_HSRL.md)
+  See [HSRL_HawkEye_Manual.pdf](./docs/HSRL_HawkEye_Manual.pdf)
 
