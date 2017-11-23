@@ -29,4 +29,7 @@ To set up and configure the archiver computer, see:
 
   [ConfigureHost.md](./docs/ConfigureHost.md)
 
+This page is published at:
+
+  [https://ncar.github.io/hsrl_configuration](https://ncar.github.io/hsrl_configuration)
 
