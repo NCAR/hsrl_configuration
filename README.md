@@ -1,8 +1,8 @@
 # HSRL Run-Time Configuration
 
-HSRL is the NCAR/EOL High Spectral Resolution Lidar:
+HSRL is the NCAR/EOL High Spectral Resolution Lidar.
 
-  [EOL instruments](https://www.eol.ucar.edu/ground-based-airborne-remote-sensing-platforms)
+See [EOL instruments](https://www.eol.ucar.edu/ground-based-airborne-remote-sensing-platforms)
 
 The HSRL run-time system includes 2 computers:
 
@@ -24,4 +24,9 @@ The operations manual for starting up and running HSRL is at:
 The manual for running the HawkEye display is at:
 
   [HSRL_HawkEye_Manual.pdf](./docs/HSRL_HawkEye_Manual.pdf)
+
+To set up and configure the archiver computer, see:
+
+  [ConfigureHost.md](./docs/ConfigureHost.md)
+
 
