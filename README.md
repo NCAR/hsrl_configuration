@@ -1,5 +1,9 @@
 # HSRL Run-Time Configuration
 
+HSRL is the NCAR/EOL High Spectral Resolution Lidar:
+
+  [EOL instruments](https://www.eol.ucar.edu/ground-based-airborne-remote-sensing-platforms)
+
 The HSRL run-time system includes 2 computers:
 
 * The instrument computer
