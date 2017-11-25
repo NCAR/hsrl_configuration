@@ -1,0 +1,20 @@
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+
+192.168.2.1      hcr-router
+192.168.2.251    hsrl-router router
+
+192.168.2.10     hcr-spider
+192.168.2.12     hcr-timeserver ntp
+192.168.2.14     hcr-digi
+192.168.2.20     hcr-rds
+192.168.2.30     hcr-archiver
+
+192.168.2.200    archiver   hsrl-archiver
+192.168.2.201    hsrl       hsrl-instrument
+192.168.2.202    archiver2  hsrl-archiver2
+192.168.2.203    hsrl2      hsrl-instrument2
+192.168.2.204    hsrl-spider
+
+
+
