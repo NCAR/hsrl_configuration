@@ -1,3 +1,12 @@
+###############################################################################
+# Hosts file for HSRL
+#
+# This file is checked in at:
+#
+#   git/hsrl_configuration/projDir/system/etc/hosts
+#
+###############################################################################
+
 127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 
