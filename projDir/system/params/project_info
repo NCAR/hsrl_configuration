@@ -3,6 +3,6 @@
 #############################################
 
 setenv PROJECT_NAME               "socrates"
-setenv SITE_NAME                  "SOCRATES"
+setenv SITE_NAME                  "NCAR-GV"
 
 
