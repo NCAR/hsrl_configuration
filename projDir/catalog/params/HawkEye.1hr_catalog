@@ -326,15 +326,15 @@ color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 //
 
 fields = {
-  {
-    label = "1Hr_BackScatterRatio",
-    raw_name = "BackScatterRatio_F",
-    filtered_name = "",
-    units = "",
-    color_map = "backscatter_ratio.colors",
-    shortcut = "1"
-  } 
-  ,
+  // {
+  //   label = "1Hr_BackScatterRatio",
+  //   raw_name = "BackScatterRatio_F",
+  //   filtered_name = "",
+  //   units = "",
+  //   color_map = "backscatter_ratio.colors",
+  //   shortcut = "1"
+  // } 
+  // ,
   {
     label = "1Hr_BackScatterCoeff",
     raw_name = "BackScatterCoeff_F",
@@ -352,33 +352,33 @@ fields = {
     color_map = "volume_depol_ratio.colors",
     shortcut = "3"
   } 
-  ,
-  {
-    label = "1Hr_ParticleDepolRatio",
-    raw_name = "ParticleDepolRatio_F",
-    filtered_name = "",
-    units = "",
-    color_map = "particle_depol_ratio.colors",
-    shortcut = "4"
-  } 
-  ,
-  {
-    label = "1Hr_ExtinctionCoeff",
-    raw_name = "ExtinctionCoeff_F",
-    filtered_name = "",
-    units = "m-1",
-    color_map = "extinction_coeff.colors",
-    shortcut = "5"
-  }
-  , 
-  {
-    label = "1Hr_OpticalDepth",
-    raw_name = "OpticalDepth_F",
-    filtered_name = "",
-    units = "",
-    color_map = "optical_depth.colors",
-    shortcut = "6"
-  }
+  // ,
+  // {
+  //   label = "1Hr_ParticleDepolRatio",
+  //   raw_name = "ParticleDepolRatio_F",
+  //   filtered_name = "",
+  //   units = "",
+  //   color_map = "particle_depol_ratio.colors",
+  //   shortcut = "4"
+  // } 
+  // ,
+  // {
+  //   label = "1Hr_ExtinctionCoeff",
+  //   raw_name = "ExtinctionCoeff_F",
+  //   filtered_name = "",
+  //   units = "m-1",
+  //   color_map = "extinction_coeff.colors",
+  //   shortcut = "5"
+  // }
+  // , 
+  // {
+  //   label = "1Hr_OpticalDepth",
+  //   raw_name = "OpticalDepth_F",
+  //   filtered_name = "",
+  //   units = "",
+  //   color_map = "optical_depth.colors",
+  //   shortcut = "6"
+  // }
   ,
   {
     label = "1Hr_CombinedHighCounts",
@@ -388,15 +388,15 @@ fields = {
     color_map = "hsrl_combined_high.colors",
     shortcut = "7"
   }
-  ,
-  {
-    label = "1Hr_CombinedLowCounts",
-    raw_name = "CombinedLowCounts",
-    filtered_name = "",
-    units = "counts",
-    color_map = "hsrl_combined_low.colors",
-    shortcut = "8"
-  }
+  // ,
+  // {
+  //   label = "1Hr_CombinedLowCounts",
+  //   raw_name = "CombinedLowCounts",
+  //   filtered_name = "",
+  //   units = "counts",
+  //   color_map = "hsrl_combined_low.colors",
+  //   shortcut = "8"
+  // }
   ,
   {
     label = "1Hr_CrossPolarCounts",
