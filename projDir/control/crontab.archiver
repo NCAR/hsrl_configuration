@@ -15,6 +15,9 @@
 # Start Xvfb
 */1 * * * *  csh -c "start_Xvfb"      1> /dev/null 2> /dev/null
 ####################################################################
+# Restart HawkEye for catalog
+#12 * * * *  csh -c "restart_HawkEye.catalog"   1> /dev/null 2> /dev/null
+####################################################################
 # Sync data to hcr and eldora
 */5 * * * *   csh -c "rsync_hsrl_to_hcr" 1> /dev/null 2> /dev/null
 #
