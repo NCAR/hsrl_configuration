@@ -1,0 +1,9 @@
+#! /bin/csh
+
+# restart HawkEye for catalogs
+
+snuff HawkEye.catalog
+snuff HawkEye.1hr_catalog
+
+start_HawkEye.catalog
+start_HawkEye.1hr_catalog
