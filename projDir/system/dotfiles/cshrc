@@ -147,6 +147,7 @@ setenv GRIB_CACHE /scr/eldora1/HSRL_data/GFS_cache
 # then projDir/bin, then the rest
 
 set path = (.)
+set path = ($path ~/bin)
 
 if ( -d $LROSE_INSTALL_DIR/bin ) then
   set path = ($path $LROSE_INSTALL_DIR/bin)
