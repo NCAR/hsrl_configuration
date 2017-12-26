@@ -1,0 +1,15 @@
+#! /bin/csh
+
+# rsync the data across to USB stick
+# Make sure you mount the USB stick first
+#
+#  cd ~/projDir/system/scripts
+#  sudo ./mount_usb
+
+cd $DATA_DIR
+
+echo "================= rsync hsrl data to usb ================"
+
+mkdir /data/usb/archive
+rsync -av --size-only raw cfradial monitoring spdb logs images /data/usb/archive |& grep -v mkstemp
+
