@@ -1,0 +1,8 @@
+#! /bin/csh
+
+#
+# Unmount USB stick on /dev/sdb1
+#
+
+umount /data/usb
+

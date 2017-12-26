@@ -1,0 +1,8 @@
+#! /bin/csh
+
+#
+# Mount USB stick on /dev/sdb1
+#
+
+mount /dev/sdb1 /data/usb
+
