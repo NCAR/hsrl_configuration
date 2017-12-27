@@ -1,0 +1,11 @@
+INSTALLING SUPPORT for WINDOWS EXFAT
+====================================
+
+# install repos
+
+yum install -y http://li.nux.ro/download/nux/dextop/el7/x86_64/nux-dextop-release-0-1.el7.nux.noarch.rpm
+
+# install packages
+
+yum install exfat-utils
+yum install fuse-exfat
