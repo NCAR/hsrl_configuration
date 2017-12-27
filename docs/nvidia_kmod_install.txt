@@ -1,0 +1,30 @@
+INSTALLING NVIDIA DRIVERS using KMOD on CENTOS 7
+================================================
+
+# install repos
+
+rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+rpm -Uvh http://www.elrepo.org/elrepo-release-7.0-2.el7.elrepo.noarch.rpm
+
+# check for nvidia drivers
+
+yum search nvidia
+
+# this last step takes quite a while - so be patient
+
+yum install kmod-nvidia-340xx.x86_64 nvidia-x11-drv-340xx.x86_64 nvidia-detect.x86_64
+
+# you may need to disable glaamor if you get the following WARNING
+
+# WARNING:
+# Disable glamoregl or uninstall xorg-x11-glamor
+# See: http://elrepo.org/tiki/kmod-nvidia (Known Issues) for more information
+
+# in which case do the following:
+
+yum remove xorg-x11-glamor
+
+# reboot
+
+reboot
+
