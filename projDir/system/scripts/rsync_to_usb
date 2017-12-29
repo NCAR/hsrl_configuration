@@ -6,7 +6,7 @@
 #  cd ~/projDir/system/scripts
 #  sudo ./mount_usb
 
-cd $DATA_DIR
+cd ~hsrl/projDir/data
 
 echo "================= rsync hsrl data to usb ================"
 

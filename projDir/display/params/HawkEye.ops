@@ -640,7 +640,7 @@ site_name = "GV";
 // Type: int
 //
 
-main_window_width = 1400;
+main_window_width = 1200;
 
 ///////////// main_window_height //////////////////////
 //
@@ -650,7 +650,7 @@ main_window_width = 1400;
 // Type: int
 //
 
-main_window_height = 700;
+main_window_height = 600;
 
 ///////////// main_window_start_x /////////////////////
 //
