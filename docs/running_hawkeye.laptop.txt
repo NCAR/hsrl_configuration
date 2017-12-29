@@ -1,0 +1,15 @@
+# Running HawkEye on laptop
+
+# Copy data onto laptop
+
+(a) Insert USB stick
+(b) cd to top of usb stick
+(c) cd archive
+(d) rsync -av * ~/projDir/data
+
+# Run HawkEye
+# specify the start time
+
+cd
+cd projDir/display/scripts
+./start_HawkEye.hsrl-socrates yyyy mm dd hh mm ss

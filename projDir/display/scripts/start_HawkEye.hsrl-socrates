@@ -1,0 +1,14 @@
+#! /bin/csh
+
+rehash
+
+setenv PROJ_DIR ~/projDir
+setenv DATA_DIR ~/projDir/data
+cd $PROJ_DIR/display/params
+
+if ($#argv < 6) then
+  HawkEye -params HawkEye.hsrl-socrates -start_time "2015 07 27 18 00 10 00" >& /dev/null &
+else
+  HawkEye -params HawkEye.hsrl-socrates -start_time "$1 $2 $3 $4 $5 $6" >& /dev/null &
+endif
+

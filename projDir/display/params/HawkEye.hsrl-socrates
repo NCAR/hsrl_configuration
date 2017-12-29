@@ -1158,7 +1158,7 @@ bscan_min_altitude_km = 0;
 // Type: double
 //
 
-bscan_max_altitude_km = 25;
+bscan_max_altitude_km = 20;
 
 ///////////// bscan_altitude_in_feet //////////////////
 //
