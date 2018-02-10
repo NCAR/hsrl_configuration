@@ -518,7 +518,7 @@ baseline_calibration_path = "$(PROJ_DIR)/calfiles/baseline_correction_20171019T2
 // Type: string
 //
 
-diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20171018T0000.geo";
+diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20180102T2154.geo";
 
 ///////////// geofile_default_path ////////////////////
 //
@@ -528,7 +528,7 @@ diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20171018T
 // Type: string
 //
 
-geofile_default_path = "$(PROJ_DIR)/calfiles/geofile_default_20150601T0000.geo";
+geofile_default_path = "$(PROJ_DIR)/calfiles/geofile_default_20180104T1700.geo";
 
 ///////////// afterpulse_default_path /////////////////
 //
