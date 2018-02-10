@@ -1,0 +1,100 @@
+{
+	"lidar_name": "GV-HSRL",
+	"MCS_bins": [
+		{"date": "7-Dec-2013 0:0","value": 280}
+	],
+	"Bin_Width": [
+		{"date": "7-Dec-2013 0:0","value": 50e-9, "units":"seconds"}
+	],
+     "Dead_Time": [
+           {"date":"1-Jan-2008 0:0","combined_hi":47e-9,"combined_lo":47e-9,"cross":32e-9,"molecular":32e-9},
+           {"date":"18-Jan-2012 0:0","combined_hi":27.9e-9,"combined_lo":21.3e-9,"cross":32e-9,"molecular":26.0e-9},
+           {"date":"3-Mar-2016 0:0","combined_hi":27.9e-9,"combined_lo":21.3e-9,"cross":32e-9,"molecular":28.4e-9}
+     ],
+
+	"Molecular_Gain": [
+           {"date": "29-Jul-2015 16:31","value": 1.0347, "down_gain":1.0347, "diff_geo": "diff_geo_GVHSRL20120201.npz", "change_type": "gradual", "RB_Corrected":"False","down_diff":""},
+           {"date": "29-Jul-2015 16:31","value": 0.688944, "down_gain":0.661462, "diff_geo": "diff_geo_GVHSRL20120201.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":""},
+		{"date": "12-Oct-2017 0:0","value": 1.0728915, "down_gain":1.0728915, "diff_geo": "diff_geo_GVHSRL20171025.npz", "change_type": "abrupt", "RB_Corrected":"False","down_diff":""},
+		{"date": "27-Oct-2017 0:0","value": 1.133915, "down_gain":1.133915, "diff_geo": "diff_geo_GVHSRL20171025.npz", "change_type": "gradual", "RB_Corrected":"False","down_diff":""},
+		{"date": "27-Oct-2017 0:0","value": 0.784546, "down_gain":0.784546, "diff_geo": "diff_geo_GVHSRL20171025.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":""},
+           {"date": "20-Dec-2017 18:00","value": 0.629033, "down_gain":0.59758, "diff_geo": "diff_geo_GVHSRL20171220.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":"diff_geo_GVHSRL20180102.npz"},
+           {"date": "1-Jan-2018 18:00","value": 0.594734, "down_gain":0.64897, "diff_geo": "diff_geo_GVHSRL20171220.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":"diff_geo_GVHSRL20180102.npz"},
+           {"date": "15-Jan-2018 23:00","value": 0.63, "down_gain":0.65, "diff_geo": "diff_geo_GVHSRL20171220.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":"diff_geo_GVHSRL20180102.npz"},
+           {"date": "28-Jan-2018 22:00","value": 0.668, "down_gain":0.67, "diff_geo": "diff_geo_GVHSRL20171220.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":"diff_geo_GVHSRL20180102.npz"},
+           {"date": "2-Feb-2018 22:00","value": 0.60, "down_gain":0.642866, "diff_geo": "diff_geo_GVHSRL20171220.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":"diff_geo_GVHSRL20180102.npz"}
+	],
+	"Baseline_File": [
+		{"date": "12-Oct-2017 0:0","value": "baseline_20171019T2000.npz", "change_type": "abrupt"}
+	],
+      "Geo_File": [
+           {"date": "25-Oct-2017 20:00","value": "geofile_GVHSRL20171025.npz","down_file":"", "change_type": "abrupt"},
+           {"date": "7-Dec-2017 20:00","value": "geofile_GVHSRL20171025.npz","down_file":"geofile_GVHSRL20180104.npz", "change_type": "abrupt"}
+      ],
+
+	"Laser_Pulse_Width": [
+		{"date": "7-Dec-2013 0:0","value": 50e-9, "units":"seconds"}
+	],
+
+	"I2_Scan": [
+           {"date": "1-Jul-2017 0:0","value": "i2-default-scan-20150701T0000.npz", "change_type": "abrupt"},
+		{"date": "18-Oct-2017 19:02","value": "i2-default-scan-20171018T1901.npz", "change_type": "gradual"},
+		{"date": "21-Nov-2017 20:00","value": "i2-default-scan-20171121T2000.npz", "change_type": "gradual"},
+           {"date": "20-Dec-2017 19:39","value": "i2-default-scan-20171220T1939.npz", "change_type": "gradual"}
+	],
+
+	"Polarization": [
+		{"date": "1-Jul-2015 0:0","value": "NA", "cal_file":"pol_cal_default_20150722T19200.json", "diff_geo":"cross_pol_diff_geo_GVHSRL20150722.npz","change_type": "abrupt"},
+		{"date": "1-Sep-2015 0:0","value": "NA", "cal_file":"pol_cal_default_20160407T16520.json", "diff_geo":"cross_pol_diff_geo_GVHSRL20160301.npz","change_type": "abrupt"},
+		{"date": "20-Oct-2016 0:0","value": "NA", "cal_file":"pol_cal_default_20161020T21000.json", "diff_geo":"cross_pol_diff_geo_GVHSRL20161024.npz","change_type": "gradual"},
+		{"date": "14-Nov-2017 0:0","value": "NA", "cal_file":"pol_cal_default_20171114T17000.json", "diff_geo":"cross_pol_diff_geo_GVHSRL20171114.npz","change_type": "gradual"},
+           {"date": "20-Dec-2017 0:0","value": "NA", "cal_file":"pol_cal_default_20171220T19000.json", "diff_geo":"cross_pol_diff_geo_GVHSRL20171220.npz","change_type": "abrupt"}
+	],
+
+	"Location": [
+		{"date": "1-Sep-2015 0:0","location": "Boulder, CO, USA","latitude": 40.038589, "longitude": -105.238968, "Project":"none", "description": "Lidar Lab", "change_type": "abrupt"},
+           {"date": "7-Dec-2017 0:0","location": "Broomfield, CO, USA","latitude": 39.912763, "longitude": -105.118251, "Project":"SOCRATES", "description": "GV", "change_type": "abrupt"},
+           {"date": "8-Jan-2018 0:0","location": "Kona, HI, USA","latitude": 19.729125, "longitude": -156.042596, "Project":"SOCRATES", "description": "GV", "change_type": "abrupt"},
+	   {"date": "9-Jan-2018 0:0","location": "Pago Pago, American Samoa, USA","latitude": -14.328274, "longitude": -170.712712, "Project":"SOCRATES", "description": "GV", "change_type": "abrupt"},
+           {"date": "11-Jan-2018 0:0","location": "Hobart, TAS, Australia","latitude": -42.839674, "longitude": 147.506667, "Project":"SOCRATES", "description": "GV", "change_type": "abrupt"}
+	],
+
+	"Flights": [
+		{"date": "1-Jul-2015 0:0","Project":"CSET","Flight Number": 1,"Flight Designation": "rf"},
+		{"date": "7-Jul-2015 0:0","Project":"CSET","Flight Number": 2,"Flight Designation": "rf"},
+		{"date": "9-Jul-2015 0:0","Project":"CSET","Flight Number": 3,"Flight Designation": "rf"},
+		{"date": "12-Jul-2015 0:0","Project":"CSET","Flight Number": 4,"Flight Designation": "rf"},
+		{"date": "14-Jul-2015 0:0","Project":"CSET","Flight Number": 5,"Flight Designation": "rf"},
+		{"date": "17-Jul-2015 0:0","Project":"CSET","Flight Number": 6,"Flight Designation": "rf"},
+		{"date": "19-Jul-2015 0:0","Project":"CSET","Flight Number": 7,"Flight Designation": "rf"},
+		{"date": "22-Jul-2015 0:0","Project":"CSET","Flight Number": 8,"Flight Designation": "rf"},
+		{"date": "24-Jul-2015 0:0","Project":"CSET","Flight Number": 9,"Flight Designation": "rf"},
+		{"date": "27-Jul-2015 0:0","Project":"CSET","Flight Number": 10,"Flight Designation": "rf"},
+		{"date": "29-Jul-2015 0:0","Project":"CSET","Flight Number": 11,"Flight Designation": "rf"},
+		{"date": "1-Aug-2015 0:0","Project":"CSET","Flight Number": 12,"Flight Designation": "rf"},
+		{"date": "3-Aug-2015 0:0","Project":"CSET","Flight Number": 13,"Flight Designation": "rf"},
+		{"date": "7-Aug-2015 0:0","Project":"CSET","Flight Number": 14,"Flight Designation": "rf"},
+		{"date": "9-Aug-2015 0:0","Project":"CSET","Flight Number": 15,"Flight Designation": "rf"},
+		{"date": "12-Aug-2015 0:0","Project":"CSET","Flight Number": 16,"Flight Designation": "rf"},
+
+           {"date": "2-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 1,"Flight Designation": "tf"},
+           {"date": "4-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 2,"Flight Designation": "tf"},
+           {"date": "8-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 1,"Flight Designation": "ff"},
+           {"date": "9-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 2,"Flight Designation": "ff"},
+           {"date": "10-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 3,"Flight Designation": "ff"},
+           {"date": "15-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 1,"Flight Designation": "rf"},
+           {"date": "18-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 2,"Flight Designation": "rf"},
+           {"date": "22-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 3,"Flight Designation": "rf"},
+           {"date": "23-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 4,"Flight Designation": "rf"},
+           {"date": "25-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 5,"Flight Designation": "rf"},
+           {"date": "28-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 6,"Flight Designation": "rf"},
+           {"date": "30-Jan-2018 0:0","Project":"SOCRATES","Flight Number": 7,"Flight Designation": "rf"},
+           {"date": "3-Feb-2018 0:0","Project":"SOCRATES","Flight Number": 8,"Flight Designation": "rf"},
+           {"date": "4-Feb-2018 0:0","Project":"SOCRATES","Flight Number": 9,"Flight Designation": "rf"}
+	],
+
+	"Comments": [
+		{"date": "7-Dec-2013 0:0", "value": "Made up start date"}
+	]
+
+}
