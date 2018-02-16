@@ -217,7 +217,7 @@ archive_n_scans = 12;
 // Type: string
 //
 
-archive_data_url = "$(DATA_DIR)/hsrl/cfradial/archive_moments";
+archive_data_url = "/scr/eldora1/rsfdata/socrates/hsrl/cfradial/archive_moments";
 
 ///////////// archive_search_margin_secs //////////////
 //
@@ -325,7 +325,7 @@ show_status_in_gui = {
 // Type: string
 //
 
-color_scale_dir = "/opt/$(PROJ_DIR)/display/color_scales";
+color_scale_dir = "/opt/local/git/lrose-displays/color_scales";
 
 ///////////// fields //////////////////////////////////
 //
