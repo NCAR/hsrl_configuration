@@ -44,7 +44,7 @@ debug = DEBUG_OFF;
 // Type: string
 //
 
-instance = "ops";
+instance = "socrates_qc";
 
 //======================================================================
 //
@@ -62,7 +62,7 @@ instance = "ops";
 // Type: string
 //
 
-input_dir = "$(DATA_DIR)/cfradial/uw";
+input_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/raw";
 
 ///////////// mode ////////////////////////////////////
 //
@@ -86,7 +86,7 @@ input_dir = "$(DATA_DIR)/cfradial/uw";
 //     FILELIST
 //
 
-mode = REALTIME_FMQ;
+mode = ARCHIVE;
 
 ///////////// input_fmq_path //////////////////////////
 //
@@ -295,7 +295,7 @@ read_georef_data_from_aircraft_system = TRUE;
 // Type: string
 //
 
-georef_data_spdb_url = "$(DATA_DIR)/spdb/ac_georef/iwg1";
+georef_data_spdb_url = "/scr/rain1/rsfdata/projects/socrates/spdb/ac_georef/raf_1hz";
 
 ///////////// georef_data_search_margin_secs //////////
 //
@@ -309,6 +309,18 @@ georef_data_spdb_url = "$(DATA_DIR)/spdb/ac_georef/iwg1";
 //
 
 georef_data_search_margin_secs = 10;
+
+///////////// correct_elevation_angle_for_roll ////////
+//
+// Option to correct the elevation angle for the aircraft roll angle.
+//
+// If true, we adjust the elevation angle by subtracting the roll angle.
+//
+//
+// Type: boolean
+//
+
+correct_elevation_angle_for_roll = TRUE;
 
 //======================================================================
 //
@@ -459,7 +471,7 @@ raw_bin_spacing_km = 0.0075;
 // Type: string
 //
 
-combined_hi_field_name = "CombinedHiCount";
+combined_hi_field_name = "combined_hi";
 
 ///////////// combined_lo_field_name //////////////////
 //
@@ -472,7 +484,7 @@ combined_hi_field_name = "CombinedHiCount";
 // Type: string
 //
 
-combined_lo_field_name = "CombinedLoCount";
+combined_lo_field_name = "combined_lo";
 
 ///////////// molecular_field_name ////////////////////
 //
@@ -485,7 +497,7 @@ combined_lo_field_name = "CombinedLoCount";
 // Type: string
 //
 
-molecular_field_name = "MolecularCount";
+molecular_field_name = "molecular";
 
 ///////////// cross_field_name ////////////////////////
 //
@@ -498,7 +510,7 @@ molecular_field_name = "MolecularCount";
 // Type: string
 //
 
-cross_field_name = "CrossCount";
+cross_field_name = "cross";
 
 ///////////// baseline_calibration_path ///////////////
 //
@@ -508,7 +520,7 @@ cross_field_name = "CrossCount";
 // Type: string
 //
 
-baseline_calibration_path = "$(PROJ_DIR)/calfiles/baseline_correction_20171019T2000.blc";
+baseline_calibration_path = "$(HOME)/git/hsrl_configuration/projDir/calfiles/baseline_correction_20171019T2000.blc";
 
 ///////////// diff_default_geofile_path ///////////////
 //
@@ -518,7 +530,7 @@ baseline_calibration_path = "$(PROJ_DIR)/calfiles/baseline_correction_20171019T2
 // Type: string
 //
 
-diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20180102T2154.geo";
+diff_default_geofile_path = "$(HOME)/git/hsrl_configuration/projDir/calfiles/diff_default_geofile_20180102T2154.geo";
 
 ///////////// geofile_default_path ////////////////////
 //
@@ -528,7 +540,7 @@ diff_default_geofile_path = "$(PROJ_DIR)/calfiles/diff_default_geofile_20180102T
 // Type: string
 //
 
-geofile_default_path = "$(PROJ_DIR)/calfiles/geofile_default_20180104T1700.geo";
+geofile_default_path = "$(HOME)/git/hsrl_configuration/projDir/calfiles/geofile_default_20180104T1700.geo";
 
 ///////////// afterpulse_default_path /////////////////
 //
@@ -538,7 +550,7 @@ geofile_default_path = "$(PROJ_DIR)/calfiles/geofile_default_20180104T1700.geo";
 // Type: string
 //
 
-afterpulse_default_path = "$(PROJ_DIR)/calfiles/afterpulse_default_20061001T0000.ap";
+afterpulse_default_path = "$(HOME)/git/hsrl_configuration/projDir/calfiles/afterpulse_default_20061001T0000.ap";
 
 ///////////// calvals_gvhsrl_path /////////////////////
 //
@@ -548,7 +560,7 @@ afterpulse_default_path = "$(PROJ_DIR)/calfiles/afterpulse_default_20061001T0000
 // Type: string
 //
 
-calvals_gvhsrl_path = "$(PROJ_DIR)/calfiles/calvals_gvhsrl.txt";
+calvals_gvhsrl_path = "$(HOME)/git/hsrl_configuration/projDir/calfiles/calvals_gvhsrl.txt";
 
 ///////////// combined_hi_dead_time_name //////////////
 //
@@ -623,6 +635,16 @@ bin_width_name = "binwidth";
 
 scan_adjustment_name = "i2_scan_adjustment";
 
+///////////// molecular_gain_name /////////////////////
+//
+// Name of molecular gain in CalVals file.
+//
+//
+// Type: string
+//
+
+molecular_gain_name = "molecular_gain";
+
 ///////////// ngates_for_background_correction ////////
 //
 // The background correction uses data from the end of each ray.
@@ -684,7 +706,7 @@ optical_depth_n_reference_obs = 10;
 // Type: double
 //
 
-optical_depth_reference_value = 0.4;
+optical_depth_reference_value = 4.5;
 
 ///////////// optical_depth_median_filter_len /////////
 //
@@ -697,7 +719,7 @@ optical_depth_reference_value = 0.4;
 // Type: int
 //
 
-optical_depth_median_filter_len = 5;
+optical_depth_median_filter_len = 1;
 
 ///////////// rate_censoring_threshold ////////////////
 //
@@ -709,7 +731,7 @@ optical_depth_median_filter_len = 5;
 // Type: double
 //
 
-rate_censoring_threshold = 1;
+rate_censoring_threshold = 0;
 
 ///////////// apply_speckle_filter ////////////////////
 //
@@ -722,7 +744,7 @@ rate_censoring_threshold = 1;
 // Type: boolean
 //
 
-apply_speckle_filter = TRUE;
+apply_speckle_filter = FALSE;
 
 ///////////// speckle_filter_len //////////////////////
 //
@@ -736,6 +758,96 @@ apply_speckle_filter = TRUE;
 //
 
 speckle_filter_len = 2;
+
+//======================================================================
+//
+// READING TEMPERATURE AND PRESSURE PROFILE FROM MODEL FILES.
+//
+//======================================================================
+ 
+///////////// read_temp_and_pressure_profile_from_model_files 
+//
+// Option to read temperature and pressure profiles from model files.
+//
+// The model output has been converted into MDV/NetCDF, with temperature 
+//   and pressure fields on constant height vlevels. Vlevel units are km.
+//
+//
+// Type: boolean
+//
+
+read_temp_and_pressure_profile_from_model_files = TRUE;
+
+///////////// model_temperature_field_name ////////////
+//
+// Name of temperature field in model data.
+//
+//
+// Type: string
+//
+
+model_temperature_field_name = "TMP";
+
+///////////// temperature_profile_units ///////////////
+//
+// Units for temperature profile data.
+//
+//
+// Type: enum
+// Options:
+//     DEGREES_CELCIUS
+//     DEGREES_KELVIN
+//
+
+temperature_profile_units = DEGREES_CELCIUS;
+
+///////////// model_pressure_field_name ///////////////
+//
+// Name of pressure field in model data.
+//
+//
+// Type: string
+//
+
+model_pressure_field_name = "Pressure";
+
+///////////// pressure_profile_units //////////////////
+//
+// Units for pressure profile data.
+//
+//
+// Type: enum
+// Options:
+//     PA
+//     HPA
+//
+
+pressure_profile_units = HPA;
+
+///////////// model_profile_mdv_data_url //////////////
+//
+// Location for model data for temp and pressure profile.
+//
+// Data is in MDV or CF NetCDF format.
+//
+//
+// Type: string
+//
+
+model_profile_mdv_data_url = "/scr/rain1/rsfdata/projects/socrates/mdv/gfs/socrates";
+
+///////////// model_profile_search_margin_secs ////////
+//
+// The search margin when looking for suitable model data (secs).
+//
+// If a data file has previously been read, within this search margin, 
+//   then that file is used again.
+//
+//
+// Type: int
+//
+
+model_profile_search_margin_secs = 7200;
 
 //======================================================================
 //
@@ -865,7 +977,7 @@ title_override = "";
 // Type: string
 //
 
-institution_override = "";
+institution_override = "NCAR/EOL";
 
 ///////////// references_override /////////////////////
 //
@@ -891,7 +1003,7 @@ references_override = "";
 // Type: string
 //
 
-source_override = "";
+source_override = "GV-HSRL";
 
 ///////////// history_override ////////////////////////
 //
@@ -930,7 +1042,7 @@ comment_override = "";
 // Type: string
 //
 
-author_override = "";
+author_override = "NCAR/EOL/RSF";
 
 //======================================================================
 //
@@ -1015,7 +1127,7 @@ site_name = "unknown";
 // Type: string
 //
 
-output_dir = "/tmp/cfradial/ncar";
+output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/cfradial/qc_moments";
 
 ///////////// output_filename_mode ////////////////////
 //
