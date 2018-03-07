@@ -1,0 +1,7 @@
+#! /bin/csh
+
+cd ~/git/hsrl_configuration/projDir/qc/params
+
+Hsrl2Radx -params Hsrl2Radx.socrates_qc -debug -f /scr/rain1/rsfdata/projects/socrates/hsrl/raw/2018/0?/*/raw/gvhsrl_*nc
+
+
