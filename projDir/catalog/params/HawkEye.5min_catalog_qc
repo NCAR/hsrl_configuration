@@ -57,7 +57,7 @@ register_with_procmap = FALSE;
 // Type: string
 //
 
-instance = "1hr_catalog_qc";
+instance = "5min_catalog_qc";
 
 //======================================================================
 //
@@ -353,7 +353,7 @@ color_scale_dir = "/opt/local/git/lrose-displays/color_scales";
 
 fields = {
   {
-    label = "1Hr_BackScatterCoeff",
+    label = "BackScatterCoeff",
     raw_name = "BackScatterCoeff",
     filtered_name = "",
     units = "m-1.sr-1",
@@ -362,7 +362,7 @@ fields = {
   }
   , 
   {
-    label = "1Hr_VolumeDepolRatio",
+    label = "VolumeDepolRatio",
     raw_name = "VolumeDepolRatio",
     filtered_name = "",
     units = "",
@@ -371,7 +371,7 @@ fields = {
   } 
   ,
   {
-    label = "1Hr_CombinedHighCounts",
+    label = "CombinedHighCounts",
     raw_name = "CombinedHighCounts",
     filtered_name = "",
     units = "counts",
@@ -380,7 +380,7 @@ fields = {
   }
   ,
   {
-    label = "1Hr_CrossPolarCounts",
+    label = "CrossPolarCounts",
     raw_name = "CrossPolarCounts",
     filtered_name = "",
     units = "counts",
@@ -389,7 +389,7 @@ fields = {
   }
   ,
   {
-    label = "1Hr_MolecularCounts",
+    label = "MolecularCounts",
     raw_name = "MolecularCounts",
     filtered_name = "",
     units = "counts",
@@ -950,7 +950,7 @@ rhi_main_legend_pos = LEGEND_TOP_LEFT;
 // Type: double
 //
 
-bscan_time_span_secs = 3600;
+bscan_time_span_secs = 300;
 
 ///////////// bscan_truncate_start_time ///////////////
 //
@@ -1556,7 +1556,7 @@ bscan_dwell_stats = DWELL_STATS_MIDDLE;
 // Type: string
 //
 
-images_output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/images/1hr_catalog_qc";
+images_output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/images/5min_catalog_qc
 
 ///////////// images_write_to_day_dir /////////////////
 //
@@ -1718,7 +1718,7 @@ images_creation_mode = CREATE_IMAGES_ON_ARCHIVE_SCHEDULE;
 // Type: int
 //
 
-images_schedule_interval_secs = 3600;
+images_schedule_interval_secs = 300;
 
 ///////////// images_schedule_delay_secs //////////////
 //
@@ -1745,7 +1745,7 @@ images_schedule_delay_secs = 0;
 // Type: string
 //
 
-images_archive_start_time = "2018 02 03 23 00 00";
+images_archive_start_time = "2018 02 03 23 15 00";
 
 ///////////// images_archive_end_time /////////////////
 //
@@ -1758,7 +1758,7 @@ images_archive_start_time = "2018 02 03 23 00 00";
 // Type: string
 //
 
-images_archive_end_time = "2018 02 04 06 00 00";
+images_archive_end_time = "2018 02 04 06 35 00";
 
 ///////////// images_set_sweep_index_list /////////////
 //
