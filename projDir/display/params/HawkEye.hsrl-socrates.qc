@@ -217,7 +217,7 @@ archive_n_scans = 12;
 // Type: string
 //
 
-archive_data_url = "/scr/eldora1/rsfdata/socrates/hsrl/cfradial/qc/moments";
+archive_data_url = "/scr/rain1/rsfdata/projects/socrates/hsrl/cfradial/qc_moments";
 
 ///////////// archive_search_margin_secs //////////////
 //
