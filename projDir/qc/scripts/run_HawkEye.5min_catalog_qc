@@ -1,0 +1,48 @@
+#! /bin/csh
+
+cd ~/git/hsrl_configuration/projDir/catalog/params
+
+# RF01
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 01 15 22 50 00" -images_end_time "2018 01 16 05 30 00"
+
+# RF02
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 01 19 00 50 00" -images_end_time "2018 01 19 07 15 00"
+
+# RF03
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 01 22 21 00 00" -images_end_time "2018 01 23 03 35 00"
+
+# RF04
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 01 23 23 10 00" -images_end_time "2018 01 24 05 45 00"
+
+# RF05
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 01 25 22 50 00" -images_end_time "2018 01 26 05 25 00"
+
+# RF06
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 01 28 22 50 00" -images_end_time "2018 01 29 06 05 00"
+
+# RF07
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 01 31 00 55 00" -images_end_time "2018 01 31 07 45 00"
+
+# RF08
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 03 23 10 00" -images_end_time "2018 02 04 06 35 00"
+
+# RF09
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 04 22 55 00" -images_end_time "2018 02 05 06 45 00"
+
+# RF10
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 07 20 55 00" -images_end_time "2018 02 08 04 55 00"
+
+# RF11
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 17 01 35 00" -images_end_time "2018 02 17 06 05 00"
+
+# RF12
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 17 23 55 00" -images_end_time "2018 02 18 07 30 00"
+
+# RF13
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 19 22 55 00" -images_end_time "2018 02 20 06 10 00"
+
+# RF14
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 21 22 45 00" -images_end_time "2018 02 22 06 30 00"
+
+# RF15
+HawkEye -params HawkEye.5min_catalog_qc -debug -images_start_time "2018 02 24 02 05 00" -images_end_time "2018 02 24 08 25 00"
