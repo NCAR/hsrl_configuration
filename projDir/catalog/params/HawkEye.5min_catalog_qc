@@ -1086,7 +1086,7 @@ bscan_min_altitude_km = -0.2;
 // Type: double
 //
 
-bscan_max_altitude_km = 7.62;
+bscan_max_altitude_km = 8.2;
 
 ///////////// bscan_altitude_in_feet //////////////////
 //
@@ -1556,7 +1556,7 @@ bscan_dwell_stats = DWELL_STATS_MIDDLE;
 // Type: string
 //
 
-images_output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/images/5min_catalog_qc
+images_output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/images/5min_catalog_qc";
 
 ///////////// images_write_to_day_dir /////////////////
 //
