@@ -1,5 +1,5 @@
 /**********************************************************************
- * TDRP params for ./Hsrl2Radx
+ * TDRP params for Hsrl2Radx
  **********************************************************************/
 
 //======================================================================
@@ -758,6 +758,38 @@ apply_speckle_filter = FALSE;
 //
 
 speckle_filter_len = 2;
+
+//======================================================================
+//
+// COMPUTING DERIVED FIELDS.
+//
+//======================================================================
+ 
+///////////// combined_high_count_threshold_for_backscat_coeff 
+//
+// SNR threshold for backscatter coefficient (counts).
+//
+// If the combined high count is less than this, the backscatter 
+//   coefficient is set to missing.
+//
+//
+// Type: int
+//
+
+combined_high_count_threshold_for_backscat_coeff = 2;
+
+///////////// combined_high_count_threshold_for_vol_depol_ratio 
+//
+// SNR threshold for volume depolarization ratio (counts).
+//
+// If the combined high count is less than this, the volume 
+//   depolarization ratio is set to missing.
+//
+//
+// Type: int
+//
+
+combined_high_count_threshold_for_vol_depol_ratio = 2;
 
 //======================================================================
 //
