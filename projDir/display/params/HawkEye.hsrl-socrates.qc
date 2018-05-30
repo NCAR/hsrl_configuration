@@ -325,7 +325,7 @@ show_status_in_gui = {
 // Type: string
 //
 
-color_scale_dir = "/opt/local/git/lrose-displays/color_scales";
+color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scales";
 
 ///////////// fields //////////////////////////////////
 //
