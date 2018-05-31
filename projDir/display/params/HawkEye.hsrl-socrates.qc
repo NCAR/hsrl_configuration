@@ -6,7 +6,7 @@
 //
 // HawkEye is the engineering display for the HAWK moments data.
 //
-// This is a C++ application using the QT4 GUI toolkit.
+// This is a C++ application using the QT GUI toolkit.
 //
 //======================================================================
  
@@ -32,6 +32,19 @@
 //
 
 debug = DEBUG_OFF;
+
+///////////// check_ray_alloc /////////////////////////
+//
+// Print out checks on ray memory allocation.
+//
+// If TRUE, the app will keep track of the number of rays allocated and 
+//   freed, and print out that information every 100 rays.
+//
+//
+// Type: boolean
+//
+
+check_ray_alloc = FALSE;
 
 ///////////// register_with_procmap ///////////////////
 //
@@ -72,8 +85,6 @@ instance = "hsrl-socrates.qc";
 // 	IWRF_FMQ_INPUT: read IWRF moments from an FMQ.
 // 	IWRF_TCP_INPUT: read an IWRF moments stream from a TCP socket.
 // 	SIMULATED_INPUT: internally-generated test pattern data.
-// 	SIMULATED_RHI_INPUT: internally-generated test pattern data for 
-//   RHIs.
 // 	DSR_FMQ_INPUT: deprecated.
 //
 //
@@ -82,7 +93,6 @@ instance = "hsrl-socrates.qc";
 //     IWRF_FMQ_INPUT
 //     IWRF_TCP_INPUT
 //     SIMULATED_INPUT
-//     SIMULATED_RHI_INPUT
 //     DSR_FMQ_INPUT
 //
 
@@ -181,31 +191,18 @@ begin_in_archive_mode = TRUE;
 //
 
 archive_start_time = "2018 01 16 00 20 00";
-//archive_start_time = "2018 01 22 22 20 00";
 
-///////////// archive_scan_interval_secs //////////////
+///////////// archive_time_span_secs //////////////////
 //
-// Time between scans in archive mode (secs).
+// Time span in ARCHIVE mode (secs).
 //
-// Only applies to POLAR (PPI/RHI) mode, not BSCAN mode.
-//
-//
-// Type: int
-//
-
-archive_scan_interval_secs = 300;
-
-///////////// archive_n_scans /////////////////////////
-//
-// Number of scans in archive mode.
-//
-// Only applies to POLAR (PPI/RHI) mode, not BSCAN mode.
+// Archive end time = archive_start_time + archive_time_span.
 //
 //
-// Type: int
+// Type: double
 //
 
-archive_n_scans = 12;
+archive_time_span_secs = 3600;
 
 ///////////// archive_data_url ////////////////////////
 //
@@ -218,19 +215,6 @@ archive_n_scans = 12;
 //
 
 archive_data_url = "/scr/rain1/rsfdata/projects/socrates/hsrl/cfradial/qc_moments";
-
-///////////// archive_search_margin_secs //////////////
-//
-// Time margin for search in archive mode (secs).
-//
-// We search for data within this margin, on either side of the required 
-//   time.
-//
-//
-// Type: int
-//
-
-archive_search_margin_secs = 600;
 
 //======================================================================
 //
@@ -320,6 +304,13 @@ show_status_in_gui = {
 ///////////// color_scale_dir /////////////////////////
 //
 // Directory for color scales.
+//
+// You can set this in 2 ways:
+//
+// (a) Set to the absolute path
+//
+// (b)Set as a path relative to the location of the application binary 
+//   executable.
 //
 //
 // Type: string
@@ -1013,6 +1004,18 @@ rhi_elevation_lines_on_at_startup = FALSE;
 //
 
 rhi_main_legend_pos = LEGEND_TOP_LEFT;
+
+///////////// rhi_beam_queue_size /////////////////////
+//
+// Size of the queue for RHI beams.
+//
+// After the queue reaches this size, older beams are discarded.
+//
+//
+// Type: int
+//
+
+rhi_beam_queue_size = 360;
 
 //======================================================================
 //
@@ -1840,6 +1843,18 @@ images_archive_start_time = "1970 01 01 00 00 00";
 //
 
 images_archive_end_time = "1970 01 01 00 00 00";
+
+///////////// images_scan_interval_secs ///////////////
+//
+// Time between scans in archive mode (secs).
+//
+// Only applies to POLAR (PPI/RHI) mode, not BSCAN mode.
+//
+//
+// Type: int
+//
+
+images_scan_interval_secs = 300;
 
 ///////////// images_set_sweep_index_list /////////////
 //
