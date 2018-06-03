@@ -6,7 +6,7 @@ setenv PROJ_DIR /opt/local/git/hsrl_configuration/projDir
 cd $PROJ_DIR/display/params
 
 if ($#argv < 6) then
-  /opt/local/lrose/bin/HawkEye -params HawkEye.hsrl-socrates.qc -start_time "2018 02 05 00 00 00" >& /dev/null &
+  /opt/local/lrose/bin/HawkEye -params HawkEye.hsrl-socrates.qc -start_time "2018 02 05 02 00 00" >& /dev/null &
 else
   /opt/local/lrose/bin/HawkEye -params HawkEye.hsrl-socrates.qc -start_time "$1 $2 $3 $4 $5 $6" >& /dev/null &
 endif
