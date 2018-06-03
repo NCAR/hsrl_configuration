@@ -190,7 +190,7 @@ begin_in_archive_mode = TRUE;
 // Type: string
 //
 
-archive_start_time = "2018 01 16 00 20 00";
+archive_start_time = "2018 02 05 00 00 00";
 
 ///////////// archive_time_span_secs //////////////////
 //
@@ -1034,7 +1034,7 @@ rhi_beam_queue_size = 360;
 // Type: double
 //
 
-bscan_time_span_secs = 300;
+bscan_time_span_secs = 3600;
 
 ///////////// bscan_truncate_start_time ///////////////
 //
