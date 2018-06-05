@@ -344,21 +344,21 @@ color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scale
 
 fields = {
   {
-    label = "BackScatRatio",
-    raw_name = "BackScatterRatio",
-    filtered_name = "",
-    units = "",
-    color_map = "backscatter_ratio.colors",
-    shortcut = "1"
-  }
-  ,
-  {
     label = "BackScatCoeff",
     raw_name = "BackScatterCoeff",
     filtered_name = "",
     units = "m-1.sr-1",
     color_map = "hsrl_backscat_coeff.colors",
     shortcut = "2"
+  }
+  ,
+  {
+    label = "BackScatRatio",
+    raw_name = "BackScatterRatio",
+    filtered_name = "",
+    units = "",
+    color_map = "backscatter_ratio.colors",
+    shortcut = "1"
   }
   ,
   {
