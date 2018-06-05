@@ -393,7 +393,7 @@ fields = {
     raw_name = "Volume_Linear_Depolarization_Ratio",
     filtered_name = "",
     units = "",
-    color_map = "volume_depol_ratio.colors",
+    color_map = "hsrl_ldr.colors",
     shortcut = "6"
   }
   ,
@@ -402,7 +402,7 @@ fields = {
     raw_name = "Particle_Linear_Depolarization_Ratio",
     filtered_name = "",
     units = "",
-    color_map = "volume_depol_ratio.colors",
+    color_map = "hsrl_ldr.colors",
     shortcut = "7"
   }
   ,
