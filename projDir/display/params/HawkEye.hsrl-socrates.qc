@@ -345,7 +345,7 @@ color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scale
 fields = {
   {
     label = "BackScatCoeff",
-    raw_name = "BackScatterCoeff",
+    raw_name = "Aerosol_Backscatter_Coefficient",
     filtered_name = "",
     units = "m-1.sr-1",
     color_map = "hsrl_backscat_coeff.colors",
@@ -354,16 +354,16 @@ fields = {
   ,
   {
     label = "BackScatRatio",
-    raw_name = "BackScatterRatio",
+    raw_name = "Backscatter_Ratio",
     filtered_name = "",
     units = "",
-    color_map = "backscatter_ratio.colors",
+    color_map = "hsrl_backscatter_ratio.colors",
     shortcut = "1"
   }
   ,
   {
     label = "VolDepolRatio",
-    raw_name = "VolumeDepolRatio",
+    raw_name = "Volume_Depolarization",
     filtered_name = "",
     units = "",
     color_map = "volume_depol_ratio.colors",
@@ -372,7 +372,7 @@ fields = {
   ,
   {
     label = "PartDepolRatio",
-    raw_name = "ParticleDepolRatio",
+    raw_name = "Particle_Depolarization",
     filtered_name = "",
     units = "",
     color_map = "particle_depol_ratio.colors",
@@ -381,25 +381,25 @@ fields = {
   ,
   {
     label = "Extinction",
-    raw_name = "ExtinctionCoeff",
+    raw_name = "Aerosol_Extinction_Coefficient",
     filtered_name = "",
     units = "m-1",
-    color_map = "extinction_coeff.colors",
+    color_map = "hsrl_extinction_coeff.colors",
     shortcut = "5"
   }
   ,
   {
     label = "OptDepth",
-    raw_name = "OpticalDepth",
+    raw_name = "Optical_Depth",
     filtered_name = "",
     units = "",
-    color_map = "optical_depth.colors",
+    color_map = "hsrl_optical_depth.colors",
     shortcut = "6"
   }
   ,
   {
     label = "HighCounts",
-    raw_name = "CombinedHighCounts",
+    raw_name = "High_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_high.colors",
@@ -408,7 +408,7 @@ fields = {
   ,
   {
     label = "LowCounts",
-    raw_name = "CombinedLowCounts",
+    raw_name = "Low_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_low.colors",
@@ -416,8 +416,17 @@ fields = {
   }
   ,
   {
+    label = "MergedCombined",
+    raw_name = "Merged_Combined_Channel",
+    filtered_name = "",
+    units = "counts",
+    color_map = "hsrl_combined_high.colors",
+    shortcut = "8"
+  }
+  ,
+  {
     label = "XPolCounts",
-    raw_name = "CrossPolarCounts",
+    raw_name = "Cross_Polarization_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_cross_polar.colors",
@@ -425,31 +434,31 @@ fields = {
   }
   ,
   {
-    label = "MolCounts",
-    raw_name = "MolecularCounts",
+    label = "MolecularCounts",
+    raw_name = "Molecular_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_molecular.colors",
     shortcut = "a"
   }
-  ,
-  {
-    label = "Height",
-    raw_name = "Height",
-    filtered_name = "",
-    units = "m",
-    color_map = "height_m.colors",
-    shortcut = "b"
-  }
-  ,
-  {
-    label = "BetaMSonde",
-    raw_name = "BetaMSonde",
-    filtered_name = "",
-    units = "",
-    color_map = "hsrl_beta_m_sonde.colors",
-    shortcut = "s"
-  }
+  // ,
+  // {
+  //   label = "Height",
+  //   raw_name = "Height",
+  //   filtered_name = "",
+  //   units = "m",
+  //   color_map = "height_m.colors",
+  //   shortcut = "b"
+  // }
+  // ,
+  // {
+  //   label = "BetaMSonde",
+  //   raw_name = "BetaMSonde",
+  //   filtered_name = "",
+  //   units = "",
+  //   color_map = "hsrl_beta_m_sonde.colors",
+  //   shortcut = "s"
+  // }
   ,
   {
     label = "Temp",
