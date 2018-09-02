@@ -1105,7 +1105,7 @@ compression_level = 4;
 // Type: boolean
 //
 
-override_instrument_name = FALSE;
+override_instrument_name = TRUE;
 
 ///////////// instrument_name /////////////////////////
 //
@@ -1117,7 +1117,7 @@ override_instrument_name = FALSE;
 // Type: string
 //
 
-instrument_name = "unknown";
+instrument_name = "GV-HSRL";
 
 ///////////// override_site_name //////////////////////
 //
@@ -1129,7 +1129,7 @@ instrument_name = "unknown";
 // Type: boolean
 //
 
-override_site_name = FALSE;
+override_site_name = TRUE;
 
 ///////////// site_name ///////////////////////////////
 //
@@ -1141,7 +1141,7 @@ override_site_name = FALSE;
 // Type: string
 //
 
-site_name = "unknown";
+site_name = "SOCRATES";
 
 //======================================================================
 //
