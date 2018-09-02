@@ -443,12 +443,165 @@ fields = {
   }
   ,
   {
+    label = "BackScatCoeffVariance",
+    raw_name = "Aerosol_Backscatter_Coefficient_variance",
+    filtered_name = "",
+    units = "m-1.sr-1",
+    color_map = "hsrl_backscat_coeff.colors",
+    shortcut = "b"
+  }
+  ,
+  {
+    label = "BackScatRatioVariance",
+    raw_name = "Backscatter_Ratio_variance",
+    filtered_name = "",
+    units = "",
+    color_map = "hsrl_backscatter_ratio.colors",
+    shortcut = "c"
+  }
+  ,
+  {
+    label = "VolDepolRatioVariance",
+    raw_name = "Volume_Depolarization_variance",
+    filtered_name = "",
+    units = "",
+    color_map = "volume_depol_ratio.colors",
+    shortcut = "d"
+  }
+  ,
+  {
+    label = "PartDepolRatioVariance",
+    raw_name = "Particle_Depolarization_variance",
+    filtered_name = "",
+    units = "",
+    color_map = "particle_depol_ratio.colors",
+    shortcut = "e"
+  }
+  ,
+  {
+    label = "ExtinctionVariance",
+    raw_name = "Aerosol_Extinction_Coefficient_variance",
+    filtered_name = "",
+    units = "m-1",
+    color_map = "hsrl_extinction_coeff.colors",
+    shortcut = "f"
+  }
+  ,
+  {
+    label = "OptDepthVariance",
+    raw_name = "Optical_Depth_variance",
+    filtered_name = "",
+    units = "",
+    color_map = "hsrl_optical_depth.colors",
+    shortcut = "g"
+  }
+  ,
+  {
+    label = "HighCountsVariance",
+    raw_name = "High_Gain_Total_Backscatter_Channel_variance",
+    filtered_name = "",
+    units = "counts",
+    color_map = "hsrl_combined_high.colors",
+    shortcut = "h"
+  }
+  ,
+  {
+    label = "LowCountsVariance",
+    raw_name = "Low_Gain_Total_Backscatter_Channel_variance",
+    filtered_name = "",
+    units = "counts",
+    color_map = "hsrl_combined_low.colors",
+    shortcut = "i"
+  }
+  ,
+  {
+    label = "MergedCombinedVariance",
+    raw_name = "Merged_Combined_Channel_variance",
+    filtered_name = "",
+    units = "counts",
+    color_map = "hsrl_combined_high.colors",
+    shortcut = "j"
+  }
+  ,
+  {
+    label = "XPolCountsVariance",
+    raw_name = "Cross_Polarization_Channel_variance",
+    filtered_name = "",
+    units = "counts",
+    color_map = "hsrl_cross_polar.colors",
+    shortcut = "k"
+  }
+  ,
+  {
+    label = "MolecularCountsVariance",
+    raw_name = "Molecular_Backscatter_Channel_variance",
+    filtered_name = "",
+    units = "counts",
+    color_map = "hsrl_molecular.colors",
+    shortcut = "l"
+  }
+  ,
+  {
+    label = "BackScatCoeffMask",
+    raw_name = "Aerosol_Backscatter_Coefficient_mask",
+    filtered_name = "",
+    units = "m-1.sr-1",
+    color_map = "mask.colors",
+    shortcut = "m"
+  }
+  ,
+  {
+    label = "BackScatRatioMask",
+    raw_name = "Backscatter_Ratio_mask",
+    filtered_name = "",
+    units = "",
+    color_map = "hsrl_backscatter_ratio.colors",
+    shortcut = "n"
+  }
+  ,
+  {
+    label = "VolDepolRatioMask",
+    raw_name = "Volume_Depolarization_mask",
+    filtered_name = "",
+    units = "",
+    color_map = "mask.colors",
+    shortcut = "o"
+  }
+  ,
+  {
+    label = "PartDepolRatioMask",
+    raw_name = "Particle_Depolarization_mask",
+    filtered_name = "",
+    units = "",
+    color_map = "mask.colors",
+    shortcut = "p"
+  }
+  ,
+  {
+    label = "ExtinctionMask",
+    raw_name = "Aerosol_Extinction_Coefficient_mask",
+    filtered_name = "",
+    units = "m-1",
+    color_map = "mask.colors",
+    shortcut = "q"
+  }
+  ,
+  {
+    label = "MergedCombinedMask",
+    raw_name = "Merged_Combined_Channel_mask",
+    filtered_name = "",
+    units = "counts",
+    color_map = "mask.colors",
+    shortcut = "r"
+  }
+  ,
+  {
     label = "Temp",
     raw_name = "Temperature",
     filtered_name = "",
     units = "K",
     color_map = "tempK_xml.colors",
-    shortcut = "b"
+    shortcut = "s"
   }
   ,
   {
@@ -457,7 +610,7 @@ fields = {
     filtered_name = "",
     units = "mb",
     color_map = "pressure_xml.colors",
-    shortcut = "c"
+    shortcut = "t"
   }
 };
 

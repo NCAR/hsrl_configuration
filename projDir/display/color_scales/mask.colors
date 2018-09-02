@@ -1,0 +1,12 @@
+<ColorScale id="mask.colors"
+            gradation="linear"
+            saturation="1.0"
+            labelsSetByValue="true">
+
+  <Range min="-0.5" max="+0.5"  color="0.0000, 0.0000, 0.8000" />
+  <Range min="+0.5" max="+1.5"  color="0.8000, 0.0000, 0.0000" />
+
+  <Label value="0"    text="0"      />
+  <Label value="1"    text="1"      />
+
+</ColorScale>
