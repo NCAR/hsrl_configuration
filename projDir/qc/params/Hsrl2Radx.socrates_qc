@@ -1159,7 +1159,7 @@ site_name = "unknown";
 // Type: string
 //
 
-output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/qc/cfradial";
+output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/cfradial/qc_moments";
 
 ///////////// output_filename_mode ////////////////////
 //

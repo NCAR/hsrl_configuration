@@ -1,10 +1,18 @@
 #! /bin/csh
 
+# NOTE
+# Matt original files are stored in:
+#
+#   /scr/sci/mhayman/SOCRATES/range_centered
+#
+# These are copied into 
+#
+#   /scr/rain1/rsfdata/projects/socrates/hsrl/qc/mhayman_moments
+#
+# and Hsrl2Radx runs on the local copies
+
 cd ~/git/hsrl_configuration/projDir/qc/params
 
-Hsrl2Radx -params Hsrl2Radx.socrates_qc -debug -f /scr/sci/mhayman/SOCRATES/range_centered/data/SOCRATESrf??/*nc >& /tmp/Hsrl2Radx.socrates_qc.log &
+Hsrl2Radx -params Hsrl2Radx.socrates_qc -debug -f /scr/rain1/rsfdata/projects/socrates/hsrl/qc/mhayman_moments/SOCRATESrf??/*nc >& /tmp/Hsrl2Radx.socrates_qc.log &
 
 tail -f /tmp/Hsrl2Radx.socrates_qc.log 
-
-
-
