@@ -62,7 +62,7 @@ instance = "socrates_qc";
 // Type: string
 //
 
-input_dir = "/scr/sci/mhayman/SOCRATES/range_centered/data";
+input_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/qc/mhayman_moments";
 
 ///////////// mode ////////////////////////////////////
 //
@@ -1159,7 +1159,7 @@ site_name = "unknown";
 // Type: string
 //
 
-output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/cfradial/qc_moments";
+output_dir = "/scr/rain1/rsfdata/projects/socrates/hsrl/qc/cfradial/qc_moments";
 
 ///////////// output_filename_mode ////////////////////
 //

@@ -190,7 +190,7 @@ begin_in_archive_mode = TRUE;
 // Type: string
 //
 
-archive_start_time = "2018 02 05 00 00 00";
+archive_start_time = "2018 01 19 04 00 00";
 
 ///////////// archive_time_span_secs //////////////////
 //
@@ -202,7 +202,7 @@ archive_start_time = "2018 02 05 00 00 00";
 // Type: double
 //
 
-archive_time_span_secs = 3600;
+archive_time_span_secs = 1800;
 
 ///////////// archive_data_url ////////////////////////
 //
@@ -214,7 +214,7 @@ archive_time_span_secs = 3600;
 // Type: string
 //
 
-archive_data_url = "/scr/rain1/rsfdata/projects/socrates/hsrl/cfradial/qc_moments";
+archive_data_url = "/scr/rain1/rsfdata/projects/socrates/hsrl/qc/cfradial/qc_moments";
 
 //======================================================================
 //
