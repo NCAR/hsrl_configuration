@@ -1025,7 +1025,7 @@ rhi_beam_queue_size = 360;
 // Type: double
 //
 
-bscan_time_span_secs = 3600;
+bscan_time_span_secs = 900;
 
 ///////////// bscan_truncate_start_time ///////////////
 //
