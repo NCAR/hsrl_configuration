@@ -317,7 +317,8 @@ show_status_in_gui = {
 // Type: string
 //
 
-color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scales";
+// color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scales";
+color_scale_dir = "../color_scales";
 
 ///////////// fields //////////////////////////////////
 //
@@ -376,7 +377,7 @@ fields = {
     raw_name = "Volume_Linear_Depolarization_Ratio",
     filtered_name = "",
     units = "",
-    color_map = "volume_depol_ratio.colors",
+    color_map = "volume_linear_depol.colors",
     shortcut = "2"
   }
   ,
@@ -394,7 +395,7 @@ fields = {
     raw_name = "Particle_Linear_Depolarization_Ratio",
     filtered_name = "",
     units = "",
-    color_map = "particle_depol_ratio.colors",
+    color_map = "particle_linear_depol.colors",
     shortcut = "3"
   }
   ,
