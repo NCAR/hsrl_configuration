@@ -191,6 +191,7 @@ begin_in_archive_mode = TRUE;
 //
 
 archive_start_time = "2018 01 19 04 00 00";
+// archive_start_time = "2018 02 04 02 00 00";
 
 ///////////// archive_time_span_secs //////////////////
 //
@@ -371,8 +372,26 @@ fields = {
   }
   ,
   {
+    label = "VolLinearDepol",
+    raw_name = "Volume_Linear_Depolarization_Ratio",
+    filtered_name = "",
+    units = "",
+    color_map = "volume_depol_ratio.colors",
+    shortcut = "2"
+  }
+  ,
+  {
     label = "PartDepolRatio",
     raw_name = "Particle_Depolarization",
+    filtered_name = "",
+    units = "",
+    color_map = "particle_depol_ratio.colors",
+    shortcut = "3"
+  }
+  ,
+  {
+    label = "PartLinearDepol",
+    raw_name = "Particle_Linear_Depolarization_Ratio",
     filtered_name = "",
     units = "",
     color_map = "particle_depol_ratio.colors",
@@ -399,7 +418,7 @@ fields = {
   ,
   {
     label = "HighCounts",
-    raw_name = "High_Gain_Total_Backscatter_Channel",
+    raw_name = "Raw_High_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_high.colors",
@@ -408,7 +427,7 @@ fields = {
   ,
   {
     label = "LowCounts",
-    raw_name = "Low_Gain_Total_Backscatter_Channel",
+    raw_name = "Raw_Low_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_low.colors",
@@ -426,7 +445,7 @@ fields = {
   ,
   {
     label = "XPolCounts",
-    raw_name = "Cross_Polarization_Channel",
+    raw_name = "Raw_Cross_Polarization_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_cross_polar.colors",
@@ -435,7 +454,7 @@ fields = {
   ,
   {
     label = "MolecularCounts",
-    raw_name = "Molecular_Backscatter_Channel",
+    raw_name = "Raw_Molecular_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_molecular.colors",
@@ -455,7 +474,7 @@ fields = {
     label = "Press",
     raw_name = "Pressure",
     filtered_name = "",
-    units = "mb",
+    units = "hPa",
     color_map = "pressure_xml.colors",
     shortcut = "c"
   }
