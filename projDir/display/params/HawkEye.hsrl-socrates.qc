@@ -346,7 +346,8 @@ color_scale_dir = "../color_scales";
 
 fields = {
   {
-    label = "BackScatCoeff",
+    // label = "BackScatCoeff",
+    label = "Aerosol_Backscatter_Coefficient",
     raw_name = "Aerosol_Backscatter_Coefficient",
     filtered_name = "",
     units = "m-1.sr-1",
@@ -355,7 +356,8 @@ fields = {
   }
   ,
   {
-    label = "BackScatRatio",
+    // label = "BackScatRatio",
+    label = "Backscatter_Ratio",
     raw_name = "Backscatter_Ratio",
     filtered_name = "",
     units = "",
@@ -364,7 +366,8 @@ fields = {
   }
   ,
   {
-    label = "VolDepolRatio",
+    // label = "VolDepolRatio",
+    label = "Volume_Depolarization",
     raw_name = "Volume_Depolarization",
     filtered_name = "",
     units = "",
@@ -373,7 +376,8 @@ fields = {
   }
   ,
   {
-    label = "VolLinearDepol",
+    // label = "VolLinearDepol",
+    label = "Volume_Linear_Depolarization_Ratio",
     raw_name = "Volume_Linear_Depolarization_Ratio",
     filtered_name = "",
     units = "",
@@ -382,7 +386,8 @@ fields = {
   }
   ,
   {
-    label = "PartDepolRatio",
+    // label = "PartDepolRatio",
+    label = "Particle_Depolarization",
     raw_name = "Particle_Depolarization",
     filtered_name = "",
     units = "",
@@ -391,7 +396,8 @@ fields = {
   }
   ,
   {
-    label = "PartLinearDepol",
+    // label = "PartLinearDepol",
+    label = "Particle_Linear_Depolarization_Ratio",
     raw_name = "Particle_Linear_Depolarization_Ratio",
     filtered_name = "",
     units = "",
@@ -400,7 +406,8 @@ fields = {
   }
   ,
   {
-    label = "Extinction",
+    // label = "Extinction",
+    label = "Aerosol_Extinction_Coefficient",
     raw_name = "Aerosol_Extinction_Coefficient",
     filtered_name = "",
     units = "m-1",
@@ -409,7 +416,8 @@ fields = {
   }
   ,
   {
-    label = "OptDepth",
+    // label = "OptDepth",
+    label = "Optical_Depth",
     raw_name = "Optical_Depth",
     filtered_name = "",
     units = "",
@@ -418,7 +426,8 @@ fields = {
   }
   ,
   {
-    label = "HighCounts",
+    // label = "HighCounts",
+    label = "Raw_High_Gain_Total_Backscatter_Channel",
     raw_name = "Raw_High_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
@@ -427,7 +436,8 @@ fields = {
   }
   ,
   {
-    label = "LowCounts",
+    // label = "LowCounts",
+    label = "Raw_Low_Gain_Total_Backscatter_Channel",
     raw_name = "Raw_Low_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
@@ -436,7 +446,8 @@ fields = {
   }
   ,
   {
-    label = "MergedCombined",
+    // label = "MergedCombined",
+    label = "Merged_Combined_Channel",
     raw_name = "Merged_Combined_Channel",
     filtered_name = "",
     units = "counts",
@@ -445,7 +456,8 @@ fields = {
   }
   ,
   {
-    label = "XPolCounts",
+    // label = "XPolCounts",
+    label = "Raw_Cross_Polarization_Channel",
     raw_name = "Raw_Cross_Polarization_Channel",
     filtered_name = "",
     units = "counts",
@@ -454,7 +466,8 @@ fields = {
   }
   ,
   {
-    label = "MolecularCounts",
+    // label = "MolecularCounts",
+    label = "Raw_Molecular_Backscatter_Channel",
     raw_name = "Raw_Molecular_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
@@ -463,7 +476,8 @@ fields = {
   }
   ,
   {
-    label = "Temp",
+    // label = "Temp",
+    label = "Temperature",
     raw_name = "Temperature",
     filtered_name = "",
     units = "K",
@@ -472,7 +486,8 @@ fields = {
   }
   ,
   {
-    label = "Press",
+    // label = "Press",
+    label = "Pressure",
     raw_name = "Pressure",
     filtered_name = "",
     units = "hPa",
