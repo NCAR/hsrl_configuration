@@ -191,6 +191,7 @@ begin_in_archive_mode = TRUE;
 //
 
 archive_start_time = "2018 01 19 04 00 00";
+// archive_start_time = "2018 02 04 02 00 00";
 
 ///////////// archive_time_span_secs //////////////////
 //
@@ -316,7 +317,8 @@ show_status_in_gui = {
 // Type: string
 //
 
-color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scales";
+// color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scales";
+color_scale_dir = "../color_scales";
 
 ///////////// fields //////////////////////////////////
 //
@@ -344,7 +346,8 @@ color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scale
 
 fields = {
   {
-    label = "BackScatCoeff",
+    // label = "BackScatCoeff",
+    label = "Aerosol_Backscatter_Coefficient",
     raw_name = "Aerosol_Backscatter_Coefficient",
     filtered_name = "",
     units = "m-1.sr-1",
@@ -353,7 +356,8 @@ fields = {
   }
   ,
   {
-    label = "BackScatRatio",
+    // label = "BackScatRatio",
+    label = "Backscatter_Ratio",
     raw_name = "Backscatter_Ratio",
     filtered_name = "",
     units = "",
@@ -362,7 +366,8 @@ fields = {
   }
   ,
   {
-    label = "VolDepolRatio",
+    // label = "VolDepolRatio",
+    label = "Volume_Depolarization",
     raw_name = "Volume_Depolarization",
     filtered_name = "",
     units = "",
@@ -371,7 +376,18 @@ fields = {
   }
   ,
   {
-    label = "PartDepolRatio",
+    // label = "VolLinearDepol",
+    label = "Volume_Linear_Depolarization_Ratio",
+    raw_name = "Volume_Linear_Depolarization_Ratio",
+    filtered_name = "",
+    units = "",
+    color_map = "volume_linear_depol.colors",
+    shortcut = "2"
+  }
+  ,
+  {
+    // label = "PartDepolRatio",
+    label = "Particle_Depolarization",
     raw_name = "Particle_Depolarization",
     filtered_name = "",
     units = "",
@@ -380,7 +396,18 @@ fields = {
   }
   ,
   {
-    label = "Extinction",
+    // label = "PartLinearDepol",
+    label = "Particle_Linear_Depolarization_Ratio",
+    raw_name = "Particle_Linear_Depolarization_Ratio",
+    filtered_name = "",
+    units = "",
+    color_map = "particle_linear_depol.colors",
+    shortcut = "3"
+  }
+  ,
+  {
+    // label = "Extinction",
+    label = "Aerosol_Extinction_Coefficient",
     raw_name = "Aerosol_Extinction_Coefficient",
     filtered_name = "",
     units = "m-1",
@@ -389,7 +416,8 @@ fields = {
   }
   ,
   {
-    label = "OptDepth",
+    // label = "OptDepth",
+    label = "Optical_Depth",
     raw_name = "Optical_Depth",
     filtered_name = "",
     units = "",
@@ -398,8 +426,9 @@ fields = {
   }
   ,
   {
-    label = "HighCounts",
-    raw_name = "High_Gain_Total_Backscatter_Channel",
+    // label = "HighCounts",
+    label = "Raw_High_Gain_Total_Backscatter_Channel",
+    raw_name = "Raw_High_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_high.colors",
@@ -407,8 +436,9 @@ fields = {
   }
   ,
   {
-    label = "LowCounts",
-    raw_name = "Low_Gain_Total_Backscatter_Channel",
+    // label = "LowCounts",
+    label = "Raw_Low_Gain_Total_Backscatter_Channel",
+    raw_name = "Raw_Low_Gain_Total_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_low.colors",
@@ -416,7 +446,8 @@ fields = {
   }
   ,
   {
-    label = "MergedCombined",
+    // label = "MergedCombined",
+    label = "Merged_Combined_Channel",
     raw_name = "Merged_Combined_Channel",
     filtered_name = "",
     units = "counts",
@@ -425,8 +456,9 @@ fields = {
   }
   ,
   {
-    label = "XPolCounts",
-    raw_name = "Cross_Polarization_Channel",
+    // label = "XPolCounts",
+    label = "Raw_Cross_Polarization_Channel",
+    raw_name = "Raw_Cross_Polarization_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_cross_polar.colors",
@@ -434,8 +466,9 @@ fields = {
   }
   ,
   {
-    label = "MolecularCounts",
-    raw_name = "Molecular_Backscatter_Channel",
+    // label = "MolecularCounts",
+    label = "Raw_Molecular_Backscatter_Channel",
+    raw_name = "Raw_Molecular_Backscatter_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_molecular.colors",
@@ -443,7 +476,8 @@ fields = {
   }
   ,
   {
-    label = "Temp",
+    // label = "Temp",
+    label = "Temperature",
     raw_name = "Temperature",
     filtered_name = "",
     units = "K",
@@ -452,10 +486,11 @@ fields = {
   }
   ,
   {
-    label = "Press",
+    // label = "Press",
+    label = "Pressure",
     raw_name = "Pressure",
     filtered_name = "",
-    units = "mb",
+    units = "hPa",
     color_map = "pressure_xml.colors",
     shortcut = "c"
   }
@@ -1025,7 +1060,7 @@ rhi_beam_queue_size = 360;
 // Type: double
 //
 
-bscan_time_span_secs = 3600;
+bscan_time_span_secs = 900;
 
 ///////////// bscan_truncate_start_time ///////////////
 //
