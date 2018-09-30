@@ -1302,7 +1302,7 @@ append_year_dir_to_output_dir = FALSE;
 
 write_latest_data_info = TRUE;
 
-///////////// split_output_files_on_time //////////////
+///////////// write_output_files_on_time_boundaries ///
 //
 // Option to split the output files, based on time.
 //
@@ -1313,7 +1313,7 @@ write_latest_data_info = TRUE;
 // Type: boolean
 //
 
-split_output_files_on_time = TRUE;
+write_output_files_on_time_boundaries = TRUE;
 
 ///////////// output_file_time_interval_secs //////////
 //
