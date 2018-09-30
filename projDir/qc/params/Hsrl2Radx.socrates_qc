@@ -1163,7 +1163,7 @@ site_name = "unknown";
 
 //======================================================================
 //
-// OUTPUT DIRECTORY AND FILE NAME.
+// WRITING DATA TO OUTPUT DIRECTORY.
 //
 //======================================================================
  
@@ -1301,6 +1301,56 @@ append_year_dir_to_output_dir = FALSE;
 //
 
 write_latest_data_info = TRUE;
+
+///////////// split_output_files_on_time //////////////
+//
+// Option to split the output files, based on time.
+//
+// If true, the output volumes will be split up to be written out on 
+//   time boundaries. See 'output_file_time_interval_secs'.
+//
+//
+// Type: boolean
+//
+
+split_output_files_on_time = TRUE;
+
+///////////// output_file_time_interval_secs //////////
+//
+// Time interval at which files will be written out (secs).
+//
+// See 'split_output_files_on_time'. To make sense, this interval should 
+//   divide evenly into an hour - i.e. 3600.
+//
+//
+// Type: int
+//
+
+output_file_time_interval_secs = 600;
+
+///////////// censor_gates_below_surface //////////////
+//
+// Option to censor the field gates below the surface.
+//
+// Only applies when antenna is pointing down.
+//
+//
+// Type: boolean
+//
+
+censor_gates_below_surface = TRUE;
+
+///////////// surface_height_for_censoring ////////////
+//
+// Height for censoring field below surface (km).
+//
+// See 'censor_gates_below_surface'.
+//
+//
+// Type: double
+//
+
+surface_height_for_censoring = -0.15;
 
 //======================================================================
 //
