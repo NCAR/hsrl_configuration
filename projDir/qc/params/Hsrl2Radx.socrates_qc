@@ -1326,7 +1326,7 @@ split_output_files_on_time = TRUE;
 // Type: int
 //
 
-output_file_time_interval_secs = 600;
+output_file_time_interval_secs = 900;
 
 ///////////// censor_gates_below_surface //////////////
 //
