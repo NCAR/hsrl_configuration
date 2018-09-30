@@ -762,8 +762,6 @@ speckle_filter_len = 2;
 //======================================================================
 //
 // READING NetCDF Files produced by Matt Haymann.
-<<<<<<< HEAD
-=======
 //
 //======================================================================
  
@@ -977,216 +975,46 @@ mhayman_fields = {
 //======================================================================
 //
 // COMPUTING DERIVED FIELDS.
->>>>>>> 7dd0b03bdee0a0bd31fc639b77d1c86012187e5d
 //
 //======================================================================
  
-///////////// mhayman_combine_bins_on_read ////////////
+///////////// combined_high_count_threshold_for_backscat_coeff 
 //
-// Option to combine range gates on read.
+// SNR threshold for backscatter coefficient (counts).
 //
-// If true, the specified number of range gates will be combined on read 
-//   to create mean values with lower noisiness.
-//
-//
-// Type: boolean
-//
-
-mhayman_combine_bins_on_read = FALSE;
-
-///////////// mhayman_n_bins_per_gate /////////////////
-//
-// Number of bins to combine into a single gate.
-//
-// In range, we will combine this number of gates to produce a data set 
-//   with lower spatial resolution but less noiry data.
+// If the combined high count is less than this, the backscatter 
+//   coefficient is set to missing.
 //
 //
 // Type: int
 //
 
-mhayman_n_bins_per_gate = 2;
+combined_high_count_threshold_for_backscat_coeff = 2;
 
-///////////// mhayman_specify_fields //////////////////
+///////////// combined_high_count_threshold_for_vol_depol_ratio 
 //
-// Option to specify the fields to be handled.
+// SNR threshold for volume depolarization ratio (counts).
 //
-// If false, the app will try to identify the field in the data and read 
-//   them all in as best it can.
-//
-//
-// Type: boolean
-//
-
-mhayman_specify_fields = TRUE;
-
-///////////// mhayman_fields //////////////////////////
-//
-// Details of fields to be included in output data set.
-//
-// If the output_name is not specified, the input name is used 
-//   unchanged. If the standard_name is not specified, the standard name 
-//   attribute will be omitted.
+// If the combined high count is less than this, the volume 
+//   depolarization ratio is set to missing.
 //
 //
-// Type: struct
-//   typedef struct {
-//      string field_name;
-//      boolean apply_mask;
-//      string mask_name;
-//      int mask_valid_value;
-//      string output_name;
-//      string cf_standard_name;
-//   }
-//
-// 1D array - variable length.
+// Type: int
 //
 
-mhayman_fields = {
-  {
-    field_name = "Aerosol_Backscatter_Coefficient",
-    apply_mask = TRUE,
-    mask_name = "Aerosol_Backscatter_Coefficient_mask",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_backscatter_coefficient"
-  }
-  ,
-  {
-    field_name = "Backscatter_Ratio",
-    apply_mask = TRUE,
-    mask_name = "Backscatter_Ratio_mask",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_backscatter_ratio"
-  }
-  ,
-  {
-    field_name = "Particle_Depolarization",
-    apply_mask = TRUE,
-    mask_name = "Particle_Depolarization_mask",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_particle_depolarization_ratio"
-  }
-  ,
-  {
-    field_name = "Particle_Linear_Depolarization_Ratio",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_particle_linear_depolarization_ratio"
-  }
-  ,
-  {
-    field_name = "Volume_Depolarization",
-    apply_mask = TRUE,
-    mask_name = "Volume_Depolarization_mask",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_volume_depolarization_ratio"
-  }
-  ,
-  {
-    field_name = "Volume_Linear_Depolarization_Ratio",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_volume_linear_depolarization_ratio"
-  }
-  ,
-  {
-    field_name = "Molecular_Backscatter_Coefficient",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_molecular_backscatter_coefficient"
-  }
-  ,
-  {
-    field_name = "Merged_Combined_Channel",
-    apply_mask = TRUE,
-    mask_name = "Merged_Combined_Channel_mask",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_copolar_combined_backscatter_photon_count"
-  }
-  ,
-  {
-    field_name = "Raw_High_Gain_Total_Backscatter_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = ""
-  }
-  ,
-  {
-    field_name = "Raw_Low_Gain_Total_Backscatter_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = ""
-  }
-  ,
-  {
-    field_name = "Raw_Molecular_Backscatter_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = ""
-  }
-  ,
-  {
-    field_name = "Raw_Cross_Polarization_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = ""
-  }
-  ,
-  {
-    field_name = "Optical_Depth",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_optical_depth"
-  }
-  ,
-  {
-    field_name = "Aerosol_Extinction_Coefficient",
-    apply_mask = TRUE,
-    mask_name = "Aerosol_Extinction_Coefficient_mask",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "lidar_aerosol_extinction_coefficient"
-  }
-  ,
-  {
-    field_name = "Temperature",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "air_temperature"
-  }
-  ,
-  {
-    field_name = "Pressure",
-    apply_mask = FALSE,
-    mask_name = "",
-    mask_valid_value = 0,
-    output_name = "",
-    cf_standard_name = "air_pressure"
-  }
-};
+combined_high_count_threshold_for_vol_depol_ratio = 2;
+
+//======================================================================
+//
+// READING TEMPERATURE AND PRESSURE PROFILE FROM MODEL FILES.
+//
+//======================================================================
+ 
+///////////// read_temp_and_pressure_profile_from_model_files 
+//
+// Option to read temperature and pressure profiles from model files.
+//
+// The model output has been converted into MDV/NetCDF, with temperature 
 //   and pressure fields on constant height vlevels. Vlevel units are km.
 //
 //
@@ -1340,15 +1168,9 @@ site_name = "unknown";
 //======================================================================
  
 ///////////// output_dir //////////////////////////////
-<<<<<<< HEAD
 //
 // Output directory path.
 //
-=======
-//
-// Output directory path.
-//
->>>>>>> 7dd0b03bdee0a0bd31fc639b77d1c86012187e5d
 // Files will be written to this directory.
 //
 //
