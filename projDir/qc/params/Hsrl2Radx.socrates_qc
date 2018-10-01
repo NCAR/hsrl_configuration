@@ -839,7 +839,7 @@ mhayman_fields = {
   {
     field_name = "Backscatter_Ratio",
     apply_mask = TRUE,
-    mask_name = "Backscatter_Ratio_mask",
+    mask_name = "Aerosol_Backscatter_Coefficient_mask",
     mask_valid_value = 0,
     output_name = "",
     cf_standard_name = "lidar_backscatter_ratio"
@@ -851,7 +851,7 @@ mhayman_fields = {
     mask_name = "Particle_Depolarization_mask",
     mask_valid_value = 0,
     output_name = "",
-    cf_standard_name = "lidar_particle_depolarization_ratio"
+    cf_standard_name = "lidar_particle_circular_depolarization_ratio"
   }
   ,
   {
@@ -869,7 +869,7 @@ mhayman_fields = {
     mask_name = "Volume_Depolarization_mask",
     mask_valid_value = 0,
     output_name = "",
-    cf_standard_name = "lidar_volume_depolarization_ratio"
+    cf_standard_name = "lidar_volume_circular_depolarization_ratio"
   }
   ,
   {
@@ -901,38 +901,38 @@ mhayman_fields = {
   ,
   {
     field_name = "Raw_High_Gain_Total_Backscatter_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
+    apply_mask = TRUE,
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
-    cf_standard_name = ""
+    cf_standard_name = "lidar_high_gain_channel_photon_count"
   }
   ,
   {
     field_name = "Raw_Low_Gain_Total_Backscatter_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
+    apply_mask = TRUE,
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
-    cf_standard_name = ""
+    cf_standard_name = "lidar_low_gain_channel_photon_count"
   }
   ,
   {
     field_name = "Raw_Molecular_Backscatter_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
+    apply_mask = TRUE,
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
-    cf_standard_name = ""
+    cf_standard_name = "lidar_molecular_channel_photon_count"
   }
   ,
   {
     field_name = "Raw_Cross_Polarization_Channel",
-    apply_mask = FALSE,
-    mask_name = "",
+    apply_mask = TRUE,
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
-    cf_standard_name = ""
+    cf_standard_name = "lidar_cross_polar_channel_photon_count"
   }
   ,
   {
@@ -947,7 +947,7 @@ mhayman_fields = {
   {
     field_name = "Aerosol_Extinction_Coefficient",
     apply_mask = TRUE,
-    mask_name = "Aerosol_Extinction_Coefficient_mask",
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
     cf_standard_name = "lidar_aerosol_extinction_coefficient"
@@ -955,8 +955,8 @@ mhayman_fields = {
   ,
   {
     field_name = "Temperature",
-    apply_mask = FALSE,
-    mask_name = "",
+    apply_mask = TRUE,
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
     cf_standard_name = "air_temperature"
@@ -964,8 +964,8 @@ mhayman_fields = {
   ,
   {
     field_name = "Pressure",
-    apply_mask = FALSE,
-    mask_name = "",
+    apply_mask = TRUE,
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
     cf_standard_name = "air_pressure"

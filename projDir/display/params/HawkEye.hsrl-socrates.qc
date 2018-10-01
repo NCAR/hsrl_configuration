@@ -378,7 +378,7 @@ fields = {
     filtered_name = "",
     units = "",
     color_map = "volume_linear_depol.colors",
-    shortcut = "2"
+    shortcut = "3"
   }
   ,
   {
@@ -387,7 +387,7 @@ fields = {
     filtered_name = "",
     units = "",
     color_map = "particle_depol_ratio.colors",
-    shortcut = "3"
+    shortcut = "4"
   }
   ,
   {
@@ -396,7 +396,7 @@ fields = {
     filtered_name = "",
     units = "",
     color_map = "particle_linear_depol.colors",
-    shortcut = "3"
+    shortcut = "5"
   }
   ,
   {
@@ -405,7 +405,7 @@ fields = {
     filtered_name = "",
     units = "m-1",
     color_map = "hsrl_extinction_coeff.colors",
-    shortcut = "4"
+    shortcut = "6"
   }
   ,
   {
@@ -414,7 +414,7 @@ fields = {
     filtered_name = "",
     units = "",
     color_map = "hsrl_optical_depth.colors",
-    shortcut = "5"
+    shortcut = "7"
   }
   ,
   {
@@ -423,7 +423,7 @@ fields = {
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_high.colors",
-    shortcut = "6"
+    shortcut = "8"
   }
   ,
   {
@@ -432,16 +432,16 @@ fields = {
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_low.colors",
-    shortcut = "7"
+    shortcut = "9"
   }
   ,
   {
-    label = "Merged_Counts",
+    label = "Copol_Counts",
     raw_name = "Merged_Combined_Channel",
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_combined_high.colors",
-    shortcut = "8"
+    shortcut = "a"
   }
   ,
   {
@@ -450,7 +450,7 @@ fields = {
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_cross_polar.colors",
-    shortcut = "9"
+    shortcut = "b"
   }
   ,
   {
@@ -459,7 +459,7 @@ fields = {
     filtered_name = "",
     units = "counts",
     color_map = "hsrl_molecular.colors",
-    shortcut = "a"
+    shortcut = "c"
   }
   ,
   {
@@ -468,7 +468,7 @@ fields = {
     filtered_name = "",
     units = "K",
     color_map = "tempK_xml.colors",
-    shortcut = "b"
+    shortcut = "d"
   }
   ,
   {
@@ -477,7 +477,7 @@ fields = {
     filtered_name = "",
     units = "hPa",
     color_map = "pressure_xml.colors",
-    shortcut = "c"
+    shortcut = "e"
   }
 };
 
@@ -1191,7 +1191,7 @@ bscan_max_altitude_km = 8;
 // Type: boolean
 //
 
-bscan_altitude_in_feet = TRUE;
+bscan_altitude_in_feet = FALSE;
 
 ///////////// bscan_range_in_feet /////////////////////
 //

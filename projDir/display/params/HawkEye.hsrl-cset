@@ -868,7 +868,7 @@ bscan_max_altitude_km = 25;
 // Type: boolean
 //
 
-bscan_altitude_in_feet = TRUE;
+bscan_altitude_in_feet = FALSE;
 
 ///////////// bscan_range_in_feet /////////////////////
 //
