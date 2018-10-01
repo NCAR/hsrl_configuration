@@ -938,7 +938,7 @@ mhayman_fields = {
   {
     field_name = "Optical_Depth",
     apply_mask = TRUE,
-    mask_name = "Optical_Depth_mask",
+    mask_name = "Merged_Combined_Channel_mask",
     mask_valid_value = 0,
     output_name = "",
     cf_standard_name = "lidar_optical_depth"
