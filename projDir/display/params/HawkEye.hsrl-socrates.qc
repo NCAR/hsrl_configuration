@@ -364,7 +364,7 @@ fields = {
   }
   ,
   {
-    label = "Volume_Depol",
+    label = "Volume_CDR",
     raw_name = "Volume_Depolarization",
     filtered_name = "",
     units = "",
@@ -382,7 +382,7 @@ fields = {
   }
   ,
   {
-    label = "Particle_Depol",
+    label = "Particle_CDR",
     raw_name = "Particle_Depolarization",
     filtered_name = "",
     units = "",
@@ -1171,7 +1171,7 @@ bscan_max_range_km = 15;
 // Type: double
 //
 
-bscan_min_altitude_km = -1;
+bscan_min_altitude_km = -0.25;
 
 ///////////// bscan_max_altitude_km ///////////////////
 //
@@ -1181,7 +1181,7 @@ bscan_min_altitude_km = -1;
 // Type: double
 //
 
-bscan_max_altitude_km = 8;
+bscan_max_altitude_km = 9;
 
 ///////////// bscan_altitude_in_feet //////////////////
 //
