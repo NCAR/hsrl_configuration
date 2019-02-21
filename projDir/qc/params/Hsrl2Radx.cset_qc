@@ -62,7 +62,7 @@ instance = "cset_qc";
 // Type: string
 //
 
-input_dir = "/scr/eldora1/rsfdata/cset/hsrl/raw";
+input_dir = "/scr/snow2/rsfdata/projects/cset/hsrl/raw";
 
 ///////////// mode ////////////////////////////////////
 //
