@@ -13,12 +13,14 @@ software_path = os.environ['HOME']+'/git/hsrl_configuration/projDir/postProcessi
 cal_file_path = os.environ['HOME']+'/git/hsrl_configuration/projDir/calfiles/'
 
 # HSRL data dirs
-#basepath = '/scr/rain1/rsfdata/projects/socrates/hsrl/raw/' #SOCRATES basepath to non denoised data
-basepath = '/scr/rain1/rsfdata/projects/socrates/hsrl/raw/raw_denoised/' #SOCRATES basepath to non denoised data
+basepath = {
+        'CSET':'/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised/', #CSET basepath to denoised data
+        'SOCRATES':'/scr/rain1/rsfdata/projects/socrates/hsrl/raw/raw_denoised/' #SOCRATES basepath to denoised data
+        }
 
 # Aircraft data dirs
 aircraft_basepath = {
-    'CSET':'/scr/raf_data/CSET/24_Mar_17_BU/',
+    'CSET':'/scr/snow2/rsfdata/projects/cset/GV/',
     'SOCRATES':'/scr/raf_data/SOCRATES/'       
     } 
     

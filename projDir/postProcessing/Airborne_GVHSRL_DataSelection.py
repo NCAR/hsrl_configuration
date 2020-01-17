@@ -79,8 +79,7 @@ def SelectAirborneData(settings={},paths={},process_vars={}):
     try: 
         proj = process_vars['proj']
     except KeyError:    
-        # interactive prompt to determine desired flight
-      
+        # interactive prompt to determine desired flight      
         usr_proj = np.int(input('Select Project: '))-1
         if usr_proj < 0 or usr_proj > len(proj_list)-1:
             print('Selection is not recognized')
@@ -100,7 +99,7 @@ def SelectAirborneData(settings={},paths={},process_vars={}):
                 print('%d.) '%len(flight_list) + ' ' + flight_list[-1] + ', ' + flight_date[-1].strftime('%d-%b, %Y'))
                 if flight_list[-1] == flt:
                     usr_flt = len(flight_list)-1
-                    print('^^^^^^^^^^')
+                    print('--> Requested flight')
                     
     except KeyError:
         for ai in range(len(cal_json['Flights'])):

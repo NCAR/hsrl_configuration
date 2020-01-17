@@ -862,9 +862,9 @@ def pcolor_airborne(lidar_prof0,lidar_pointing = np.array([]),lidar_alt=None,
         # no data valid data was availabe to be plotted
         return fig,ax,np.nan,np.nan
     
-def scatter_z(lidar_prof,lidar_pointing = None,lidar_alt=None,
+def scatter_z(lidar_prof,ax=None,lidar_pointing = None,lidar_alt=None,
                   tlimits=None,ylimits=None,climits=None,scale='log',
-                  cmap='jet',title_font_size=0,title_add ='',s=2,plotAsDays=False,
+                  cmap='jet',title_font_size=12,title_add ='',s=2,
                   t_axis_scale=1.0,h_axis_scale=1.0,plt_kft=False):
     """
     plots range centered data on a time/altitude grid
@@ -877,11 +877,11 @@ def scatter_z(lidar_prof,lidar_pointing = None,lidar_alt=None,
     s-plot point size
         
     """
-    Nprof = 1
-    
+    ax = ax or plt.gca()
+
     if lidar_alt is None:
         lidar_alt = np.zeros(lidar_prof.time.size)
-    elif np.isscaler(lidar_alt):
+    elif np.isscalar(lidar_alt):
         lidar_alt = lidar_alt*np.ones(lidar_prof.time.size)
         
     if tlimits is None:
@@ -892,13 +892,8 @@ def scatter_z(lidar_prof,lidar_pointing = None,lidar_alt=None,
     if climits is None:
         climits = []
     
-    if plotAsDays:
-        time_scale = 3600*24.0
-        span_scale = 24.0
-    else:
-        time_scale = 3600.0
-        span_scale = 1.0    
-    
+    time_scale = 3600.0
+
     # if plotting in kft, adjust the range scales    
     # this does not affect range limits.
     if plt_kft:
@@ -914,10 +909,13 @@ def scatter_z(lidar_prof,lidar_pointing = None,lidar_alt=None,
     else:
         alt_data = (-lidar_pointing[2,:][:,np.newaxis]*lidar_prof.range_array+lidar_alt[:,np.newaxis]).flatten()*1e-3*range_factor     
         
-    t_data_plt = (np.ones((1,lidar_prof.range_array.size))*(lidar_prof.time[:,np.newaxis]/time_scale)).flatten()
+    t_data_plt = (np.ones((1,lidar_prof.range_array.size))*(lidar_prof.time[:,np.newaxis])/time_scale).flatten()
+#    # Set up plot times
+#    t_data_plt=[]
+#    for sec1 in range(t_data_plt1.size):
+#        t_data_plt.append(datetime.timedelta(seconds=t_data_plt1[sec1])+lidar_prof.StartDate)
     t_data_1d = lidar_prof.time[:,np.newaxis]/time_scale
-    
-    
+        
     # trim data that is outside the time and range limits
     if hasattr(lidar_prof.profile,'mask'):
         plot_prof = (lidar_prof.profile.data.copy()).flatten()
@@ -934,9 +932,7 @@ def scatter_z(lidar_prof,lidar_pointing = None,lidar_alt=None,
     
     lidar_alt = np.delete(lidar_alt,irm1d)
     t_data_1d = np.delete(t_data_1d,irm1d)
-    
-    
-    
+            
     if np.isnan(tlimits[0]):
         tlimits[0] = t_data_1d[0]
     if np.isnan(tlimits[1]):
@@ -945,78 +941,37 @@ def scatter_z(lidar_prof,lidar_pointing = None,lidar_alt=None,
         ylimits[0] = np.min(alt_data)
     if np.isnan(ylimits[1]):
         ylimits[1] = np.max(alt_data)
-        
-#    print ('time limits:')
-#    print(tlimits)
-    # scale figure dimensions based on time and altitude dimensions
-    time_span = tlimits[1]*span_scale-tlimits[0]*span_scale  # time domain of plotted data
-    range_span = (ylimits[1]-ylimits[0])/range_factor  # range domain of plotted data
-    
-    if title_font_size == 0:
-        # adjust title line based on the amount of plotted time data
-        if time_span*t_axis_scale < 8.0:
-            # short plots (in time)
-            line_char = '\n'  # include a newline to fit full title
-            y_top_edge = 1.2  # top edge set for double line title
-            title_font_size = 12  # use larger title font
-        elif time_span*t_axis_scale <= 16.0:
-            # medium plots (in time)
-            line_char = ' '  # no newline in title
-            y_top_edge = 0.9  # top edge set for single line title
-            title_font_size = 12  # use smaller title font
-        else:
-            # long plots (in time)
-            line_char = ' '  # no newline in title
-            y_top_edge = 0.9  # top edge set for single line title
-            title_font_size = 16  # use larger title font
-    else:
-        line_char = ' '
-        y_top_edge = 0.9
-    
-    max_len = 18.0
-    min_len = 2.0
-    max_h = 8.0
-    min_h = 0.2
-    x_left_edge =1.0
-    x_right_edge = 2.0
-    y_bottom_edge = 0.6
-
-    
-    ax_len = np.max(np.array([np.min(np.array([max_len,time_span*18.0/24.0*t_axis_scale])),min_len])) # axes length
-    ax_h = np.max(np.array([np.min(np.array([max_h,range_span*2.1/12*h_axis_scale])),min_h]))  # axes height
-    fig_len = x_left_edge+x_right_edge+ax_len  # figure length
-    fig_h =y_bottom_edge+y_top_edge+ax_h  # figure height
-    
-#    axL = []   # axes list
-#    caxL = []  # color axes list
-#    imL = []   # image list
-    
-    fig = plt.figure(figsize=(fig_len,Nprof*fig_h))
-
-    ai = 0
-    axlim = [x_left_edge/fig_len,y_bottom_edge/fig_h/Nprof+(Nprof-ai-1)/Nprof,1-x_right_edge/fig_len,(1-y_top_edge/fig_h)/Nprof]
-           
-    ax = plt.axes(axlim) 
-    
+ 
     if plot_prof.size > 0:
     
         if scale == 'log':
-            im = plt.scatter(t_data_plt,alt_data,c=plot_prof,s=s,linewidth=0,norm=matplotlib.colors.LogNorm(),cmap=cmap)
+            im = ax.scatter(t_data_plt,alt_data,c=plot_prof,s=s,linewidth=0,norm=matplotlib.colors.LogNorm(),cmap=cmap)
         else:
-            im = plt.scatter(t_data_plt,alt_data,c=plot_prof,s=s,linewidth=0,cmap=cmap)
+            im = ax.scatter(t_data_plt,alt_data,c=plot_prof,s=s,linewidth=0,cmap=cmap)
         if len(climits) > 0:    
-            plt.clim(climits[0])
+            im.set_clim(climits[0])
         if len(lidar_alt) > 0:
-            plt.plot(t_data_1d,lidar_alt*1e-3*range_factor,color='gray',linewidth=1.5)
-        plt.xlim(tlimits)
-        plt.ylim(ylimits)
-        DateLabel = lidar_prof.StartDate.strftime("%A %B %d, %Y")
-        plt.title(title_add+DateLabel + ', ' +lidar_prof.lidar + line_char + lidar_prof.label,fontsize=title_font_size)
-        plt.ylabel('Altitude ['+range_label+']')
-        if plotAsDays:
-            plt.xlabel('Days [UTC]')
-        else:
-            plt.xlabel('Time [UTC]')
+            ax.plot(t_data_1d,lidar_alt*1e-3*range_factor,color='red',linewidth=1.5)
+        ax.set_xlim(tlimits)
+        ax.set_ylim(ylimits)
+        getXticks1=ax.get_xticks()
+        xTicksSecs=getXticks1*time_scale
+        tempTicks=np.round(xTicksSecs/60)*60/time_scale
+        ax.set_xticks(np.arange(tempTicks[1],tempTicks[-1],step=np.min(tempTicks[2:getXticks1.size]-tempTicks[1:getXticks1.size-1])))
+        getXticks=ax.get_xticks()
+        newLabAll=[]
+        addTime=datetime.datetime(lidar_prof.StartDate.year,lidar_prof.StartDate.month,lidar_prof.StartDate.day,0,0,0)
+        for lab in range(getXticks.size):
+            currLab=getXticks[lab]
+            newLab=datetime.timedelta(seconds=currLab*time_scale)+addTime
+            newLabAll.append(newLab.strftime("%H:%M"))        
+        ax.set_xticklabels(newLabAll)
+        ax.set_xlim(tlimits)
+        startLab=datetime.timedelta(seconds=t_data_plt[0]*time_scale)+addTime
+        endLab=datetime.timedelta(seconds=t_data_plt[-1]*time_scale)+addTime
+        ax.set_title(lidar_prof.label+ ', '+ title_add+startLab.strftime("%Y%m%d %H:%M") + ' to ' +endLab.strftime("%Y%m%d %H:%M"),fontsize=title_font_size)
+        ax.set_ylabel('Altitude ['+range_label+']')
+        ax.set_xlabel('Time [UTC]')
         divider = make_axes_locatable(ax)
         cax = divider.append_axes("right",size=0.1,pad=0.2)
         units = lidar_prof.profile_type
@@ -1026,10 +981,10 @@ def scatter_z(lidar_prof,lidar_pointing = None,lidar_alt=None,
             units = '$'+units+'$'
         cbar=plt.colorbar(im,cax=cax,label=units)
         
-        return fig,ax,cax,im,cbar
+        return ax.boxplot
     else:
         # no data valid data was availabe to be plotted
-        return fig,ax,np.nan,np.nan,np.nan
+        return ax.boxplot
     
 def scatter_3d(lidar_prof,lidar_pointing = np.array([]),lat=np.array([]),lon=np.array([]),pos_ref=[np.nan,np.nan],
                lidar_alt=np.array([0]),tlimits=[np.nan,np.nan],ylimits=[0,np.nan],climits=[],scale='log',
