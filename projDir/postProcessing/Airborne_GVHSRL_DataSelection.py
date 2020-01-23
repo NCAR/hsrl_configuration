@@ -7,6 +7,7 @@ Created on Mon Jan  8 13:56:12 2018
 
 import sys
 import os
+import glob
 import numpy as np
 import LidarProfileFunctions as lp
 import datetime

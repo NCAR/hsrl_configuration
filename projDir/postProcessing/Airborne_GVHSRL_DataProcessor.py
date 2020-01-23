@@ -187,13 +187,14 @@ def ProcessAirborneDataChunk(time_start,time_stop,
     """
     Get raw data from netcdf files
     """
-    time_list,var_1d_data, profs = gv.load_raw_data(time_start,time_stop,var_2d_list,var_1d_list,basepath=basepath,verbose=True,as_prof=True,loadQWP=settings['loadQWP'],date_reference=date_reference,time_shift=settings['aircraft_time_shift'],bin0=bin0,loadBM3D=settings['use_BM3D'])
+    proj = process_vars['proj']
+    time_list,var_1d_data, profs = gv.load_raw_data(time_start,time_stop,var_2d_list,var_1d_list,basepath=basepath[proj],verbose=True,as_prof=True,loadQWP=settings['loadQWP'],date_reference=date_reference,time_shift=settings['aircraft_time_shift'],bin0=bin0,loadBM3D=settings['use_BM3D'])
     
     if settings['use_BM3D']:
         # if using BM3D data, try to load the pthinned denoised profiles for 
         # filter optimization
         thin_list = ['molecular_pthin_fit_BM3D','molecular_pthin_ver_BM3D']
-        _,_, thin_profs = gv.load_raw_data(time_start,time_stop,thin_list,[],basepath=basepath,verbose=True,as_prof=True,loadQWP=settings['loadQWP'],date_reference=date_reference,time_shift=settings['aircraft_time_shift'],bin0=bin0,loadBM3D=True)
+        _,_, thin_profs = gv.load_raw_data(time_start,time_stop,thin_list,[],basepath=basepath[proj],verbose=True,as_prof=True,loadQWP=settings['loadQWP'],date_reference=date_reference,time_shift=settings['aircraft_time_shift'],bin0=bin0,loadBM3D=True)
         for tvar in thin_profs.keys():
             if isinstance(thin_profs[tvar], lp.LidarProfile):
                 print('found '+tvar)

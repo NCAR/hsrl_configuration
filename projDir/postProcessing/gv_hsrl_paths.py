@@ -20,7 +20,7 @@ basepath = {
 
 # Aircraft data dirs
 aircraft_basepath = {
-    'CSET':'/scr/snow2/rsfdata/projects/cset/GV/',
+    'CSET':'/scr/snow2/rsfdata/projects/cset/GV/gv_data/',
     'SOCRATES':'/scr/raf_data/SOCRATES/'       
     } 
     

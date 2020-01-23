@@ -22,8 +22,8 @@ process_vars['flt'] = process_vars['proj']+'rf01'
 Set start and end time
 """
 # As time in hour and minutes --> set 'time_ref2takeoff':False in settings
-process_vars['flight_time_start'] = datetime.timedelta(hours=14,minutes=0)
-process_vars['flight_time_stop'] = datetime.timedelta(hours=14,minutes=15)
+process_vars['flight_time_start'] = datetime.timedelta(hours=17,minutes=40)
+process_vars['flight_time_stop'] = datetime.timedelta(hours=17,minutes=55)
 
 """
 Set up processing settings

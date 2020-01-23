@@ -5,7 +5,7 @@ addpath(genpath('./bm3d_scripts/'));
 % Trace the HSRL file structure and apply BM3D denoising to all raw data
 % found there.
 
-base_path = '/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised/2015/07/01';
+base_path = '/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised/2015/';
 
 data_name = {'molecular','combined_hi','combined_lo','cross'};
 
@@ -15,7 +15,7 @@ file_list = trace_file_tree(base_path,'.nc',20e6);
 
 denoise_var = true;
 
-for fi =1:length(file_list)
+for fi =69:length(file_list)
     file_name = file_list{fi};
     disp(file_name)
     fprintf('file %i of %i\n',fi,length(file_list))
