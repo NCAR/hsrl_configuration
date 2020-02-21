@@ -31,7 +31,7 @@ Set up processing settings
 
 settings = {
     # Time and aircraft settings
-    'full_flight':False, # process the entire flight
+    'full_flight':True, # process the entire flight
     'time_ref2takeoff':False,
     'Airspeed_Threshold':25, # threshold for determining start and end of the flight (in m/s)
     
@@ -48,7 +48,7 @@ settings = {
     # Save settings
     'save_plots':True, # save the plot data    
     'save_mol_gain_plot':True,  # save the plots used to estimate molecular gain
-    'save_data':False, # save data as netcdf    
+    'save_data':True, # save data as netcdf    
     'save_flight_folder':False, # save data/plots in folders according to flight name
     
     # Data processing settings
