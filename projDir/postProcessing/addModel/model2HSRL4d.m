@@ -2,8 +2,6 @@
 clear all;
 close all;
 
-%addpath(genpath('~/git/HCR_configuration/projDir/qc/dataProcessing/'));
-
 project='cset'; % socrates, cset, aristo, otrec
 quality='qc2'; % field, qc1, qc2
 freqData='2hz'; % 10hz, 100hz, or 2hz
@@ -16,9 +14,11 @@ outdir='/scr/snow2/rsfdata/projects/cset/hsrl/model/ERA5interp/';
 
 topodir=topoDir(project);
 
-indir='/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised_tempPress/2015/07/01/raw/';
+indir='/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised_tempPress/';
 
 planeDir='/scr/snow2/rsfdata/projects/cset/GV/gv_data/';
+
+flightTimes=load('~/git/hsrl_configuration/projDir/postProcessing/addModel/inFiles/flights_cset.txt');
 
 c=299792458;
 binwidth_ns=50;
@@ -26,12 +26,16 @@ bin0=37;
 lidar_tilt=[0,4];
 
 %% Go through flights
-for ii=1:1
+for ii=1:size(flightTimes,1)
     disp(['Flight ',num2str(ii)]);
     
     % Load HSRL data
     disp('Getting HSRL data ...');
-    fileList=dir([indir,'*.nc']);
+    
+    startTime=datetime([flightTimes(ii,1:4),0,0]);
+    endTime=datetime([flightTimes(ii,5:8),0,0]);
+    
+    fileList=makeFileListHSRL(indir,startTime,endTime,'xxxxxxx20YYMMDDxhhmmss');
     
     data.time=[];
     data.longitude=[];
@@ -39,8 +43,9 @@ for ii=1:1
     forDim=[];
     telDir=[];
     
-    for jj=1:size(fileList,1)
-        infile=[fileList(jj).folder,'/',fileList(jj).name];
+    for jj=1:size(fileList,2)
+        infile=fileList{jj};
+        
         intime=ncread(infile,'DATA_time');
         milSec=double(intime(7,:))+double(intime(8,:))*1e-3;
         
@@ -53,6 +58,9 @@ for ii=1:1
         
         forDim=cat(2,forDim,double(ncread(infile,'molecular')));
     end
+    
+    disp(['Processing ',datestr(data.time(1),'yyyy-mm-dd HH:MM:SS'),' to ',...
+        datestr(data.time(end),'yyyy-mm-dd HH:MM:SS')]);
     
     %% Load plane data
     disp('Getting GV data ...');
@@ -234,13 +242,22 @@ for ii=1:1
             %                         surf(data.time,data.asl,modelvar,'edgecolor','none');
             %             surf(data.time(1:5000),data.asl(:,1:5000),modelvar(:,1:5000),'edgecolor','none');
             %                         view(2);
+            
+            % Fill in nans with last good value
+            for kk=1:size(modelvar,2)
+                modRay=modelvar(:,kk);
+                lastInd=max(find(~isnan(modRay)));
+                modelvar(lastInd+1:end,kk)=modRay(lastInd);
+            end
             disp(['Saving ',intFields{ll},' data ...']);
             if strcmp(intFields{ll},'tempHSRL')
                 tempHSRL=modelvar;
+                tempHSRL=tempHSRL+273.15;
                 save([outdir,whichModel,'.',intFields{ll},'.',datestr(data.time(1),'YYYYmmDD_HHMMSS'),'_to_',...
                     datestr(data.time(end),'YYYYmmDD_HHMMSS'),'.Flight',num2str(ii),'.mat'],'tempHSRL');
             elseif strcmp(intFields{ll},'pHSRL')
                 pHSRL=modelvar;
+                pHSRL=pHSRL*100;
                 save([outdir,whichModel,'.',intFields{ll},'.',datestr(data.time(1),'YYYYmmDD_HHMMSS'),'_to_',...
                     datestr(data.time(end),'YYYYmmDD_HHMMSS'),'.Flight',num2str(ii),'.mat'],'pHSRL');
             end
