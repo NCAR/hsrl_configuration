@@ -53,7 +53,7 @@ settings = {
     
     # Data processing settings
     'tres':0.5,  # resolution in time in seconds (0.5 sec) before altitude correction
-    'tres_post':0, # resolution after altitude correction (in seconds) -  set to zero to not use
+    'tres_post':0.5, # resolution after altitude correction (in seconds) -  set to zero to not use
     'zres':7.5,  # altitude resolution in meters (7.5 m minimum)
 
     'mol_smooth':False, # smooth molecular profile
