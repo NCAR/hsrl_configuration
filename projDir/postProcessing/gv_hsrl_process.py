@@ -37,7 +37,7 @@ settings = {
     
     'aircraft_time_shift':0.859822,  # shift in aircraft time needed to align to HSRL time 0.75 - 3.0
     
-    'load_reanalysis':False, # load T and P reanalysis from NCEP/NCAR Model
+    'load_reanalysis_from_file':True, # load T and P reanalysis from netcdf file
     
     # Plot  settings
     'plot_2D':True,   # pcolor plot the BSR and depolarization profiles
@@ -53,7 +53,7 @@ settings = {
     
     # Data processing settings
     'tres':0.5,  # resolution in time in seconds (0.5 sec) before altitude correction
-    'tres_post':2.0, # resolution after altitude correction (in seconds) -  set to zero to not use
+    'tres_post':0, # resolution after altitude correction (in seconds) -  set to zero to not use
     'zres':7.5,  # altitude resolution in meters (7.5 m minimum)
 
     'mol_smooth':False, # smooth molecular profile

@@ -19,7 +19,7 @@
 
 	"Molecular_Gain": [
            {"date": "29-Jul-2015 16:31","value": 1.0347, "down_gain":1.0347, "diff_geo": "diff_geo_GVHSRL20120201.npz", "change_type": "gradual", "RB_Corrected":"False","down_diff":""},
-           {"date": "29-Jul-2015 16:31","value": 0.688944, "down_gain":0.661462, "diff_geo": "diff_geo_GVHSRL20120201.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":""},
+           {"date": "29-Jul-2015 16:31","value": 0.54, "down_gain":0.541685, "diff_geo": "diff_geo_GVHSRL20120201.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":""},
 		{"date": "12-Oct-2017 0:0","value": 1.0728915, "down_gain":1.0728915, "diff_geo": "diff_geo_GVHSRL20171025.npz", "change_type": "abrupt", "RB_Corrected":"False","down_diff":""},
 		{"date": "27-Oct-2017 0:0","value": 1.133915, "down_gain":1.133915, "diff_geo": "diff_geo_GVHSRL20171025.npz", "change_type": "gradual", "RB_Corrected":"False","down_diff":""},
 		{"date": "27-Oct-2017 0:0","value": 0.784546, "down_gain":0.784546, "diff_geo": "diff_geo_GVHSRL20171025.npz", "change_type": "gradual", "RB_Corrected":"True","down_diff":""},

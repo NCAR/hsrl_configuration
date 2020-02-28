@@ -159,7 +159,10 @@ def ProcessAirborneDataChunk(time_start,time_stop,
         ,'TelescopeDirection','TelescopeLocked','polarization','DATA_shot_count','builduptime']  # 'DATA_shot_count'
     
     # list of 2D variables (profiles) to load
-    var_2d_list = ['molecular','combined_hi','combined_lo','cross']
+    if settings['load_reanalysis_from_file']:
+        var_2d_list = ['molecular','combined_hi','combined_lo','cross','TEMP','PRESS']
+    else:
+        var_2d_list = ['molecular','combined_hi','combined_lo','cross']
     
     # list of aircraft variables to load
     var_aircraft = ['Time','GGALT','ROLL','PITCH','THDG','GGLAT','GGLON','TASX','ATX','PSXC']
@@ -369,7 +372,10 @@ def ProcessAirborneDataChunk(time_start,time_stop,
         loop through each lidar profile in profs and perform basic processing 
         operations
         """
-        
+#        if settings['load_reanalysis_from_file']:
+#            tempIn=profs['TEMP'].copy()
+#            presIn=profs['PRESS'].copy()
+            
         # set maximum range to MaxAlt
         range_trim = MaxAlt
         
@@ -414,8 +420,10 @@ def ProcessAirborneDataChunk(time_start,time_stop,
                     baseline_var = baseline_data['save_data'][var]['variance'], \
                     tx_norm=var_1d['total_energy'][:,np.newaxis]/baseline_data['avg_energy'])
                                 
+            
             # background subtract the profile
-            profs[var].bg_subtract(BGIndex)
+            if var != 'TEMP' and var != 'PRESS':
+                profs[var].bg_subtract(BGIndex)
 
             # profile specific processing routines
             if var == 'combined_hi' and settings['diff_geo_correct']:
@@ -621,8 +629,27 @@ def ProcessAirborneDataChunk(time_start,time_stop,
         if settings['save_mol_gain_plot']:
             plt.title(save_plots_base)
             plt.savefig(save_plots_path+'Debug02_Lidar_Profiles_'+save_plots_base,dpi=300)
-
-        temp,pres = gv.get_TP_from_aircraft(air_data,profs['molecular'],telescope_direction=var_post['TelescopeDirection'])
+            
+        if settings['load_reanalysis_from_file']:
+            #profile=profs['molecular']
+            #tempData=tempIn.profile
+            #tempData[tempData<-1000]=np.nan
+            #tempData=tempData+273.15
+            #temp = profile.copy()
+            #temp.profile = tempData.copy()
+            temp=profs['TEMP'].copy()
+            temp.profile_type =  '$K$'
+            
+            #presData=presIn.profile
+            #presData[presData<-1000]=np.nan
+            #presData=presData*100
+            #pres = profile.copy()
+            #pres.profile = presData.copy()
+            pres=profs['PRESS'].copy()
+            pres.profile_type =  '$Pa$'
+        else:
+            temp,pres = gv.get_TP_from_aircraft(air_data,profs['molecular'],telescope_direction=var_post['TelescopeDirection'])
+        
         beta_m = lp.get_beta_m(temp,pres,profs['molecular'].wavelength)
         
         nLidar = gv.lidar_pointing_vector(air_data_post,var_post['TelescopeDirection'],lidar_tilt=4.0)
@@ -828,7 +855,10 @@ def ProcessAirborneDataChunk(time_start,time_stop,
             else:
                 alpha_a.sg_filter(3,1,axis=1,deriv=1)
             alpha_a = 0.5*alpha_a/alpha_a.mean_dR # not sure this is the right scaling factor
-            alpha_a = alpha_a - beta_m_ext*(8*np.pi/3)  # remove molecular extinction
+            if settings['load_reanalysis_from_file']:
+                alpha_a = alpha_a - beta_m_ext.profile*(8*np.pi/3)  # remove molecular extinction
+            else:
+                alpha_a = alpha_a - beta_m_ext*(8*np.pi/3)  # remove molecular extinction
 
             alpha_a.descript = 'Aerosol Extinction Coefficient'
             alpha_a.label = 'Aerosol Extinction Coefficient'
@@ -930,12 +960,12 @@ def ProcessAirborneDataChunk(time_start,time_stop,
             print('saving lidar status data to')
             print(save_data_file)
             for var in save_var1d_post.keys():
-                lp.write_var2nc(var_post[var],str(var),save_data_file,description=save_var1d_post[var]['description'],units=save_var1d_post[var]['units'])
+                lp.write_var2nc(var_post[var],str(var),save_data_file,description=save_var1d_post[var]['description'],units=save_var1d_post[var]['units'],dim_name=['time'])
             
             print('saving aircraft variables to')
             print(save_data_file)
             for var in save_air_post.keys():
-                lp.write_var2nc(air_data_post[var],str(var),save_data_file,description=save_air_post[var]['description'],units=save_air_post[var]['units'])
+                lp.write_var2nc(air_data_post[var],str(var),save_data_file,description=save_air_post[var]['description'],units=save_air_post[var]['units'],dim_name=['time'])
             
             print('saving additional variables to')
             print(save_data_file)
@@ -959,7 +989,7 @@ def ProcessAirborneDataChunk(time_start,time_stop,
             fig1=plt.figure(figsize=(10,13))
             ax1 = fig1.add_subplot(numPlots,1,1)
             
-            rfig = lplt.scatter_z(beta_a,scale=['log'],
+            rfig = lplt.scatter_z(beta_a,scale='log',
                                       ax=ax1,
                                       lidar_pointing = nLidar,
                                       lidar_alt = air_data_post['GGALT'],
@@ -972,7 +1002,7 @@ def ProcessAirborneDataChunk(time_start,time_stop,
                                       cmap='jet')
             
             ax2 = fig1.add_subplot(numPlots,1,2)
-            rfig = lplt.scatter_z(dPart,scale=['linear'],
+            rfig = lplt.scatter_z(dPart,scale='linear',
                                       ax=ax2,
                                       lidar_pointing = nLidar,
                                       lidar_alt = air_data_post['GGALT'],
@@ -984,7 +1014,7 @@ def ProcessAirborneDataChunk(time_start,time_stop,
                                       h_axis_scale=settings['alt_axis_scale'])
             
             ax3 = fig1.add_subplot(numPlots,1,3)
-            rfig = lplt.scatter_z(profs['combined'],scale=['log'],
+            rfig = lplt.scatter_z(profs['combined'],scale='log',
                                       ax=ax3,
                                       lidar_pointing = nLidar,
                                       lidar_alt = air_data_post['GGALT'],
@@ -996,7 +1026,7 @@ def ProcessAirborneDataChunk(time_start,time_stop,
                                       h_axis_scale=settings['alt_axis_scale'])
 
             ax4 = fig1.add_subplot(numPlots,1,4)
-            rfig = lplt.scatter_z(dVol,scale=['linear'],
+            rfig = lplt.scatter_z(dVol,scale='linear',
                                       ax=ax4,
                                       lidar_pointing = nLidar,
                                       lidar_alt = air_data_post['GGALT'],

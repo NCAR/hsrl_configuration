@@ -1,4 +1,4 @@
-% add the path the the BM3D denoising routine
+%add the path the the BM3D denoising routine
 %addpath(genpath('/h/eol/mhayman/MatlabCode/iterVSTpoisson_STANDALONE'));
 addpath(genpath('./bm3d_scripts/'));
 %addpath('/h/eol/mhayman/PythonScripts/HSRL_Processing/libraries/matlab_code')  % add path to matlab libraries used in this script

@@ -14,7 +14,7 @@ cal_file_path = os.environ['HOME']+'/git/hsrl_configuration/projDir/calfiles/'
 
 # HSRL data dirs
 basepath = {
-        'CSET':'/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised/', #CSET basepath to denoised data
+        'CSET':'/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised_tempPress/', #CSET basepath to denoised data
         'SOCRATES':'/scr/rain1/rsfdata/projects/socrates/hsrl/raw/raw_denoised/' #SOCRATES basepath to denoised data
         }
 
@@ -25,8 +25,8 @@ aircraft_basepath = {
     } 
     
 # Save data dirs
-save_plots_path = '/scr/sci/romatsch/HSRL/pythonOut/plots/'
-save_data_path = '/scr/sci/romatsch/HSRL/pythonOut/data/'
+save_plots_path = '/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/plotsModel/'
+save_data_path = '/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/dataModel/'
 
 paths = {
     'software_path':software_path,
