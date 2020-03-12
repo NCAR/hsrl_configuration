@@ -35,7 +35,7 @@ for ii=15:size(caseList,1)
         timeModelNum=datenum(model.time);
                 
         %% Loop through hsrl data files
-        for jj=5:length(fileList)
+        for jj=1:length(fileList)
             infile=fileList{jj};
             
             disp(infile);
