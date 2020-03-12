@@ -26,7 +26,7 @@ bin0=37;
 lidar_tilt=[0,4];
 
 %% Go through flights
-for ii=1:size(flightTimes,1)
+for ii=15:size(flightTimes,1)
     disp(['Flight ',num2str(ii)]);
     
     % Load HSRL data

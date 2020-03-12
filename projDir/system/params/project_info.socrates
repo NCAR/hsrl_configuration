@@ -1,0 +1,23 @@
+#############################################
+# project-specific parameters for SOCRATES
+#############################################
+
+# set up the environment for HCR processing for socrates
+
+setenv PROJECT_NAME socrates
+
+setenv  BSCAN_MAX_ALTITUDE_KM      9.0
+setenv  BSCAN_MIN_ALTITUDE_KM      -0.5
+
+setenv PROJ_DIR ~/git/hsrl_configuration/projDir
+setenv DATA_DIR  /scr/snow2/rsfdata/projects/socrates/hsrl
+setenv LOG_DIR $HOME/logs
+setenv QC_VERSION qc2
+
+# make sure the output dirs exist
+
+mkdir -p $DATA_DIR
+mkdir -p $DATA_DIR/logs
+mkdir -p $LOG_DIR
+
+

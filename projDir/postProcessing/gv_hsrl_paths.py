@@ -25,8 +25,8 @@ aircraft_basepath = {
     } 
     
 # Save data dirs
-save_plots_path = '/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/plotsModel/'
-save_data_path = '/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/dataModel/'
+save_plots_path = '/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/plots/'
+save_data_path = '/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/data/'
 
 paths = {
     'software_path':software_path,

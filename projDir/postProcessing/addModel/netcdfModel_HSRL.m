@@ -16,7 +16,7 @@ indir='/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised_tempPress/';
 %% Run processing
 
 % Go through flights
-for ii=2:size(caseList,1)
+for ii=15:size(caseList,1)
     
     disp(['Flight ',num2str(ii)]);
     

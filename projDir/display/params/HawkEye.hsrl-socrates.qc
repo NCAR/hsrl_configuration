@@ -190,7 +190,8 @@ begin_in_archive_mode = TRUE;
 // Type: string
 //
 
-archive_start_time = "2018 01 19 04 00 00";
+archive_start_time = "2018 01 16 00 00 00";
+// archive_start_time = "2018 01 19 04 00 00";
 // archive_start_time = "2018 02 04 02 00 00";
 
 ///////////// archive_time_span_secs //////////////////
@@ -215,7 +216,8 @@ archive_time_span_secs = 1800;
 // Type: string
 //
 
-archive_data_url = "/scr/rain1/rsfdata/projects/socrates/hsrl/qc/cfradial/qc_moments";
+// archive_data_url = "/scr/rain1/rsfdata/projects/socrates/hsrl/qc/cfradial/qc_moments";
+archive_data_url = "/scr/snow2/rsfdata/projects/socrates/hsrl/qc2/hsrl/cfradial/archive_moments2";
 
 //======================================================================
 //
@@ -317,8 +319,7 @@ show_status_in_gui = {
 // Type: string
 //
 
-// color_scale_dir = "/opt/local/git/hsrl_configuration/projDir/display/color_scales";
-color_scale_dir = "../color_scales";
+color_scale_dir = "$(PROJ_DIR)/display/color_scales";
 
 ///////////// fields //////////////////////////////////
 //
@@ -346,7 +347,7 @@ color_scale_dir = "../color_scales";
 
 fields = {
   {
-    label = "Backscatter_Coeff",
+    label = "Backscatter_Coefficient",
     raw_name = "Aerosol_Backscatter_Coefficient",
     filtered_name = "",
     units = "m-1.sr-1",
@@ -355,11 +356,11 @@ fields = {
   }
   ,
   {
-    label = "Backscatter_Ratio",
-    raw_name = "Backscatter_Ratio",
+    label = "Extinction_Coefficient",
+    raw_name = "Aerosol_Extinction_Coefficient",
     filtered_name = "",
     units = "",
-    color_map = "hsrl_backscatter_ratio.colors",
+    color_map = "extinction_coeff.colors",
     shortcut = "1"
   }
   ,

@@ -1,0 +1,26 @@
+#############################################
+# project-specific parameters for CSET
+#############################################
+
+# set up the environment for HCR processing for cset
+
+setenv PROJECT_NAME cset
+
+setenv  BSCAN_MAX_ALTITUDE_KM      15.0
+setenv  BSCAN_MIN_ALTITUDE_KM      -0.5
+
+setenv PROJ_DIR ~/git/HCR_configuration/projDir
+setenv DATA_DIR  /scr/snow2/rsfdata/projects/cset/hcr
+setenv LOG_DIR $HOME/logs
+
+setenv QC_VERSION qc2
+
+# make sure the output dirs exist
+
+mkdir -p $DATA_DIR
+mkdir -p $DATA_DIR/logs
+mkdir -p $LOG_DIR
+
+# length of wave filter for HcrVelCorrect
+
+setenv WAVE_FILTER_LENGTH_SECS 10

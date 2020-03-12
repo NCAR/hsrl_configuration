@@ -16,7 +16,7 @@ process_start_time = datetime.datetime.now()
 
 process_vars = {}
 process_vars['proj'] = 'CSET' # SOCRATES, CSET
-process_vars['flt'] = process_vars['proj']+'rf01'
+process_vars['flt'] = process_vars['proj']+'rf15'
 
 """
 Set start and end time

@@ -1159,7 +1159,8 @@ site_name = "unknown";
 // Type: string
 //
 
-output_dir = "$(DATA_DIR)/$(QC_VERSION)/hsrl/cfradial/archive_moments";
+// output_dir = "$(DATA_DIR)/$(QC_VERSION)/hsrl/cfradial/archive_moments";
+output_dir = "$(DATA_DIR)/$(QC_VERSION)/hsrl/cfradial/archive_moments2";
 
 ///////////// output_filename_mode ////////////////////
 //
