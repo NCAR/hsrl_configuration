@@ -1,0 +1,76 @@
+#####################################
+Purpose and general comments
+#####################################
+
+This document describes how to run the production QC processing for HSRL data.
+All the code is in ~/git/hsrl_configuration/projDir/postProcessing/
+
+#####################################
+Denoise data
+#####################################
+
+The first step is to denoise the raw data. This is done
+with scripts we got from the University of Wisconsin.
+
+gvhsrl_BM3D_iterVSTpoisson_DenoiseFileTree.m
+
+This script is very slow and takes seveal days for one flight.
+It is very reliable, though. It takes the raw data as input,
+e.g. data in /scr/snow2/rsfdata/projects/cset/hsrl/raw/2015/06/30/raw
+and the ouput for e.g. CSET is in
+/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised/2015/07/07/raw.
+
+#####################################
+Add model temperature and pressure
+#####################################
+
+We need to add forecast or reanalysis model temperature and pressure
+data and therefore make a copy of the denoised data to 
+/scr/snow2/rsfdata/projects/cset/hsrl/raw/raw_denoised_tempPress/2015/07/07/raw
+run script
+
+./addModel/model2HSRL4d.m
+
+which creates matlab files with the interpolated model values. These files
+are at /scr/snow2/rsfdata/projects/cset/hsrl/model/ERA5interp/
+The model data is attached to the copied denoised data in
+raw_denoised_tempPress with the script
+
+./addModel/netcdfModel_HSRL.m
+
+#####################################
+Python processing
+#####################################
+
+The actual processing of the data is done with the python script
+
+gv_hsrl_process.py
+
+This script produces NetCDF files in
+/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/data/
+and plots in
+/scr/snow2/rsfdata/projects/cset/hsrl/qc2/pythonOut/plots/
+The plots are some plots that help to set the parameters right
+(Debug...png) and the final output fields (LidarFields...png).
+
+Cal files need to be updated and are in
+~/git/hsrl_configuration/projDir/calfiles/
+The file that we can adjust is gv_calvals.json
+For CSET e.g. we adjust "Molecular_Gain" in the correct
+date line and the line that says "RB_Corrected":"True"
+We first run a couple flights with the cal file as is,
+then we check the plots Debug03_Molecular_Gain_Up* and
+Debug03_Molecular_Gain_Down* and see what the suggested
+values are. Values can change over the course of a
+field campaign and need to be monitored and adjusted.
+
+The script is run on a per flight basis ('full_flight':True) for
+data generatio but can be run on start and end time
+for testing purposes. Rike is running it with spyder, anaconda3.
+
+#####################################
+Convert to cfRadial
+#####################################
+
+Note that the following steps are carried out in the
+HCR data and software environment.
